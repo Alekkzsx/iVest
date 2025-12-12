@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Plataforma completa de preparação para o Vestibulinho ETEC com IA. Simulados, planos de estudo personalizados, análise de redação e tutor virtual." />
-  <meta name="keywords" content="ETEC, Vestibulinho, preparação, simulado, estudo, IA, educação" />
-  <meta name="theme-color" content="#4F46E5" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ivest.app/" />
-  <meta property="og:title" content="ETEC Prep - Preparação para o Vestibulinho" />
-  <meta property="og:description"
-    content="Plataforma completa de preparação para o Vestibulinho ETEC com IA. Simulados, planos de estudo personalizados, análise de redação e tutor virtual." />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://ivest.app/" />
-  <meta property="twitter:title" content="ETEC Prep - Preparação para o Vestibulinho" />
-  <meta property="twitter:description" content="Plataforma completa de preparação para o Vestibulinho ETEC com IA." />
-
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <title>ETEC Prep - Preparação para o Vestibulinho</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EtecPrep - Dashboard do Vestibulando</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
 </head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>

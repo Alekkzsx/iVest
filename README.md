@@ -1,70 +1,20 @@
-# ETEC Prep
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Plataforma completa de preparação para o **Vestibulinho ETEC** impulsionada por IA.
+# Run and deploy your AI Studio app
 
-## 🎯 Funcionalidades
+This contains everything you need to run your app locally.
 
-- **📚 Plano de Estudos**: Gere um cronograma semanal personalizado baseado no curso técnico desejado e suas horas disponíveis
-- **🧠 Simulados & Questões**: Pratique com questões estilo ETEC geradas por IA, focadas no conteúdo do Ensino Fundamental II
-- **✍️ Análise de Texto**: Receba feedback detalhado sobre seus textos dissertativos
-- **💬 Tutor Virtual**: Tire dúvidas sobre qualquer matéria do Ensino Fundamental II com um tutor especializado em ETEC
+View your app in AI Studio: https://ai.studio/apps/drive/1fCaisnm7ro_OiChetZ9dRY0dW748rvPB
 
-## 🚀 Como Usar
+## Run Locally
 
-### Pré-requisitos
+**Prerequisites:**  Node.js
 
-- Node.js instalado
-- Chave de API do Google Gemini
 
-### Instalação
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/Alekkzsx/iVest.git
-cd iVest
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
-3. Configure a chave da API:
-   - Crie um arquivo `.env.local` na raiz do projeto
-   - Adicione sua chave do Gemini:
-```
-API_KEY=sua_chave_gemini_aqui
-```
-
-4. Execute o projeto:
-```bash
-npm run dev
-```
-
-5. Acesse http://localhost:5173 no seu navegador
-
-## 📖 Sobre o Vestibulinho ETEC
-
-O Vestibulinho ETEC é o processo seletivo para ingresso nos cursos técnicos das Escolas Técnicas Estaduais (ETECs) do Centro Paula Souza, no estado de São Paulo. A prova avalia conhecimentos do Ensino Fundamental II nas seguintes disciplinas:
-
-- Matemática
-- Português
-- História
-- Geografia
-- Ciências
-- Inglês
-
-## 🛠️ Tecnologias
-
-- **Frontend**: React + TypeScript + Vite
-- **Estilização**: TailwindCSS
-- **IA**: Google Gemini API (gemini-2.5-flash)
-- **Ícones**: Lucide React
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT.
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

@@ -1,5 +1,5 @@
 {
-  "name": "ETEC Prep",
-  "description": "Plataforma completa de preparação para o Vestibulinho ETEC impulsionada por IA. Inclui planos de estudo, análise de textos, simulados e tutor virtual especializado em Ensino Fundamental II.",
+  "name": "VestBot",
+  "description": "Uma plataforma completa de preparação para a ETEC impulsionada por IA. Inclui planos de estudo, simulados inteligentes, gamificação e tutor virtual.",
   "requestFramePermissions": []
 }
