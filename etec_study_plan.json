@@ -1,0 +1,99 @@
+{
+  "id": "1769956507337",
+  "createdAt": 1769956507337,
+  "dailyHours": 0,
+  "weakness": "Otimizado IA",
+  "days": [
+    {
+      "dayName": "Segunda-feira",
+      "focus": "Organização",
+      "agendaText": "",
+      "tasks": [
+        {
+          "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+          "topic": "Organizar materiais e planejar a semana",
+          "subject": "Geral",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "dayName": "Terça-feira",
+      "focus": "Estudos Gerais",
+      "agendaText": "",
+      "tasks": [
+        {
+          "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+          "topic": "Leitura de atualidades ou revisão leve",
+          "subject": "Geral",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "dayName": "Quarta-feira",
+      "focus": "Biologia",
+      "agendaText": "biologia",
+      "tasks": [
+        {
+          "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+          "topic": "Revisão de teoria e exercícios de Biologia",
+          "subject": "Biologia",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "dayName": "Quinta-feira",
+      "focus": "Revisão",
+      "agendaText": "",
+      "tasks": [
+        {
+          "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+          "topic": "Revisar anotações da semana",
+          "subject": "Geral",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "dayName": "Sexta-feira",
+      "focus": "Português",
+      "agendaText": "portugues",
+      "tasks": [
+        {
+          "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+          "topic": "Gramática e interpretação de texto",
+          "subject": "Português",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "dayName": "Sábado",
+      "focus": "Descanso",
+      "agendaText": "",
+      "tasks": [
+        {
+          "id": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+          "topic": "Dia livre para lazer e descanso",
+          "subject": "Lazer",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "dayName": "Domingo",
+      "focus": "Matemática",
+      "agendaText": "mate",
+      "tasks": [
+        {
+          "id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+          "topic": "Resolução de exercícios de Matemática",
+          "subject": "Matemática",
+          "completed": false
+        }
+      ]
+    }
+  ]
+}
