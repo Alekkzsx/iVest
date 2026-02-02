@@ -20,5 +20,55 @@
       "type": "video",
       "done": false
     }
+  ],
+  "Linguagens (Português)": [
+    {
+      "id": "li-ai-1770055937648-0",
+      "title": "Interpretação de Texto: Estratégias e Análise (6º ao 9º ano)",
+      "type": "exercise",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-1",
+      "title": "Gêneros Textuais: Características dos Textos Narrativos, Descritivos e Argumentativos",
+      "type": "text",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-2",
+      "title": "Classes de Palavras Essenciais (Substantivo, Verbo, Adjetivo, Advérbio)",
+      "type": "video",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-3",
+      "title": "Pontuação para a Coerência e Clareza Textual (Vírgula, Ponto, Ponto e Vírgula)",
+      "type": "text",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-4",
+      "title": "Coesão e Coerência Textual: O Uso de Conectivos e Pronomes",
+      "type": "video",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-5",
+      "title": "Concordância Nominal e Verbal (Casos Fundamentais)",
+      "type": "exercise",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-6",
+      "title": "Variação Linguística: Linguagem Formal e Informal, Regionalismos",
+      "type": "text",
+      "done": false
+    },
+    {
+      "id": "li-ai-1770055937648-7",
+      "title": "Ortografia e Uso dos Porquês: As Regras Mais Comuns e Erros Frequentes",
+      "type": "exercise",
+      "done": false
+    }
   ]
 }
