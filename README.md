@@ -45,11 +45,35 @@ npm install --legacy-peer-deps
 
 ### 2. Executar Localmente
 
+#### 🐧 Linux / 🍎 macOS
+
 ```bash
 npm run dev
 ```
 
 O aplicativo abrirá em `http://localhost:4200`
+
+#### 🪟 Windows
+
+**Método Simples (Recomendado):**
+
+1. Dê **duplo clique** em `start-vestbot.bat`
+2. Aguarde o script:
+   - ✅ Instalar dependências (primeira vez)
+   - ✅ Iniciar backend (porta 3001)
+   - ✅ Iniciar frontend (porta 3000)
+   - ✅ Abrir navegador automaticamente
+3. Use o VestBot! 🎓
+
+**⚠️ Windows Security bloqueando?**
+- Veja [WINDOWS_SECURITY.md](WINDOWS_SECURITY.md) para adicionar exceção
+- Leia [LEIA-ME-SEGURANCA.txt](LEIA-ME-SEGURANCA.txt) para entender por que é seguro
+- O VestBot é 100% seguro e open source!
+
+**Documentação Completa para Windows:**
+- [WINDOWS_GUIDE.md](WINDOWS_GUIDE.md) - Guia de uso completo
+- [WINDOWS_SECURITY.md](WINDOWS_SECURITY.md) - Como adicionar exceção no antivírus
+- [CHANGELOG_SEGURANCA.md](CHANGELOG_SEGURANCA.md) - Detalhes das melhorias de segurança
 
 ### 3. Usar Simulados Offline
 
