@@ -153,9 +153,13 @@ export class QuizComponent implements OnDestroy {
 
     // Fase 1: Distribuir cota base para cada matéria
     for (const subject of shuffledSubjects) {
-      const subjectPool = filteredPool.filter(q =>
-        q.subject === subject && !usedIds.has(q.id)
-      );
+      // FILTRO INTELIGENTE: aceita matérias exatas e compostas
+      const subjectPool = filteredPool.filter(q => {
+        const matchesSubject = q.subject === subject ||
+          q.subject.includes(subject + ' /') ||  // "Matéria / Outra"
+          q.subject.includes('/ ' + subject);    // "Outra / Matéria"
+        return matchesSubject && !usedIds.has(q.id);
+      });
 
       if (subjectPool.length === 0) continue;
 
@@ -185,9 +189,12 @@ export class QuizComponent implements OnDestroy {
       for (const subject of sortedSubjects) {
         if (finalSelection.length >= targetCount) break;
 
-        const available = filteredPool.filter(q =>
-          q.subject === subject && !usedIds.has(q.id)
-        );
+        const available = filteredPool.filter(q => {
+          const matchesSubject = q.subject === subject ||
+            q.subject.includes(subject + ' /') ||  // "Matéria / Outra"
+            q.subject.includes('/ ' + subject);    // "Outra / Matéria"
+          return matchesSubject && !usedIds.has(q.id);
+        });
 
         if (available.length > 0) {
           const shuffled = this.shuffleArray(available);
@@ -257,8 +264,17 @@ export class QuizComponent implements OnDestroy {
 
       console.log(`🔄 Spaced repetition: ${allQuestions.length - availableQuestions.length} questions blocked`);
 
-      // Filtrar questões por matérias selecionadas
-      let pool = availableQuestions.filter(q => selectedSubjects.includes(q.subject));
+      // Filtrar questões por matérias selecionadas (FILTRO INTELIGENTE)
+      // Aceita tanto matérias exatas quanto compostas
+      // Ex: Se selecionou "Matemática", pega "Matemática" E "Matemática / Física"
+      let pool = availableQuestions.filter(q => {
+        return selectedSubjects.some(selectedMat => {
+          // Aceita se a matéria é exata OU se contém a matéria selecionada
+          return q.subject === selectedMat ||
+            q.subject.includes(selectedMat + ' /') ||  // "Matemática / Física"
+            q.subject.includes('/ ' + selectedMat);    // "Física / Matemática"
+        });
+      });
 
       let finalSelection: Question[] = [];
 

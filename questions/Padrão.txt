@@ -3608,5 +3608,1717 @@
     ],
     "correta": "1/6 (aproximadamente 16,6%).",
     "explicacao_base": "Total de combinações: $6 \\times 6 = 36$. Pares que somam 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) -> 6 casos favoráveis. Probabilidade: $6/36 = 1/6$."
+  },
+  {
+    "grupo_id": 191,
+    "tema": "Ecologia e Sustentabilidade",
+    "texto_referencia": "A compostagem é um processo biológico de reciclagem da matéria orgânica (restos de alimentos, folhas), transformando-a em adubo natural (húmus). Esse processo reduz o volume de lixo enviado aos aterros sanitários, diminuindo a produção de chorume e de gás metano ($CH_4$).",
+    "image_id": "",
+    "id": 191,
+    "materia": "Biologia / Química",
+    "dificuldade": "Média",
+    "enunciado": "Do ponto de vista das cadeias alimentares, os microrganismos (bactérias e fungos) responsáveis pela decomposição da matéria na composteira ocupam o nível trófico dos:",
+    "alternativas": [
+      "Produtores fotossintetizantes.",
+      "Consumidores primários herbívoros.",
+      "Decompositores.",
+      "Consumidores terciários.",
+      "Predadores de topo."
+    ],
+    "correta": "Decompositores.",
+    "explicacao_base": "Na compostagem, fungos e bactérias agem quebrando a matéria orgânica morta para reciclar nutrientes, papel fundamental dos decompositores no ciclo da matéria."
+  },
+  {
+    "grupo_id": 192,
+    "tema": "Matemática Financeira",
+    "texto_referencia": "Devido à crise de produção de componentes eletrônicos, o preço de um videogame subiu de R$ 4.000,00 para R$ 5.000,00.",
+    "image_id": "",
+    "id": 192,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Qual foi a taxa percentual de aumento aplicada sobre o preço original do produto?",
+    "alternativas": [
+      "10%.",
+      "20%.",
+      "25%.",
+      "30%.",
+      "50%."
+    ],
+    "correta": "25%.",
+    "explicacao_base": "Aumento absoluto = 5000 - 4000 = 1000. Porcentagem = 1000 / 4000 = 0,25 ou 25%."
+  },
+  {
+    "grupo_id": 193,
+    "tema": "Física - Propagação de Calor",
+    "texto_referencia": "As garrafas térmicas são projetadas para evitar que o líquido em seu interior troque calor com o ambiente externo. Para isso, possuem paredes duplas de vidro ou metal com vácuo entre elas, e as superfícies são espelhadas.",
+    "image_id": "",
+    "id": 193,
+    "materia": "Física",
+    "dificuldade": "Difícil",
+    "enunciado": "A existência do vácuo entre as paredes da garrafa tem a função específica de impedir ou dificultar a propagação do calor pelos processos de:",
+    "alternativas": [
+      "Irradiação e Convecção.",
+      "Condução e Convecção.",
+      "Condução e Irradiação.",
+      "Evaporação e Fusão.",
+      "Apenas Irradiação."
+    ],
+    "correta": "Condução e Convecção.",
+    "explicacao_base": "A condução e a convecção precisam de meios materiais (sólidos, líquidos ou gases) para ocorrer. O vácuo elimina a matéria, bloqueando esses dois processos. A superfície espelhada bloqueia a irradiação."
+  },
+  {
+    "grupo_id": 194,
+    "tema": "História do Brasil - Escravidão",
+    "texto_referencia": "A Lei Áurea, assinada em 1888, aboliu oficialmente a escravidão no Brasil. No entanto, o texto da lei era curto e não previa nenhuma medida de integração social ou econômica para os recém-libertos.",
+    "image_id": "",
+    "id": 194,
+    "materia": "História / Sociologia",
+    "dificuldade": "Média",
+    "enunciado": "Uma consequência direta dessa falta de políticas de inclusão para a população negra no pós-abolição foi:",
+    "alternativas": [
+      "A imediata reforma agrária, garantindo terras para plantio.",
+      "O acesso universal às melhores escolas e universidades públicas do Império.",
+      "A ocupação de áreas precárias (formação de favelas) e a marginalização no mercado de trabalho.",
+      "O retorno massivo de todos os ex-escravizados para o continente africano.",
+      "O pagamento de indenizações milionárias aos libertos pelo Estado."
+    ],
+    "correta": "A ocupação de áreas precárias (formação de favelas) e a marginalização no mercado de trabalho.",
+    "explicacao_base": "Sem terras, empregos (preteridos pelos imigrantes) ou educação, a população negra foi empurrada para as margens da sociedade e do espaço urbano."
+  },
+  {
+    "grupo_id": 195,
+    "tema": "Geometria - Áreas e Pisos",
+    "texto_referencia": "Um arquiteto precisa calcular a quantidade de porcelanato para cobrir o piso de uma sala retangular de 6 metros de largura por 8 metros de comprimento. Cada peça quadrada de porcelanato tem 50 cm de lado.",
+    "image_id": "",
+    "id": 195,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Desconsiderando os rejuntes e considerando uma compra exata sem quebras, quantas peças, no mínimo, são necessárias?",
+    "alternativas": [
+      "48 peças.",
+      "96 peças.",
+      "192 peças.",
+      "240 peças.",
+      "480 peças."
+    ],
+    "correta": "192 peças.",
+    "explicacao_base": "Área sala = $6 \\times 8 = 48 m^2$. Lado peça = 0,5 m. Área peça = $0,5 \\times 0,5 = 0,25 m^2$. N de peças = $48 / 0,25 = 192$ peças."
+  },
+  {
+    "grupo_id": 196,
+    "tema": "Química - Funções Inorgânicas",
+    "texto_referencia": "Ao sofrerem com azia estomacal (excesso de ácido clorídrico - HCl), muitas pessoas recorrem a medicamentos antiácidos que contêm bicarbonato de sódio ($NaHCO_3$) ou hidróxido de magnésio ($Mg(OH)_2$).",
+    "image_id": "",
+    "id": 196,
+    "materia": "Química",
+    "dificuldade": "Média",
+    "enunciado": "O alívio da azia ocorre porque essas substâncias reagem com o ácido estomacal em um processo químico denominado:",
+    "alternativas": [
+      "Combustão.",
+      "Fermentação.",
+      "Neutralização.",
+      "Destilação.",
+      "Polimerização."
+    ],
+    "correta": "Neutralização.",
+    "explicacao_base": "Reações entre ácidos e bases (ou sais de caráter básico como o bicarbonato) que resultam em sal e água, elevando o pH, são chamadas de reações de neutralização."
+  },
+  {
+    "grupo_id": 197,
+    "tema": "Geografia - Relevo e Urbanização",
+    "texto_referencia": "Os deslizamentos de terra são tragédias frequentes no verão brasileiro, especialmente em áreas de encosta (morros) ocupadas irregularmente nas grandes cidades.",
+    "image_id": "",
+    "id": 197,
+    "materia": "Geografia",
+    "dificuldade": "Fácil",
+    "enunciado": "Além da declividade natural do relevo e das chuvas intensas, um fator humano que agrava drasticamente o risco de deslizamentos é:",
+    "alternativas": [
+      "A retirada da cobertura vegetal (desmatamento) que protegia e dava estabilidade ao solo.",
+      "A construção de prédios muito altos no centro plano da cidade.",
+      "A limpeza frequente dos bueiros e redes de drenagem.",
+      "O reflorestamento de topos de morro com espécies nativas.",
+      "A pavimentação das rodovias em áreas planas."
+    ],
+    "correta": "A retirada da cobertura vegetal (desmatamento) que protegia e dava estabilidade ao solo.",
+    "explicacao_base": "As raízes das árvores ajudam a fixar o solo. A remoção da vegetação para construção de moradias expõe o solo à erosão e encharcamento, facilitando deslizamentos."
+  },
+  {
+    "grupo_id": 198,
+    "tema": "Literatura - Modernismo (2ª Geração)",
+    "texto_referencia": "Drummond escreveu no poema 'José': 'E agora, José? / A festa acabou, / a luz apagou, / o povo sumiu, / a noite esfriou, / e agora, José?'.",
+    "image_id": "",
+    "id": 198,
+    "materia": "Português",
+    "dificuldade": "Média",
+    "enunciado": "Os versos expressam uma angústia existencial típica da poesia da segunda geração modernista, caracterizada por:",
+    "alternativas": [
+      "Um otimismo ufanista e patriótico sobre o futuro do Brasil.",
+      "Uma paródia cômica da linguagem indígena.",
+      "Um sentimento de desamparo, solidão e incomunicabilidade do indivíduo no mundo moderno.",
+      "Uma descrição objetiva e realista da paisagem rural.",
+      "O uso exclusivo de sonetos com rimas perfeitas."
+    ],
+    "correta": "Um sentimento de desamparo, solidão e incomunicabilidade do indivíduo no mundo moderno.",
+    "explicacao_base": "Drummond, na fase do 'Eu maior que o mundo' ou 'sentimento do mundo', trata da angústia existencial, da falta de saídas e da solidão urbana ('você que é sem nome, que zomba dos outros...')."
+  },
+  {
+    "grupo_id": 199,
+    "tema": "Biologia - Genética",
+    "texto_referencia": "A cor dos olhos em humanos é determinada por diversos genes, mas, para fins didáticos, muitas vezes simplifica-se usando a 1ª Lei de Mendel. Suponha que o alelo para olhos castanhos (B) seja dominante sobre o alelo para olhos azuis (b).",
+    "image_id": "",
+    "id": 199,
+    "materia": "Biologia",
+    "dificuldade": "Média",
+    "enunciado": "Se um casal onde ambos são heterozigotos (Bb) tiver um filho, qual é a probabilidade teórica dessa criança nascer com olhos azuis?",
+    "alternativas": [
+      "0% (Impossível).",
+      "25% (1/4).",
+      "50% (1/2).",
+      "75% (3/4).",
+      "100%."
+    ],
+    "correta": "25% (1/4).",
+    "explicacao_base": "Cruzamento $Bb \\times Bb$. Possíveis gametas: BB, Bb, Bb, bb. O único genótipo para olhos azuis (recessivo) é bb, que aparece em 1 de 4 possibilidades."
+  },
+  {
+    "grupo_id": 200,
+    "tema": "Física - Mecânica (Velocidade Relativa)",
+    "texto_referencia": "Dois carros viajam na mesma direção em uma estrada plana e reta. O Carro A está a 80 km/h e o Carro B, que vem logo atrás no mesmo sentido, está a 100 km/h.",
+    "image_id": "",
+    "id": 200,
+    "materia": "Física",
+    "dificuldade": "Difícil",
+    "enunciado": "Para um passageiro dentro do Carro A (referencial), o Carro B parece estar se aproximando com uma velocidade relativa de:",
+    "alternativas": [
+      "20 km/h.",
+      "80 km/h.",
+      "100 km/h.",
+      "180 km/h.",
+      "Zero, pois ambos estão em movimento."
+    ],
+    "correta": "20 km/h.",
+    "explicacao_base": "Velocidade relativa em mesmo sentido é a diferença das velocidades. $V_{rel} = V_b - V_a = 100 - 80 = 20 km/h$. Se fossem sentidos opostos, seria a soma."
+  },
+  {
+    "grupo_id": 201,
+    "tema": "Atualidades / Geografia - Agronegócio",
+    "texto_referencia": "O termo 'commodities' refere-se a mercadorias primárias produzidas em larga escala e com padrão de qualidade global, sendo essenciais para a economia brasileira.",
+    "image_id": "",
+    "id": 201,
+    "materia": "Geografia",
+    "dificuldade": "Fácil",
+    "enunciado": "Assinale a alternativa que contém apenas exemplos de commodities agrícolas importantes na pauta de exportação do Brasil.",
+    "alternativas": [
+      "Smartphones, carros e aviões.",
+      "Soja, milho e café.",
+      "Aço, tecidos e sapatos.",
+      "Urânio, ouro e diamantes.",
+      "Petróleo, gás natural e carvão."
+    ],
+    "correta": "Soja, milho e café.",
+    "explicacao_base": "Soja, milho e café são produtos agrícolas primários, padronizados e cotados em bolsas internacionais, sendo o carro-chefe do agronegócio brasileiro."
+  },
+  {
+    "grupo_id": 202,
+    "tema": "Interpretação Textual - Ambiguidade",
+    "texto_referencia": "Manchete de jornal: 'Polícia prende acusado de assalto a banco falando ao celular'.",
+    "image_id": "",
+    "id": 202,
+    "materia": "Português",
+    "dificuldade": "Fácil",
+    "enunciado": "A frase apresenta ambiguidade (duplo sentido) pois não deixa claro:",
+    "alternativas": [
+      "Se a polícia tem celulares funcionais.",
+      "Se o banco tinha sinal de internet.",
+      "Se o assalto foi virtual ou presencial.",
+      "Se quem estava falando ao celular era a polícia, o acusado ou o banco.",
+      "O modelo do aparelho celular utilizado."
+    ],
+    "correta": "Se quem estava falando ao celular era a polícia, o acusado ou o banco.",
+    "explicacao_base": "A estrutura da frase permite entender que a polícia falava ao celular enquanto prendia, ou que o acusado falava ao celular quando foi preso."
+  },
+  {
+    "grupo_id": 203,
+    "tema": "Química - Tabela Periódica e Íons",
+    "texto_referencia": "O flúor ($F$) é um elemento químico adicionado à água potável e aos cremes dentais para prevenir cáries. Na tabela periódica, ele é o elemento mais eletronegativo.",
+    "image_id": "",
+    "id": 203,
+    "materia": "Química",
+    "dificuldade": "Difícil",
+    "enunciado": "Ao reagir com metais para formar sais (como fluoreto de sódio), o átomo de flúor tende a:",
+    "alternativas": [
+      "Doar 1 elétron e se tornar um cátion ($F^+$).",
+      "Receber 1 elétron e se tornar um ânion ($F^-$).",
+      "Compartilhar elétrons formando ligações metálicas.",
+      "Não reagir, pois é um gás nobre.",
+      "Perder prótons do núcleo."
+    ],
+    "correta": "Receber 1 elétron e se tornar um ânion ($F^-$).",
+    "explicacao_base": "O flúor é da família 17 (Halogênios), tendo 7 elétrons na camada de valência. Pela regra do octeto e alta eletronegatividade, ele ganha 1 elétron, virando um ânion monovalente ($F^-$)."
+  },
+  {
+    "grupo_id": 204,
+    "tema": "História - Industrialização (Era Mauá)",
+    "texto_referencia": "Na segunda metade do século XIX, Irineu Evangelista de Sousa, o Barão de Mauá, foi um pioneiro na tentativa de modernizar o Brasil, investindo em ferrovias, estaleiros e iluminação a gás.",
+    "image_id": "",
+    "id": 204,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "Muitas das iniciativas industriais de Mauá falharam ou enfrentaram dificuldades devido:",
+    "alternativas": [
+      "À falta de mão de obra escrava, única permitida na época.",
+      "Ao apoio excessivo que recebeu da Inglaterra, que doava dinheiro.",
+      "À mentalidade agrária e escravista da elite brasileira e à falta de apoio do governo imperial.",
+      "Ao fato de Mauá ser republicano e tentar derrubar D. Pedro II.",
+      "À inexistência de consumidores no Brasil."
+    ],
+    "correta": "À mentalidade agrária e escravista da elite brasileira e à falta de apoio do governo imperial.",
+    "explicacao_base": "A elite cafeeira e o governo imperial priorizavam a agricultura de exportação (café), vendo a indústria como secundária ou concorrente, além das taxas favoráveis a produtos ingleses."
+  },
+  {
+    "grupo_id": 205,
+    "tema": "Biologia - Citologia",
+    "texto_referencia": "O teste de paternidade por DNA compara o material genético da criança com o do suposto pai. Porém, existe um DNA especial que herdamos exclusivamente de nossas mães, pois ele está localizado em uma organela que os espermatozoides não passam para o zigoto.",
+    "image_id": "",
+    "id": 205,
+    "materia": "Biologia",
+    "dificuldade": "Difícil",
+    "enunciado": "Esse material genético de herança materna exclusiva é o:",
+    "alternativas": [
+      "DNA Nuclear.",
+      "DNA Ribossômico.",
+      "DNA Mitocondrial.",
+      "RNA Mensageiro.",
+      "DNA Bacteriano."
+    ],
+    "correta": "DNA Mitocondrial.",
+    "explicacao_base": "Na fecundação, apenas a cabeça do espermatozoide (núcleo) entra no óvulo. As mitocôndrias do embrião vêm todas do citoplasma do óvulo materno."
+  },
+  {
+    "grupo_id": 206,
+    "tema": "Matemática - Grandezas (Torneiras)",
+    "texto_referencia": "Duas torneiras são usadas para encher um tanque. A torneira A sozinha enche o tanque em 3 horas. A torneira B sozinha enche o tanque em 6 horas.",
+    "image_id": "",
+    "id": 206,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Se ambas forem abertas simultaneamente, quanto tempo levará para o tanque encher completamente?",
+    "alternativas": [
+      "2 horas.",
+      "4,5 horas.",
+      "9 horas.",
+      "1,5 horas.",
+      "5 horas."
+    ],
+    "correta": "2 horas.",
+    "explicacao_base": "Em 1 hora, A enche 1/3 do tanque e B enche 1/6. Juntas: $1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2$. Se em 1 hora enchem metade (1/2), levam 2 horas para o tanque cheio."
+  },
+  {
+    "grupo_id": 207,
+    "tema": "Física - Ondas (Espectro)",
+    "texto_referencia": "O controle remoto da TV funciona enviando um sinal de luz invisível aos olhos humanos para o receptor do aparelho.",
+    "image_id": "",
+    "id": 207,
+    "materia": "Física",
+    "dificuldade": "Média",
+    "enunciado": "Essa radiação eletromagnética, de frequência logo abaixo da luz vermelha visível, é denominada:",
+    "alternativas": [
+      "Raios X.",
+      "Ultravioleta (UV).",
+      "Infravermelho.",
+      "Micro-ondas.",
+      "Raios Gama."
+    ],
+    "correta": "Infravermelho.",
+    "explicacao_base": "O espectro abaixo da frequência vermelha (menor energia) é o infravermelho, usado em controles remotos e sensores térmicos."
+  },
+  {
+    "grupo_id": 208,
+    "tema": "Inglês Instrumental - Vocabulário",
+    "texto_referencia": "Ao tentar salvar um arquivo no computador, o usuário recebe a mensagem de erro em inglês: 'Storage Full. Please delete some files to free up space.'",
+    "image_id": "",
+    "id": 208,
+    "materia": "Inglês",
+    "dificuldade": "Fácil",
+    "enunciado": "A ação recomendada ao usuário para resolver o problema é:",
+    "alternativas": [
+      "Comprar um novo computador.",
+      "Reiniciar o sistema.",
+      "Apagar alguns arquivos para liberar espaço, pois o armazenamento está cheio.",
+      "Salvar os arquivos na nuvem automaticamente.",
+      "Aumentar o brilho da tela."
+    ],
+    "correta": "Apagar alguns arquivos para liberar espaço, pois o armazenamento está cheio.",
+    "explicacao_base": "'Storage Full' = Armazenamento Cheio. 'Delete' = Apagar. 'Free up space' = Liberar espaço."
+  },
+  {
+    "grupo_id": 209,
+    "tema": "Química - Tabela Periódica (Metais)",
+    "texto_referencia": "O alumínio é o metal mais reciclado no Brasil (latinhas). Apesar de ser abundante, sua produção a partir do minério (bauxita) consome uma quantidade gigantesca de eletricidade.",
+    "image_id": "",
+    "id": 209,
+    "materia": "Química / Meio Ambiente",
+    "dificuldade": "Média",
+    "enunciado": "A principal vantagem ambiental e econômica da reciclagem do alumínio é:",
+    "alternativas": [
+      "Evitar que o alumínio enferruje nos lixões.",
+      "Aumentar a toxicidade do solo.",
+      "Economizar cerca de 95% da energia que seria gasta para produzir alumínio novo, além de poupar a extração de bauxita.",
+      "Gerar mais plástico para embalagens.",
+      "Reduzir o consumo de vidro."
+    ],
+    "correta": "Economizar cerca de 95% da energia que seria gasta para produzir alumínio novo, além de poupar a extração de bauxita.",
+    "explicacao_base": "O processo de eletrólise para obter alumínio da bauxita é extremamente enérgico. Derreter uma latinha usada consome apenas 5% dessa energia."
+  },
+  {
+    "grupo_id": 210,
+    "tema": "Biologia / Física - Visão",
+    "texto_referencia": "Os gatos enxergam muito melhor no escuro do que os humanos. Isso se deve a uma camada refletora atrás da retina (tapetum lucidum) e a uma maior quantidade de células fotorreceptoras sensíveis à baixa luminosidade.",
+    "image_id": "",
+    "id": 210,
+    "materia": "Biologia",
+    "dificuldade": "Difícil",
+    "enunciado": "As células da retina responsáveis pela visão em preto e branco e pela percepção de luz fraca (visão noturna) são os:",
+    "alternativas": [
+      "Cones.",
+      "Bastonetes.",
+      "Neurônios motores.",
+      "Queratinócitos.",
+      "Cílios."
+    ],
+    "correta": "Bastonetes.",
+    "explicacao_base": "Cones detectam cores (precisam de muita luz). Bastonetes são muito sensíveis à luz, permitindo visão noturna e periférica (em tons de cinza)."
+  },
+  {
+    "grupo_id": 211,
+    "tema": "Ecologia e Relações Desarmônicas",
+    "texto_referencia": "A maré vermelha é um fenômeno natural provocado pelo desequilíbrio ecológico resultante da excessiva proliferação de algas unicelulares dinoflageladas (fitoplâncton) que liberam toxinas na água. O consumo de moluscos (ostras e mariscos) provenientes dessas áreas pode causar intoxicação alimentar grave em humanos.",
+    "image_id": "",
+    "id": 211,
+    "materia": "Biologia",
+    "dificuldade": "Média",
+    "enunciado": "A relação ecológica entre essas algas produtoras de toxinas e os peixes que morrem envenenados no mesmo habitat, onde uma espécie secreta substâncias que inibem ou matam outras, é denominada:",
+    "alternativas": [
+      "Comensalismo.",
+      "Protocooperação.",
+      "Amensalismo (Antibiose).",
+      "Predatismo.",
+      "Mutualismo Obrigatório."
+    ],
+    "correta": "Amensalismo (Antibiose).",
+    "explicacao_base": "Amensalismo ou Antibiose é a relação onde uma espécie prejudica a outra secretando substâncias tóxicas, muitas vezes sem obter benefício direto do prejuízo causado à outra (ex: maré vermelha, fungo penicillium e bactérias)."
+  },
+  {
+    "grupo_id": 212,
+    "tema": "Geometria Espacial - Volume",
+    "texto_referencia": "Em um canteiro de obras, a areia é armazenada em uma pilha cônica perfeita. Um engenheiro mediu a altura da pilha, encontrando 3 metros, e o diâmetro da base, encontrando 4 metros.",
+    "image_id": "",
+    "id": 212,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Considerando $\\pi = 3$, o volume de areia contido nessa pilha é de:",
+    "alternativas": [
+      "4 m³.",
+      "12 m³.",
+      "16 m³.",
+      "36 m³.",
+      "48 m³."
+    ],
+    "correta": "12 m³.",
+    "explicacao_base": "Raio da base = Diâmetro/2 = 2 m. Volume do cone = $( \\pi \\cdot r^2 \\cdot h ) / 3$. $V = (3 \\cdot 2^2 \\cdot 3) / 3 = 12 m^3$."
+  },
+  {
+    "grupo_id": 213,
+    "tema": "Química - Chuva Ácida e Poluição",
+    "texto_referencia": "A queima de combustíveis fósseis contendo impurezas de enxofre (S) lança dióxido de enxofre ($SO_2$) na atmosfera. Este gás reage com o oxigênio e a umidade do ar, formando ácido sulfúrico ($H_2SO_4$), que se precipita.",
+    "image_id": "",
+    "id": 213,
+    "materia": "Química / Geografia",
+    "dificuldade": "Média",
+    "enunciado": "Além de danificar florestas, a chuva ácida causa prejuízo histórico e cultural ao corroer estátuas e monumentos feitos de mármore e calcário, materiais compostos principalmente por:",
+    "alternativas": [
+      "Carbonato de Cálcio ($CaCO_3$).",
+      "Sílica ou Quartzo ($SiO_2$).",
+      "Óxido de Ferro ($Fe_2O_3$).",
+      "Cloreto de Sódio ($NaCl$).",
+      "Sulfato de Bário ($BaSO_4$)."
+    ],
+    "correta": "Carbonato de Cálcio ($CaCO_3$).",
+    "explicacao_base": "O Carbonato de Cálcio (calcário/mármore) reage com ácidos fortes (chuva ácida), transformando-se em sulfato de cálcio solúvel, desgastando o monumento."
+  },
+  {
+    "grupo_id": 214,
+    "tema": "História Geral - Guerra Fria",
+    "texto_referencia": "A Crise dos Mísseis em Cuba (1962) foi o momento em que a humanidade esteve mais perto de uma guerra nuclear. Aviões espiões americanos fotografaram a instalação de bases de lançamento de mísseis soviéticos na ilha caribenha.",
+    "image_id": "",
+    "id": 214,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "Esse evento tenso reflete a disputa bipolar característica da Guerra Fria entre duas superpotências com ideologias antagônicas, que eram:",
+    "alternativas": [
+      "Alemanha (Nazismo) e Inglaterra (Liberalismo).",
+      "Estados Unidos (Capitalismo) e União Soviética (Socialismo).",
+      "China (Comunismo) e Japão (Imperialismo).",
+      "Coreia do Norte (Comunismo) e Coreia do Sul (Capitalismo).",
+      "Israel (Sionismo) e Irã (Fundamentalismo)."
+    ],
+    "correta": "Estados Unidos (Capitalismo) e União Soviética (Socialismo).",
+    "explicacao_base": "A Guerra Fria foi o confronto geopolítico indireto entre os EUA e a URSS. Cuba, aliada socialista próxima aos EUA, recebeu mísseis soviéticos, gerando o conflito diplomático."
+  },
+  {
+    "grupo_id": 215,
+    "tema": "Física - Hidrostática",
+    "texto_referencia": "Para elevar um carro de 1.000 kg em uma oficina mecânica, utiliza-se um macaco hidráulico. Esse equipamento funciona com dois êmbolos de áreas diferentes interligados por um fluido incompressível (óleo).",
+    "image_id": "",
+    "id": 215,
+    "materia": "Física",
+    "dificuldade": "Difícil",
+    "enunciado": "O princípio físico que explica a multiplicação da força aplicada em sistemas hidráulicos, afirmando que 'a variação de pressão aplicada a um ponto de um fluido em equilíbrio transmite-se integralmente a todos os pontos do fluido', é o:",
+    "alternativas": [
+      "Princípio de Arquimedes.",
+      "Teorema de Stevin.",
+      "Princípio de Pascal.",
+      "Lei de Hooke.",
+      "Lei de Bernoulli."
+    ],
+    "correta": "Princípio de Pascal.",
+    "explicacao_base": "O Princípio de Pascal é a base de prensas e freios hidráulicos. $P_1 = P_2$, logo $F_1/A_1 = F_2/A_2$. Uma força pequena em área pequena gera uma força grande em área grande."
+  },
+  {
+    "grupo_id": 216,
+    "tema": "Gramática - Crase",
+    "texto_referencia": "Observe as frases: \nI. Vou ___ escola estudar.\nII. Ele voltou ___ pé.\nIII. Ela prefere bife ___ cavalo.\nIV. Entreguei o relatório ___ diretora.",
+    "image_id": "",
+    "id": 216,
+    "materia": "Português",
+    "dificuldade": "Difícil",
+    "enunciado": "Assinale a alternativa que preenche as lacunas correta e, respectivamente, quanto ao uso do acento grave indicador de crase.",
+    "alternativas": [
+      "à - à - à - a",
+      "a - a - a - à",
+      "à - a - a - à",
+      "a - à - à - a",
+      "à - a - à - à"
+    ],
+    "correta": "à - a - a - à",
+    "explicacao_base": "I. Quem vai, vai A algum lugar + A (artigo) escola = À. II. Pé é masculino (sem crase). III. Cavalo é masculino (sem crase). IV. Entregar A alguém + A (artigo) diretora = À."
+  },
+  {
+    "grupo_id": 217,
+    "tema": "Geografia - Clima e Agricultura",
+    "texto_referencia": "A 'Geada Negra' é um fenômeno meteorológico temido pelos agricultores do sul do Brasil. Diferente da geada branca (estética), ela ocorre quando ventos muito frios e secos congelam a seiva no interior das plantas, matando a lavoura e deixando as folhas escuras.",
+    "image_id": "",
+    "id": 217,
+    "materia": "Geografia",
+    "dificuldade": "Média",
+    "enunciado": "A massa de ar responsável por trazer essas frentes frias potentes, que provocam quedas bruscas de temperatura no inverno brasileiro, é a:",
+    "alternativas": [
+      "Massa Equatorial Continental (mEc).",
+      "Massa Tropical Atlântica (mTa).",
+      "Massa Tropical Continental (mTc).",
+      "Massa Polar Atlântica (mPa).",
+      "Massa Equatorial Atlântica (mEa)."
+    ],
+    "correta": "Massa Polar Atlântica (mPa).",
+    "explicacao_base": "A mPa (fria e úmida na origem) se forma na Patagônia/Antártida e sobe pelo continente, causando o inverno no Centro-Sul e friagens na Amazônia."
+  },
+  {
+    "grupo_id": 218,
+    "tema": "Bioquímica - Enzimas e Temperatura",
+    "texto_referencia": "O corpo humano funciona idealmente a cerca de 36,5°C. Se a temperatura sobe muito (febre alta, acima de 41°C), corre-se risco de morte.",
+    "image_id": "",
+    "id": 218,
+    "materia": "Biologia / Química",
+    "dificuldade": "Difícil",
+    "enunciado": "Biologicamente, o risco da hipertermia severa está ligado à desnaturação de proteínas essenciais que catalisam as reações químicas do metabolismo. Essas proteínas são chamadas de:",
+    "alternativas": [
+      "Glicogênio.",
+      "Fosfolipídios.",
+      "Enzimas.",
+      "Vitaminas hidrossolúveis.",
+      "Sais minerais."
+    ],
+    "correta": "Enzimas.",
+    "explicacao_base": "Enzimas são proteínas com formas tridimensionais específicas. Altas temperaturas quebram suas ligações (desnaturação), fazendo-as perder a função, paralisando o metabolismo vital."
+  },
+  {
+    "grupo_id": 219,
+    "tema": "Interpretação Matemática de Gráficos",
+    "texto_referencia": "O gráfico de velocidade (v) versus tempo (t) de um carro descreve um trapézio. No tempo $t=0$, $v=0$. O carro acelera até 10 s, mantendo $v=20 m/s$. Depois mantém velocidade constante até 30 s. E freia até parar em 40 s.",
+    "image_id": "",
+    "id": 219,
+    "materia": "Física / Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Sabendo que em um gráfico V x t a área sob a curva corresponde à distância percorrida ($\\\\Delta S$), qual foi a distância total percorrida pelo carro nesses 40 segundos?",
+    "alternativas": [
+      "400 metros.",
+      "500 metros.",
+      "600 metros.",
+      "800 metros.",
+      "1.000 metros."
+    ],
+    "correta": "600 metros.",
+    "explicacao_base": "Área do trapézio: $A = (B + b) \\cdot h / 2$. Base Maior (B) = 40. Base Menor (b) = 30-10 = 20. Altura (h) = 20. $A = (40+20) \\cdot 20 / 2 = 60 \\cdot 10 = 600$ metros."
+  },
+  {
+    "grupo_id": 220,
+    "tema": "Inglês Instrumental - Cognatos",
+    "texto_referencia": "No manual de um experimento, lê-se: 'Eventually, the solution will turn blue. Note: Actual results may vary'.",
+    "image_id": "",
+    "id": 220,
+    "materia": "Inglês",
+    "dificuldade": "Média",
+    "enunciado": "A palavra destacada 'Eventually' e 'Actual' são falsos cognatos (falsos amigos). No contexto, elas significam, correta e respectivamente:",
+    "alternativas": [
+      "Eventualmente e Atuais.",
+      "Finalmente/Por fim e Reais/Verdadeiros.",
+      "Ocasionalmente e Atuais.",
+      "De vez em quando e Modernos.",
+      "Provavelmente e Práticos."
+    ],
+    "correta": "Finalmente/Por fim e Reais/Verdadeiros.",
+    "explicacao_base": "*Eventually* = Ao final de um processo (finalmente), não 'eventualmente'. *Actual* = Real/De verdade, não 'atual' (que seria *current*)."
+  },
+  {
+    "grupo_id": 221,
+    "tema": "Química - Substâncias e Misturas",
+    "texto_referencia": "O ar atmosférico puro e filtrado é vital para a vida. Ele é composto, aproximadamente, por 78% de Nitrogênio ($N_2$), 21% de Oxigênio ($O_2$) e 1% de Argônio ($Ar$) e outros gases.",
+    "image_id": "",
+    "id": 221,
+    "materia": "Química",
+    "dificuldade": "Fácil",
+    "enunciado": "Considerando essa composição, o ar atmosférico deve ser classificado quimicamente como:",
+    "alternativas": [
+      "Uma substância pura composta.",
+      "Uma mistura heterogênea.",
+      "Uma mistura homogênea (Solução gasosa).",
+      "Um elemento químico gasoso.",
+      "Uma dispersão coloidal."
+    ],
+    "correta": "Uma mistura homogênea (Solução gasosa).",
+    "explicacao_base": "O ar (sem poeira) é visualmente uniforme (uma fase) e composto por várias substâncias moleculares diferentes misturadas átomo a átomo, portanto, uma mistura homogênea."
+  },
+  {
+    "grupo_id": 222,
+    "tema": "Biologia - Vacinação e Memória",
+    "texto_referencia": "Ao tomarmos a vacina tríplice viral (sarampo, caxumba e rubéola) na infância, nosso sistema imunológico produz 'células de memória'.",
+    "image_id": "",
+    "id": 222,
+    "materia": "Biologia",
+    "dificuldade": "Fácil",
+    "enunciado": "Caso entremos em contato com o vírus selvagem do sarampo anos depois, essas células agirão:",
+    "alternativas": [
+      "Produzindo antígenos lentamente para matar o vírus.",
+      "Reconhecendo o invasor rapidamente e produzindo grande quantidade de anticorpos específicos (resposta secundária) antes que a doença se instale.",
+      "Impedindo a entrada do vírus na pele mecanicamente.",
+      "Alterando o DNA humano para se tornar imune.",
+      "Consumindo os antibióticos que tomamos na época da vacina."
+    ],
+    "correta": "Reconhecendo o invasor rapidamente e produzindo grande quantidade de anticorpos específicos (resposta secundária) antes que a doença se instale.",
+    "explicacao_base": "A imunização gera memória imunológica. A reexposição ao antígeno (vírus real) dispara uma resposta imune secundária muito mais rápida e potente que a primária."
+  },
+  {
+    "grupo_id": 223,
+    "tema": "História do Brasil - Ouro",
+    "texto_referencia": "No século XVIII, a descoberta de ouro nas Minas Gerais deslocou o eixo econômico e político da colônia, que antes ficava no Nordeste (açúcar).",
+    "image_id": "",
+    "id": 223,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "Uma consequência administrativa direta desse deslocamento econômico, realizada pelo Marquês de Pombal em 1763, foi:",
+    "alternativas": [
+      "A transferência da capital de Salvador para o Rio de Janeiro, para fiscalizar melhor o escoamento do ouro.",
+      "A construção imediata de Brasília no centro do país.",
+      "A proibição total da escravidão nas minas.",
+      "A expulsão dos jesuítas apenas do estado de São Paulo.",
+      "A criação do Estado de Minas Gerais independente de Portugal."
+    ],
+    "correta": "A transferência da capital de Salvador para o Rio de Janeiro, para fiscalizar melhor o escoamento do ouro.",
+    "explicacao_base": "O Rio de Janeiro era o porto de saída do ouro das Minas. Mudar a capital para lá visava controlar o contrabando e a arrecadação do Quinto."
+  },
+  {
+    "grupo_id": 224,
+    "tema": "Física - Leis de Newton",
+    "texto_referencia": "Um jogador de futebol chuta uma bola. No instante do impacto, o pé aplica uma força na bola impulsionando-a para o gol.",
+    "image_id": "",
+    "id": 224,
+    "materia": "Física",
+    "dificuldade": "Fácil",
+    "enunciado": "Segundo a Terceira Lei de Newton (Ação e Reação), a reação a essa força aplicada pelo pé é:",
+    "alternativas": [
+      "A força da gravidade puxando a bola para baixo.",
+      "A força de resistência do ar freando a bola.",
+      "Uma força de mesma intensidade e direção, mas sentido contrário, aplicada pela bola no pé do jogador.",
+      "Uma força aplicada pelo pé no chão para ter apoio.",
+      "Não existe reação, pois a bola tem massa muito menor que o jogador."
+    ],
+    "correta": "Uma força de mesma intensidade e direção, mas sentido contrário, aplicada pela bola no pé do jogador.",
+    "explicacao_base": "Para toda força de ação, existe uma reação de mesmo valor e direção oposta aplicada no *outro* corpo da interação (Pé chuta Bola -> Bola chuta Pé)."
+  },
+  {
+    "grupo_id": 225,
+    "tema": "Matemática - Grandezas Proporcionais",
+    "texto_referencia": "Um mapa digital mostra que a rota entre duas cidades é de 480 km. Um carro econômico faz 15 km com 1 litro de gasolina. A gasolina custa R$ 5,50 o litro.",
+    "image_id": "",
+    "id": 225,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Considerando apenas o custo do combustível para a viagem de ida, quanto o motorista gastará?",
+    "alternativas": [
+      "R$ 150,00.",
+      "R$ 165,00.",
+      "R$ 176,00.",
+      "R$ 200,00.",
+      "R$ 320,00."
+    ],
+    "correta": "R$ 176,00.",
+    "explicacao_base": "Litros necessários: $480 / 15 = 32$ litros. Custo: $32 \\cdot 5,50 = 176,00$ reais."
+  },
+  {
+    "grupo_id": 226,
+    "tema": "Literatura - Modernismo",
+    "texto_referencia": "A Semana de Arte Moderna de 1922 foi um marco na cultura brasileira. Artistas como Tarsila do Amaral e Anita Malfatti chocaram a sociedade da época com obras que fugiam do realismo fotográfico e das regras acadêmicas europeias tradicionais.",
+    "image_id": "",
+    "id": 226,
+    "materia": "Artes / Literatura",
+    "dificuldade": "Média",
+    "enunciado": "No campo das artes visuais, uma característica central do modernismo brasileiro foi:",
+    "alternativas": [
+      "A busca pela reprodução exata e detalhista da anatomia humana.",
+      "A distorção das formas e o uso de cores vivas e arbitrárias, valorizando a identidade nacional e temas populares.",
+      "A pintura exclusiva de temas sacros e religiosos.",
+      "O uso exclusivo de preto e branco.",
+      "A rejeição total a qualquer temática que envolvesse o Brasil, preferindo paisagens francesas."
+    ],
+    "correta": "A distorção das formas e o uso de cores vivas e arbitrárias, valorizando a identidade nacional e temas populares.",
+    "explicacao_base": "O Modernismo (vide 'O Abaporu' de Tarsila) buscava cores tropicais, temas brasileiros e liberdade formal, distanciando-se do academicismo europeu."
+  },
+  {
+    "grupo_id": 227,
+    "tema": "Química - Termoquímica",
+    "texto_referencia": "A sensação de 'frio' ao aplicar éter ou acetona na pele e a queima de uma vela representam dois processos energéticos opostos.",
+    "image_id": "",
+    "id": 227,
+    "materia": "Química",
+    "dificuldade": "Difícil",
+    "enunciado": "A evaporação da acetona na pele (que absorve calor) e a combustão da vela (que libera calor) são classificadas termoquimicamente, respectivamente, como fenômenos:",
+    "alternativas": [
+      "Exotérmico e Endotérmico.",
+      "Endotérmico e Exotérmico.",
+      "Isotérmico e Adiabático.",
+      "Endotérmico e Endotérmico.",
+      "Exotérmico e Exotérmico."
+    ],
+    "correta": "Endotérmico e Exotérmico.",
+    "explicacao_base": "Absorver calor = Endotérmico (Delta H positivo). Liberar calor/chama = Exotérmico (Delta H negativo)."
+  },
+  {
+    "grupo_id": 228,
+    "tema": "Matemática - Potenciação",
+    "texto_referencia": "Bactérias se reproduzem por divisão binária. Suponha que uma colônia começa com 1 bactéria e dobra de quantidade a cada 20 minutos. ($2^0 \\rightarrow 2^1 \\rightarrow 2^2 \\dots$)",
+    "image_id": "",
+    "id": 228,
+    "materia": "Matemática / Biologia",
+    "dificuldade": "Difícil",
+    "enunciado": "Após 2 horas (120 minutos), quantas bactérias haverá na colônia?",
+    "alternativas": [
+      "12 bactérias.",
+      "32 bactérias.",
+      "64 bactérias.",
+      "128 bactérias.",
+      "256 bactérias."
+    ],
+    "correta": "64 bactérias.",
+    "explicacao_base": "Tempo total = 120 min. Ciclo de duplicação = 20 min. Número de ciclos $n = 120 / 20 = 6$. População = $1 \\cdot 2^6$. $2^6 = 64$."
+  },
+  {
+    "grupo_id": 229,
+    "tema": "Sociologia - Desigualdade",
+    "texto_referencia": "O Coeficiente de Gini é um indicador estatístico usado mundialmente, variando de 0 a 1 (ou 0 a 100), para medir um aspecto específico da sociedade.",
+    "image_id": "",
+    "id": 229,
+    "materia": "Geografia / Sociologia",
+    "dificuldade": "Média",
+    "enunciado": "Quanto mais próximo de 1 for o Índice de Gini de um país, maior é o grau de:",
+    "alternativas": [
+      "Desenvolvimento Humano (IDH).",
+      "Alfabetização da população adulta.",
+      "Concentração de renda (desigualdade social).",
+      "Industrialização tecnológica.",
+      "Preservação ambiental."
+    ],
+    "correta": "Concentração de renda (desigualdade social).",
+    "explicacao_base": "Gini 0 = Igualdade perfeita (todos ganham o mesmo). Gini 1 = Desigualdade máxima (um tem tudo). O Brasil tem historicamente um Gini alto."
+  },
+  {
+    "grupo_id": 230,
+    "tema": "Física - Óptica (Espelhos)",
+    "texto_referencia": "Espelhos esféricos são usados para vigilância em ônibus e lojas, pois permitem um campo de visão ampliado, embora as imagens fiquem menores do que o objeto real.",
+    "image_id": "",
+    "id": 230,
+    "materia": "Física",
+    "dificuldade": "Difícil",
+    "enunciado": "Esse tipo de espelho, cuja face refletora é a externa da calota esférica e que sempre fornece imagens virtuais, direitas e menores, é o:",
+    "alternativas": [
+      "Plano.",
+      "Côncavo.",
+      "Convexo.",
+      "Lente Convergente.",
+      "Prisma Óptico."
+    ],
+    "correta": "Convexo.",
+    "explicacao_base": "Espelhos convexos 'espalham' os raios, aumentando o campo visual e gerando imagens reduzidas e direitas (virtuais), típicos de retrovisores e cantos de lojas."
+  },
+  {
+    "grupo_id": 231,
+    "tema": "Matemática - Probabilidade e Análise de Gráfico",
+    "texto_referencia": "Para fins de análise estatística, um pesquisador decide sortear aleatoriamente um dos anos compreendidos no período histórico apresentado no gráfico (2008 a 2022).",
+    "image_id": "amazonia-densidade.png",
+    "id": 231,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Considerando o conjunto de dados disponíveis, qual é a probabilidade de o ano sorteado apresentar uma área desmatada inferior a 2.000 km²?",
+    "alternativas": [
+      "20,0% (1/5).",
+      "26,6% (4/15).",
+      "33,3% (1/3).",
+      "40,0% (2/5).",
+      "50,0% (1/2)."
+    ],
+    "correta": "33,3% (1/3).",
+    "explicacao_base": "O período tem 15 anos no total. Os anos com valores abaixo de 2.000 km² são: 2009 (1602), 2010 (1905), 2011 (1257), 2012 (1145) e 2013 (1008). São 5 casos favoráveis. Probabilidade: P = 5/15 = 1/3, que equivale a aproximadamente 33,3%."
+  },
+  {
+    "grupo_id": 232,
+    "tema": "Matemática - Notação Científica e Unidades",
+    "texto_referencia": "A área desmatada no ano de 2022 atingiu um recorde no período recente mostrado no gráfico, totalizando 9.069 km².",
+    "image_id": "amazonia-densidade.png",
+    "id": 232,
+    "materia": "Matemática / Física",
+    "dificuldade": "Média",
+    "enunciado": "Convertendo esse valor para o Sistema Internacional de Unidades (metros quadrados), a área desmatada em 2022 corresponde, em notação científica, a:",
+    "alternativas": [
+      "9,069 x 10⁶ m².",
+      "9,069 x 10⁹ m².",
+      "9,069 x 10¹² m².",
+      "90,69 x 10⁶ m².",
+      "9,069 x 10³ m²."
+    ],
+    "correta": "9,069 x 10⁹ m².",
+    "explicacao_base": "Sabe-se que 1 km = 10³ m. Portanto, 1 km² = (10³ m)² = 10⁶ m². Assim, 9.069 km² = 9.069 x 10⁶ m². Ajustando para notação científica (deslocando a vírgula 3 casas para a esquerda): 9,069 x 10³ x 10⁶ = 9,069 x 10⁹ m²."
+  },
+  {
+    "grupo_id": 233,
+    "tema": "Ecologia e Sucessão Ecológica",
+    "texto_referencia": "As grandes áreas desmatadas mostradas no gráfico muitas vezes são abandonadas após o uso para pastagem, iniciando um processo lento de recuperação natural da floresta.",
+    "image_id": "amazonia-densidade.png",
+    "id": 233,
+    "materia": "Biologia",
+    "dificuldade": "Fácil",
+    "enunciado": "O processo de colonização progressiva de um ambiente desmatado por comunidades biológicas (espécies pioneiras, depois arbustos, até chegar ao clímax) é denominado biologicamente de:",
+    "alternativas": [
+      "Especiação Alopátrica.",
+      "Sucessão Ecológica Secundária.",
+      "Seleção Artificial.",
+      "Eutrofização Terrestre.",
+      "Magnificação Trófica."
+    ],
+    "correta": "Sucessão Ecológica Secundária.",
+    "explicacao_base": "Sucessão Ecológica Secundária é a que ocorre em áreas onde a vegetação original foi destruída (pelo desmatamento ou fogo), mas o solo ainda conserva nutrientes e sementes, permitindo a recolonização."
+  },
+  {
+    "grupo_id": 234,
+    "tema": "Matemática - Razão e Proporção",
+    "texto_referencia": "Comparando os dados extremos do gráfico, nota-se uma grande variação na área devastada entre o ano de menor desmatamento (2013) e o ano de maior desmatamento (2022).",
+    "image_id": "amazonia-densidade.png",
+    "id": 234,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Pode-se afirmar corretamente que a área desmatada em 2022 é, aproximadamente:",
+    "alternativas": [
+      "3 vezes maior que a área de 2013.",
+      "5 vezes maior que a área de 2013.",
+      "9 vezes maior que a área de 2013.",
+      "12 vezes maior que a área de 2013.",
+      "50% maior que a área de 2013."
+    ],
+    "correta": "9 vezes maior que a área de 2013.",
+    "explicacao_base": "Valor em 2013: 1.008 km². Valor em 2022: 9.069 km². Razão = 9.069 / 1.008 ≈ 8,997. Ou seja, aproximadamente 9 vezes maior."
+  },
+  {
+    "grupo_id": 235,
+    "tema": "Geografia - Clima e Rios Voadores",
+    "texto_referencia": "Os dados de 2020 a 2022 mostram níveis altíssimos de remoção da cobertura florestal. A Floresta Amazônica tem função vital no transporte de umidade do oceano Atlântico para o centro-sul da América do Sul.",
+    "image_id": "amazonia-densidade.png",
+    "id": 235,
+    "materia": "Geografia",
+    "dificuldade": "Média",
+    "enunciado": "A redução drástica da floresta compromete esse mecanismo climático conhecido como 'Rios Voadores' principalmente porque:",
+    "alternativas": [
+      "Diminui a quantidade de oxigênio disponível para a formação de nuvens.",
+      "Aumenta a reflexão da luz solar (albedo), resfriando demais o continente.",
+      "Interrompe o processo de evapotranspiração, reduzindo o volume de vapor d'água lançado na atmosfera pelas árvores.",
+      "Bloqueia fisicamente a passagem dos ventos alísios com a fumaça das queimadas.",
+      "Impede que a chuva ácida chegue às plantações de soja."
+    ],
+    "correta": "Interrompe o processo de evapotranspiração, reduzindo o volume de vapor d'água lançado na atmosfera pelas árvores.",
+    "explicacao_base": "As árvores 'bombam' água do solo para o ar via evapotranspiração. Sem floresta, esse fluxo de umidade cessa, afetando o regime de chuvas em regiões como o Sudeste e Centro-Oeste."
+  },
+  {
+    "grupo_id": 236,
+    "tema": "Química - Ciclo do Carbono",
+    "texto_referencia": "A área desmatada mostrada no gráfico é frequentemente queimada para 'limpar' o terreno para a pecuária. Suponha que, em média, a queima de 1 hectare de floresta amazônica libere 100 toneladas de gás carbônico ($CO_2$). (Considere 1 km² = 100 hectares).",
+    "image_id": "amazonia-densidade.png",
+    "id": 236,
+    "materia": "Química / Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Com base nessa estimativa hipotética, a massa total de $CO_2$ lançada na atmosfera apenas devido ao desmatamento registrado no ano de 2021 (8.939 km²) seria da ordem de:",
+    "alternativas": [
+      "8,9 milhões de toneladas.",
+      "89,3 milhões de toneladas.",
+      "893,9 milhões de toneladas.",
+      "8,9 bilhões de toneladas.",
+      "893 mil toneladas."
+    ],
+    "correta": "89,3 milhões de toneladas.",
+    "explicacao_base": "Área 2021 = 8.939 km². Em hectares: 8.939 x 100 = 893.900 ha. Emissões = 893.900 ha x 100 t/ha = 89.390.000 toneladas de CO₂ (aprox. 89,3 ou 89,4 milhões)."
+  },
+  {
+    "grupo_id": 237,
+    "tema": "Física - Análise Dimensional e Área",
+    "texto_referencia": "A dimensão do desmatamento pode ser comparada a medidas conhecidas. Um campo de futebol oficial padrão FIFA tem aproximadamente 10.000 m² (1 hectare) de área, ou seja, $0,01$ km².",
+    "image_id": "amazonia-densidade.png",
+    "id": 237,
+    "materia": "Física / Matemática",
+    "dificuldade": "Média",
+    "enunciado": "No ano de menor desmatamento do período, 2013 (1.008 km²), a área perdida equivaleria a, aproximadamente, quantos campos de futebol?",
+    "alternativas": [
+      "1.008 campos.",
+      "10.080 campos.",
+      "100.800 campos.",
+      "1.008.000 campos.",
+      "10.080.000 campos."
+    ],
+    "correta": "100.800 campos.",
+    "explicacao_base": "1 km² = 100 campos (pois 1 / 0,01 = 100). Logo, 1.008 km² = 1.008 x 100 = 100.800 campos de futebol."
+  },
+  {
+    "grupo_id": 238,
+    "tema": "Biologia - Impacto Ambiental",
+    "texto_referencia": "O padrão gráfico de aumento acelerado do desmatamento (como visto de 2018 a 2022) resulta na fragmentação de habitats, onde grandes manchas contínuas de floresta são quebradas em pequenas 'ilhas' isoladas.",
+    "image_id": "amazonia-densidade.png",
+    "id": 238,
+    "materia": "Biologia",
+    "dificuldade": "Difícil",
+    "enunciado": "Uma consequência direta e imediata para as populações de animais silvestres presas nesses fragmentos menores de floresta é:",
+    "alternativas": [
+      "O aumento da variabilidade genética devido ao isolamento.",
+      "A diminuição do 'Efeito de Borda', protegendo o miolo da mata.",
+      "A perda de biodiversidade e o risco de extinção devido à endogamia (cruzamento entre parentes) e à falta de recursos.",
+      "O surgimento de novas espécies em poucos meses.",
+      "A migração imediata de todos os animais para as cidades."
+    ],
+    "correta": "A perda de biodiversidade e o risco de extinção devido à endogamia (cruzamento entre parentes) e à falta de recursos.",
+    "explicacao_base": "A fragmentação isola populações, reduzindo o fluxo gênico e aumentando a endogamia, o que fragiliza a saúde da população e leva à perda de espécies locais."
+  },
+  {
+    "grupo_id": 239,
+    "tema": "Geografia - Fronteira Agrícola",
+    "texto_referencia": "O gráfico demonstra dois momentos de alta no desmatamento: um pico inicial (antes de 2008, refletido ainda em 2008) e uma escalada recente a partir de 2019. Historicamente, essa dinâmica na Amazônia Legal está intimamente ligada ao avanço geoeconômico conhecido como:",
+    "image_id": "amazonia-densidade.png",
+    "id": 239,
+    "materia": "Geografia / História",
+    "dificuldade": "Fácil",
+    "enunciado": "A expansão das atividades produtivas sobre a floresta, impulsionada pela pecuária e pelo cultivo de soja, ocorre predominantemente numa região geográfica denominada:",
+    "alternativas": [
+      "Zona da Mata Nordestina.",
+      "Arco do Desmatamento (ou do Povoamento).",
+      "Polígono das Secas.",
+      "Quadrilátero Ferrífero.",
+      "Vale do Paraíba."
+    ],
+    "correta": "Arco do Desmatamento (ou do Povoamento).",
+    "explicacao_base": "O Arco do Desmatamento é a faixa que contorna o sul e o leste da Amazônia (MT, PA, RO), onde a fronteira agrícola avança sobre a floresta nativa."
+  },
+  {
+    "grupo_id": 240,
+    "tema": "Matemática - Medidas de Tendência Central",
+    "texto_referencia": "Um estatístico analisa os dados dos cinco anos centrais do gráfico (2014, 2015, 2016, 2017 e 2018) para entender o comportamento intermediário da série.",
+    "image_id": "amazonia-densidade.png",
+    "id": 240,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Para esse subconjunto de dados (2.461, 2.594, 3.402, 2.106, 4.358), o valor da Mediana do desmatamento, em km², é:",
+    "alternativas": [
+      "2.461.",
+      "2.594.",
+      "2.984.",
+      "3.402.",
+      "4.358."
+    ],
+    "correta": "2.594.",
+    "explicacao_base": "Para encontrar a mediana, deve-se ordenar os valores em ordem crescente: 2.106, 2.461, 2.594, 3.402, 4.358. O valor central (terceiro elemento) é 2.594."
+  },
+  {
+    "grupo_id": 241,
+    "tema": "Interpretação Textual e Humor",
+    "texto_referencia": "A tirinha constrói sua narrativa baseada em uma reflexão existencial do personagem, que se atira ao mar em busca do navio 'Vida'.",
+    "image_id": "charge_nicolau.png",
+    "id": 241,
+    "materia": "Português",
+    "dificuldade": "Média",
+    "enunciado": "O efeito de humor e ironia da tirinha é produzido, principalmente, pela quebra de expectativa no último quadrinho, pois revela que:",
+    "alternativas": [
+      "O personagem não sabia nadar e se arrependeu de ter pulado na água.",
+      "O navio da vida havia naufragado antes, deixando todos os passageiros no fundo do mar.",
+      "A sensação de exclusividade e heroísmo do personagem ('pessoa especial') é contradita pela realidade de que uma multidão já havia tentado o mesmo e fracassado.",
+      "O mar estava poluído com lixo, o que impediu o personagem de alcançar seus objetivos.",
+      "A 'Vida' é um navio fantasma que nunca existiu de verdade."
+    ],
+    "correta": "A sensação de exclusividade e heroísmo do personagem ('pessoa especial') é contradita pela realidade de que uma multidão já havia tentado o mesmo e fracassado.",
+    "explicacao_base": "A ironia reside no contraste entre o discurso interno do personagem (que se acha único/especial por 'tentar') e a imagem final mostrando que ele é apenas mais um no meio de muitos outros na mesma situação."
+  },
+  {
+    "grupo_id": 242,
+    "tema": "Física - Hidrostática (Empuxo e Densidade)",
+    "texto_referencia": "Nos quadrinhos 2 e 3, o personagem salta na água e afunda rapidamente até o fundo, onde permanece junto aos outros.",
+    "image_id": "charge_nicolau.png",
+    "id": 242,
+    "materia": "Física",
+    "dificuldade": "Fácil",
+    "enunciado": "Do ponto de vista da Física, para que o personagem afunde e permaneça no fundo do oceano, a relação correta entre a densidade média do seu corpo ($d_{corpo}$) e a densidade da água ($d_{agua}$) deve ser:",
+    "alternativas": [
+      "$d_{corpo} < d_{agua}$ (O corpo é menos denso que a água).",
+      "$d_{corpo} = d_{agua}$ (O corpo tem a mesma densidade da água).",
+      "$d_{corpo} > d_{agua}$ (O corpo é mais denso que a água).",
+      "O peso do personagem é nulo dentro da água.",
+      "O empuxo é maior que o peso do personagem."
+    ],
+    "correta": "$d_{corpo} > d_{agua}$ (O corpo é mais denso que a água).",
+    "explicacao_base": "Segundo o Princípio de Arquimedes, um corpo só afunda se sua densidade média for maior que a do fluido em que está imerso, fazendo com que o Peso seja maior que o Empuxo."
+  },
+  {
+    "grupo_id": 243,
+    "tema": "Figuras de Linguagem",
+    "texto_referencia": "No primeiro balão, lê-se: 'A vida segue viagem num vasto oceano de possibilidades!'.",
+    "image_id": "charge_nicolau.png",
+    "id": 243,
+    "materia": "Português",
+    "dificuldade": "Fácil",
+    "enunciado": "A frase emprega um recurso estilístico que estabelece uma comparação implícita entre 'a vida' e uma 'viagem de navio', sem o uso de conectivos comparativos. Essa figura de linguagem é a:",
+    "alternativas": [
+      "Metonímia.",
+      "Catacrese.",
+      "Prosopopeia.",
+      "Metáfora.",
+      "Antítese."
+    ],
+    "correta": "Metáfora.",
+    "explicacao_base": "A metáfora é a comparação abreviada ou mental, afirmando que a vida *é* uma viagem num oceano, transferindo as características de um termo para o outro."
+  },
+  {
+    "grupo_id": 244,
+    "tema": "Sociologia - Ideologia e Meritocracia",
+    "texto_referencia": "O texto dos quadrinhos reflete um discurso motivacional muito comum nas redes sociais contemporâneas, valorizando o esforço individual ('o simples fato de tentar').",
+    "image_id": "charge_nicolau.png",
+    "id": 244,
+    "materia": "Sociologia",
+    "dificuldade": "Difícil",
+    "enunciado": "A crítica social presente no desfecho da tirinha questiona a ideia de que:",
+    "alternativas": [
+      "A colaboração coletiva é a única forma de progresso.",
+      "O sucesso é garantido apenas pelo esforço individual e pela atitude de 'tentar', ignorando que as estruturas sociais muitas vezes levam ao mesmo destino de estagnação.",
+      "A vida no campo é melhor que a vida urbana moderna.",
+      "As viagens marítimas são perigosas e devem ser evitadas.",
+      "Todas as pessoas são biologicamente idênticas."
+    ],
+    "correta": "O sucesso é garantido apenas pelo esforço individual e pela atitude de 'tentar', ignorando que as estruturas sociais muitas vezes levam ao mesmo destino de estagnação.",
+    "explicacao_base": "A tirinha satiriza o discurso do excepcionalismo individual/meritocracia. O personagem acha que seu esforço o torna especial, mas o sistema (ou a realidade) o coloca na mesma pilha de fracasso que todos os outros."
+  },
+  {
+    "grupo_id": 245,
+    "tema": "Física - Ondulatória (Som)",
+    "texto_referencia": "Na tirinha, vemos a representação de dois sons distintos: o apito do navio no ar ('FUÓNN') e as bolhas na água ('BLUB'). O som é uma onda mecânica que se propaga nos dois meios.",
+    "image_id": "charge_nicolau.png",
+    "id": 245,
+    "materia": "Física",
+    "dificuldade": "Média",
+    "enunciado": "Comparando a propagação das ondas sonoras no ar e na água do mar, é correto afirmar que:",
+    "alternativas": [
+      "A velocidade do som é maior no ar do que na água, pois o ar é menos denso.",
+      "A velocidade do som é maior na água do que no ar, pois as moléculas no líquido estão mais próximas, facilitando a transmissão da energia mecânica.",
+      "O som não se propaga na água, por isso o fundo do mar é chamado de 'mundo do silêncio'.",
+      "A frequência do som muda ao passar do ar para a água, mas sua velocidade permanece constante.",
+      "No vácuo entre a superfície e o fundo, o som seria o mais rápido de todos."
+    ],
+    "correta": "A velocidade do som é maior na água do que no ar, pois as moléculas no líquido estão mais próximas, facilitando a transmissão da energia mecânica.",
+    "explicacao_base": "Em geral, $V_{som(sólido)} > V_{som(líquido)} > V_{som(gasoso)}$. Na água ($~1480$ m/s), o som viaja cerca de 4 a 5 vezes mais rápido que no ar ($~340$ m/s) devido à maior proximidade das partículas."
+  },
+  {
+    "grupo_id": 246,
+    "tema": "Física - Cinemática (Velocidade Relativa)",
+    "texto_referencia": "No primeiro quadrinho, o barco 'VIDA' se afasta da margem enquanto o personagem observa.",
+    "image_id": "charge_nicolau.png",
+    "id": 246,
+    "materia": "Física",
+    "dificuldade": "Média",
+    "enunciado": "Para que o personagem conseguisse alcançar o barco a nado (antes de afundar), uma condição física necessária relacionada à velocidade vetorial seria:",
+    "alternativas": [
+      "Que a velocidade do personagem fosse menor que a do barco.",
+      "Que a velocidade do personagem fosse igual à do barco.",
+      "Que o módulo da velocidade do personagem fosse maior que o do barco e na mesma direção/sentido.",
+      "Que o barco parasse de emitir som.",
+      "Que a aceleração da gravidade fosse nula.",
+      "Obs: Para 'alcançar', $V_{perseguidor} > V_{fugitivo}$."
+    ],
+    "correta": "Que o módulo da velocidade do personagem fosse maior que o do barco e na mesma direção/sentido.",
+    "explicacao_base": "Em uma perseguição retilínea, o objeto que vem atrás só alcança o da frente se sua velocidade escalar for superior à do objeto perseguido, reduzindo a distância relativa entre eles."
+  },
+  {
+    "grupo_id": 247,
+    "tema": "Biologia - Respiração",
+    "texto_referencia": "No último quadrinho, sob a água, vê-se a onomatopeia 'BLUB BLUB' saindo do personagem, indicando a liberação de ar. O ser humano não possui adaptações biológicas para respirar debaixo d'água indefinidamente.",
+    "image_id": "charge_nicolau.png",
+    "id": 247,
+    "materia": "Biologia",
+    "dificuldade": "Fácil",
+    "enunciado": "A sobrevivência prolongada submersa é impossível para humanos porque nossos pulmões não conseguem extrair o oxigênio dissolvido na água. O órgão que permite aos peixes realizar essa troca gasosa nesse ambiente é:",
+    "alternativas": [
+      "A Bexiga Natatória.",
+      "O Opérculo traqueal.",
+      "A Brânquia (Guelra).",
+      "A Pele (respiração cutânea).",
+      "O Pulmão foliáceo."
+    ],
+    "correta": "A Brânquia (Guelra).",
+    "explicacao_base": "Peixes possuem brânquias, órgãos vascularizados especializados em retirar o oxigênio dissolvido na água e liberar gás carbônico."
+  },
+  {
+    "grupo_id": 248,
+    "tema": "Química - Água do Mar",
+    "texto_referencia": "O ambiente onde a cena ocorre é descrito como um 'vasto oceano'. A água do mar é uma mistura complexa, diferindo da água potável de rios.",
+    "image_id": "charge_nicolau.png",
+    "id": 248,
+    "materia": "Química",
+    "dificuldade": "Fácil",
+    "enunciado": "A principal característica química que distingue a água do mar é a alta concentração de sais dissolvidos, sendo o soluto predominante o:",
+    "alternativas": [
+      "Cloreto de Sódio ($NaCl$).",
+      "Sacarose ($C_{12}H_{22}O_{11}$).",
+      "Carbonato de Cálcio ($CaCO_3$).",
+      "Gás Cloro ($Cl_2$).",
+      "Hidróxido de Alumínio ($Al(OH)_3$)."
+    ],
+    "correta": "Cloreto de Sódio ($NaCl$).",
+    "explicacao_base": "Embora contenha vários sais, o cloreto de sódio (sal de cozinha) representa a maior parte da salinidade dos oceanos."
+  },
+  {
+    "grupo_id": 249,
+    "tema": "História da Arte - Vanguardas",
+    "texto_referencia": "A estética do desenho, com traços simples, caricatos e a representação de uma multidão homogenizada no último quadro, pode ser associada a movimentos artísticos que criticam a sociedade de massa.",
+    "image_id": "charge_nicolau.png",
+    "id": 249,
+    "materia": "Artes",
+    "dificuldade": "Média",
+    "enunciado": "A representação visual da multidão no fundo do mar, onde todos os indivíduos perderam seus traços distintos e se tornaram um amontoado de formas, remete ao conceito de:",
+    "alternativas": [
+      "Classicismo e perfeição anatômica.",
+      "Romantismo e idealização do herói.",
+      "Despersonalização e massificação, típicos da crítica à sociedade de consumo moderna.",
+      "Impressionismo e estudo da luz solar.",
+      "Barroco e excesso de ornamentos religiosos."
+    ],
+    "correta": "Despersonalização e massificação, típicos da crítica à sociedade de consumo moderna.",
+    "explicacao_base": "O desenho enfatiza que, apesar de cada um se achar especial, no final são todos 'produtos' iguais empilhados, uma crítica comum na arte contemporânea e pop art à perda da identidade."
+  },
+  {
+    "grupo_id": 250,
+    "tema": "Matemática - Geometria (Estimativa)",
+    "texto_referencia": "Imagine que o aglomerado de pessoas no fundo do mar no último quadrinho ocupe um espaço físico semelhante a uma caixa retangular.",
+    "image_id": "charge_nicolau.png",
+    "id": 250,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Se esse aglomerado tem 10 metros de comprimento, 5 metros de largura e 2 metros de altura, e cada 'pessoa' ocupa em média um volume de 0,1 $m^3$ (já descontando espaços vazios), quantas pessoas estão acumuladas ali?",
+    "alternativas": [
+      "100 pessoas.",
+      "500 pessoas.",
+      "1.000 pessoas.",
+      "2.000 pessoas.",
+      "10.000 pessoas."
+    ],
+    "correta": "1.000 pessoas.",
+    "explicacao_base": "Volume total da 'caixa': $V = 10 \\times 5 \\times 2 = 100 \\, m^3$. Volume individual = $0,1 \\, m^3$. Quantidade de pessoas = $100 / 0,1 = 1.000$ pessoas."
+  },
+  {
+    "grupo_id": 251,
+    "tema": "Biologia - Processos Energéticos",
+    "texto_referencia": "Na produção artesanal de pão, utiliza-se o fermento biológico, que é composto por fungos unicelulares da espécie *Saccharomyces cerevisiae*. A massa deve 'descansar' antes de ir ao forno para crescer, um processo que depende da ação desses microrganismos sobre o açúcar presente na farinha.",
+    "image_id": "",
+    "id": 251,
+    "materia": "Biologia / Química",
+    "dificuldade": "Fácil",
+    "enunciado": "O aumento de volume da massa do pão (crescimento) é provocado pelo acúmulo de gás resultante de um processo metabólico anaeróbico realizado pelas leveduras. Esse processo e o gás liberado são, respectivamente:",
+    "alternativas": [
+      "Respiração celular e Oxigênio ($O_2$).",
+      "Fermentação láctica e Gás Metano ($CH_4$).",
+      "Fotossíntese e Gás Carbônico ($CO_2$).",
+      "Fermentação alcoólica e Gás Carbônico ($CO_2$).",
+      "Decomposição aeróbica e Nitrogênio ($N_2$).",
+      "Sublimação e Vapor d'água."
+    ],
+    "correta": "Fermentação alcoólica e Gás Carbônico ($CO_2$).",
+    "explicacao_base": "As leveduras realizam fermentação alcoólica, convertendo glicose em álcool etílico (que evapora no forno) e dióxido de carbono ($CO_2$), cujas bolhas ficam presas na rede de glúten, expandindo a massa."
+  },
+  {
+    "grupo_id": 252,
+    "tema": "Matemática Financeira - Descontos Sucessivos",
+    "texto_referencia": "Uma loja de eletrodomésticos anuncia uma liquidação. Um refrigerador que custava R$ 3.000,00 sofreu um primeiro desconto de 10% devido a uma troca de coleção. Na Black Friday, o preço reduzido sofreu um novo desconto de 20% para pagamento à vista.",
+    "image_id": "",
+    "id": 252,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "O preço final do produto para o consumidor que comprou à vista na Black Friday foi de:",
+    "alternativas": [
+      "R$ 2.100,00.",
+      "R$ 2.160,00.",
+      "R$ 2.200,00.",
+      "R$ 2.400,00.",
+      "R$ 2.700,00."
+    ],
+    "correta": "R$ 2.160,00.",
+    "explicacao_base": "Descontos sucessivos não se somam. Preço 1: $3.000 - 10\\% = 2.700$. Preço 2: $2.700 - 20\\%$. $20\\%$ de $2.700 = 540$. Final: $2.700 - 540 = 2.160$. (Ou $3.000 \\times 0,9 \\times 0,8 = 2.160$)."
+  },
+  {
+    "grupo_id": 253,
+    "tema": "Física - Acústica e Música",
+    "texto_referencia": "Em um concerto de rock, o público percebe a diferença entre o som da guitarra e o som do baixo, mesmo que ambos toquem a mesma nota musical. Além disso, o volume do som perto das caixas acústicas é muito mais intenso do que no fundo da plateia.",
+    "image_id": "",
+    "id": 253,
+    "materia": "Física",
+    "dificuldade": "Média",
+    "enunciado": "As qualidades fisiológicas do som que permitem distinguir a 'fonte' (guitarra x baixo) e a 'intensidade' (volume forte x fraco) são, respectivamente:",
+    "alternativas": [
+      "Timbre e Amplitude.",
+      "Altura e Frequência.",
+      "Frequência e Timbre.",
+      "Amplitude e Velocidade.",
+      "Timbre e Altura."
+    ],
+    "correta": "Timbre e Amplitude.",
+    "explicacao_base": "Timbre é a 'identidade' do som (formato da onda) que permite distinguir instrumentos. Intensidade (volume) está ligada à energia/amplitude da onda. Altura refere-se a grave/agudo (frequência)."
+  },
+  {
+    "grupo_id": 254,
+    "tema": "Geografia - Relevo Brasileiro",
+    "texto_referencia": "O relevo brasileiro é geologicamente antigo, desgastado por eras de erosão. Diferente da Cordilheira dos Andes, não possuímos dobramentos modernos resultantes de choques recentes de placas tectônicas.",
+    "image_id": "",
+    "id": 254,
+    "materia": "Geografia",
+    "dificuldade": "Fácil",
+    "enunciado": "As formas de relevo predominantes no Brasil, segundo a classificação de Jurandyr Ross, são:",
+    "alternativas": [
+      "Montanhas rochosas e fiordes.",
+      "Planaltos, Depressões e Planícies.",
+      "Vulcanismos ativos e fossas abissais.",
+      "Geleiras e desertos de areia.",
+      "Dunas e recifes de coral apenas."
+    ],
+    "correta": "Planaltos, Depressões e Planícies.",
+    "explicacao_base": "A classificação mais aceita (Ross) divide o relevo brasileiro nessas três macroilunidades, com predomínio de planaltos e depressões, e planícies restritas (litorais e amazônica)."
+  },
+  {
+    "grupo_id": 255,
+    "tema": "Química - Modelos Atômicos e Fogos de Artifício",
+    "texto_referencia": "Nos fogos de artifício, sais de metais diferentes produzem cores diferentes quando queimados: sódio produz amarelo, estrôncio produz vermelho e cobre produz azul.",
+    "image_id": "",
+    "id": 255,
+    "materia": "Química",
+    "dificuldade": "Média",
+    "enunciado": "O modelo atômico que explica a emissão de luz colorida através do salto de elétrons entre níveis de energia quantizados (camadas) é o proposto por:",
+    "alternativas": [
+      "John Dalton (Bola de Bilhar).",
+      "J.J. Thomson (Pudim de Passas).",
+      "Niels Bohr (Níveis de Energia).",
+      "Demócrito (Atomismo filosófico).",
+      "Ernest Rutherford (Sistema Planetário clássico)."
+    ],
+    "correta": "Niels Bohr (Níveis de Energia).",
+    "explicacao_base": "Bohr postulou que os elétrons giram em órbitas com energia fixa. Ao receber energia (calor), saltam para camadas mais externas; ao retornar, liberam a energia na forma de luz (fótons) de cor específica."
+  },
+  {
+    "grupo_id": 256,
+    "tema": "História Geral - Revolução Francesa",
+    "texto_referencia": "A Declaração dos Direitos do Homem e do Cidadão, aprovada em 1789 na França, estabeleceu que 'os homens nascem e permanecem livres e iguais em direitos'.",
+    "image_id": "",
+    "id": 256,
+    "materia": "História / Sociologia",
+    "dificuldade": "Média",
+    "enunciado": "Esse documento é um marco fundamental da transição da Idade Moderna para a Contemporânea porque representou o fim jurídico de qual estrutura social?",
+    "alternativas": [
+      "Do sistema escravista colonial nas Américas.",
+      "Da sociedade de classes do capitalismo industrial.",
+      "Da sociedade estamental do Antigo Regime (Clero, Nobreza e Povo), baseada em privilégios de nascimento.",
+      "Do sistema comunista soviético.",
+      "Da democracia grega direta."
+    ],
+    "correta": "Da sociedade estamental do Antigo Regime (Clero, Nobreza e Povo), baseada em privilégios de nascimento.",
+    "explicacao_base": "A Revolução Francesa derrubou os privilégios feudais da nobreza e do clero (isenção de impostos, tribunais especiais), instituindo a igualdade jurídica defendida pela burguesia."
+  },
+  {
+    "grupo_id": 257,
+    "tema": "Biologia - Zoologia e Adaptação",
+    "texto_referencia": "Anfíbios, como sapos e rãs, embora consigam viver em terra úmida quando adultos, ainda dependem da água para a reprodução.",
+    "image_id": "",
+    "id": 257,
+    "materia": "Biologia",
+    "dificuldade": "Média",
+    "enunciado": "A característica dos ovos dos anfíbios que os obriga a serem postos na água (ou em ambientes muito úmidos) é:",
+    "alternativas": [
+      "A presença de casca calcária rígida que impede a troca gasosa no ar.",
+      "A ausência de casca impermeável (casca gelatinosa), o que levaria o embrião à dessecação (perda de água) se ficasse exposto ao sol.",
+      "O tamanho microscópico dos ovos, invisíveis a olho nu.",
+      "A necessidade de alta salinidade da água do mar para eclodir.",
+      "A alta temperatura interna dos ovos, que precisam ser resfriados pela água."
+    ],
+    "correta": "A ausência de casca impermeável (casca gelatinosa), o que levaria o embrião à dessecação (perda de água) se ficasse exposto ao sol.",
+    "explicacao_base": "Diferente de répteis e aves (ovo amniótico), os anfíbios têm ovos gelatinosos permeáveis. Se ficarem no seco, a água de dentro evapora e o embrião morre seco."
+  },
+  {
+    "grupo_id": 258,
+    "tema": "Física - Óptica (Refração e Fenômenos)",
+    "texto_referencia": "Ao colocar um canudo em um copo com água, observamos que o canudo parece 'quebrado' ou deslocado na interface entre o ar e a água.",
+    "image_id": "",
+    "id": 258,
+    "materia": "Física",
+    "dificuldade": "Fácil",
+    "enunciado": "Esse fenômeno visual é causado pela alteração da velocidade da luz ao mudar de meio de propagação (do ar para a água), propriedade conhecida como:",
+    "alternativas": [
+      "Reflexão difusa.",
+      "Interferência construtiva.",
+      "Polarização.",
+      "Refração.",
+      "Dispersão luminosa."
+    ],
+    "correta": "Refração.",
+    "explicacao_base": "Refração é a mudança de direção e velocidade da luz ao passar de um meio translúcido para outro com índice de refração diferente (ar/água)."
+  },
+  {
+    "grupo_id": 259,
+    "tema": "Português - Funções da Linguagem",
+    "texto_referencia": "Leia: 'Atenção! Use óculos de proteção. Risco de respingos químicos. Em caso de acidente, lave os olhos com água abundante e procure um médico imediatamente.'",
+    "image_id": "",
+    "id": 259,
+    "materia": "Português",
+    "dificuldade": "Média",
+    "enunciado": "No texto, predominam verbos no imperativo (Use, Lave, Procure). A função da linguagem centrada na intenção de influenciar o comportamento do receptor (leitor) é a:",
+    "alternativas": [
+      "Função Emotiva (foco no emissor).",
+      "Função Referencial (foco na informação).",
+      "Função Metalinguística (foco no código).",
+      "Função Conativa ou Apelativa (foco no receptor).",
+      "Função Fática (foco no canal)."
+    ],
+    "correta": "Função Conativa ou Apelativa (foco no receptor).",
+    "explicacao_base": "A função Conativa/Apelativa busca persuadir, ordenar ou aconselhar o interlocutor, usando vocativos e imperativos."
+  },
+  {
+    "grupo_id": 260,
+    "tema": "Matemática - Área de Figuras Planas",
+    "texto_referencia": "Para criar um jardim de inverno, um paisagista projetou um canteiro no formato de um trapézio retângulo. A base maior mede 5 metros, a base menor mede 3 metros e a altura (lado perpendicular às bases) mede 4 metros.",
+    "image_id": "",
+    "id": 260,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "A área total desse canteiro que será coberta com grama é de:",
+    "alternativas": [
+      "12 m².",
+      "16 m².",
+      "20 m².",
+      "24 m².",
+      "32 m²."
+    ],
+    "correta": "16 m².",
+    "explicacao_base": "Área do trapézio: $A = (Base Maior + Base Menor) \\cdot Altura / 2$. $A = (5 + 3) \\cdot 4 / 2 = 8 \\cdot 4 / 2 = 32 / 2 = 16 m^2$."
+  },
+  {
+    "grupo_id": 261,
+    "tema": "Química - Estequiometria Básica",
+    "texto_referencia": "A queima completa do gás metano ($CH_4$) em fogões domésticos produz dióxido de carbono ($CO_2$) e água ($H_2O$), conforme a reação não balanceada: $CH_4 + O_2 \\to CO_2 + H_2O$.",
+    "image_id": "",
+    "id": 261,
+    "materia": "Química",
+    "dificuldade": "Difícil",
+    "enunciado": "Após realizar o balanceamento da equação, os coeficientes estequiométricos mínimos inteiros do Oxigênio ($O_2$) e da Água ($H_2O$) são, respectivamente:",
+    "alternativas": [
+      "1 e 1.",
+      "2 e 2.",
+      "1 e 2.",
+      "2 e 1.",
+      "3 e 4."
+    ],
+    "correta": "2 e 2.",
+    "explicacao_base": "Reação: $CH_4 + 2O_2 \\to CO_2 + 2H_2O$. Balanceando H: 4 no reagente, preciso de $2H_2O$. Balanceando O: tenho $2$ (no $CO_2$) + $2$ (na água) = 4 átomos. Logo, preciso de $2O_2$."
+  },
+  {
+    "grupo_id": 262,
+    "tema": "Sociologia - Diversidade Cultural",
+    "texto_referencia": "Ao observar os hábitos alimentares de insetos fritos em alguns países asiáticos, um turista ocidental comenta: 'Isso é nojento e errado, comida de verdade é arroz e feijão'.",
+    "image_id": "",
+    "id": 262,
+    "materia": "Sociologia / Filosofia",
+    "dificuldade": "Fácil",
+    "enunciado": "A atitude de julgar a cultura do outro tomando a sua própria como a única correta ou superior é denominada sociologicamente de:",
+    "alternativas": [
+      "Relativismo Cultural.",
+      "Sincretismo.",
+      "Aculturação.",
+      "Etnocentrismo.",
+      "Determinismo Geográfico."
+    ],
+    "correta": "Etnocentrismo.",
+    "explicacao_base": "Etnocentrismo é a visão preconceituosa formada ao considerar o próprio grupo étnico ou nação como o centro de tudo, e os outros como inferiores ou anormais."
+  },
+  {
+    "grupo_id": 263,
+    "tema": "Geografia - Blocos Econômicos",
+    "texto_referencia": "O Mercosul (Mercado Comum do Sul) é um bloco econômico sul-americano que visa facilitar o comércio e o fluxo de pessoas entre os países membros. No entanto, o bloco ainda não atingiu o estágio de integração monetária total (como o Euro).",
+    "image_id": "",
+    "id": 263,
+    "materia": "Geografia",
+    "dificuldade": "Média",
+    "enunciado": "Quais países são os quatro membros fundadores plenos e signatários do Tratado de Assunção (1991)?",
+    "alternativas": [
+      "Brasil, Argentina, Chile e Colômbia.",
+      "Brasil, México, Argentina e Uruguai.",
+      "Brasil, Argentina, Paraguai e Uruguai.",
+      "Venezuela, Brasil, Argentina e Cuba.",
+      "Bolívia, Peru, Equador e Brasil."
+    ],
+    "correta": "Brasil, Argentina, Paraguai e Uruguai.",
+    "explicacao_base": "Os fundadores originais do Mercosul são Brasil, Argentina, Paraguai e Uruguai. A Venezuela entrou depois (foi suspensa) e a Bolívia está em processo de adesão."
+  },
+  {
+    "grupo_id": 264,
+    "tema": "Física - Mecânica (Cinemática Gráfica)",
+    "texto_referencia": "Dois amigos combinam de se encontrar em uma praça. O gráfico de suas posições (S) em função do tempo (t) mostra duas retas que se cruzam em um determinado ponto $(t_e, S_e)$.",
+    "image_id": "",
+    "id": 264,
+    "materia": "Física / Matemática",
+    "dificuldade": "Média",
+    "enunciado": "O ponto de intersecção das duas retas no gráfico S x t representa fisicamente o momento em que:",
+    "alternativas": [
+      "As velocidades dos dois amigos são iguais.",
+      "A aceleração de ambos se anula.",
+      "Os amigos se encontram na mesma posição no mesmo instante.",
+      "Um amigo para e espera o outro.",
+      "A viagem terminou para ambos."
+    ],
+    "correta": "Os amigos se encontram na mesma posição no mesmo instante.",
+    "explicacao_base": "Num gráfico Posição x Tempo, o cruzamento das curvas indica que, para aquele tempo ($t$), a posição ($S$) é idêntica para ambos os móveis (encontro)."
+  },
+  {
+    "grupo_id": 265,
+    "tema": "Inglês Instrumental - Avisos",
+    "texto_referencia": "Em um elevador de um hotel internacional, há a placa: 'In case of fire, do not use elevators. Use the stairs'.",
+    "image_id": "",
+    "id": 265,
+    "materia": "Inglês",
+    "dificuldade": "Fácil",
+    "enunciado": "A instrução de segurança recomenda que, em situação de incêndio, as pessoas:",
+    "alternativas": [
+      "Fiquem dentro do elevador e esperem o resgate.",
+      "Subam para o terraço usando o elevador.",
+      "Não utilizem os elevadores e usem as escadas.",
+      "Liguem o ar-condicionado das escadas.",
+      "Usem os extintores localizados dentro do elevador."
+    ],
+    "correta": "Não utilizem os elevadores e usem as escadas.",
+    "explicacao_base": "*In case of fire* (em caso de incêndio), *do not use* (não use) elevadores. *Use the stairs* (use as escadas)."
+  },
+  {
+    "grupo_id": 266,
+    "tema": "História do Brasil - Era Vargas",
+    "texto_referencia": "A Constituição de 1934 instituiu o voto secreto e o voto feminino no Brasil, mas o período democrático foi curto. Em 1937, Vargas fechou o Congresso, outorgou uma nova constituição ('Polaca') e iniciou uma ditadura.",
+    "image_id": "",
+    "id": 266,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "Esse período ditatorial de Getúlio Vargas (1937-1945), caracterizado pela censura (DIP), nacionalismo e centralização do poder, é conhecido como:",
+    "alternativas": [
+      "República da Espada.",
+      "Governo Provisório.",
+      "Estado Novo.",
+      "República Velha.",
+      "Período Regencial."
+    ],
+    "correta": "Estado Novo.",
+    "explicacao_base": "O Estado Novo foi o regime ditatorial varguista instaurado após o golpe de 1937 (Plano Cohen), durando até o fim da 2ª Guerra em 1945."
+  },
+  {
+    "grupo_id": 267,
+    "tema": "Biologia - Botânica e Polinização",
+    "texto_referencia": "As angiospermas (plantas com flores) coevoluíram com diversos animais. Algumas flores são vermelhas, não têm cheiro, mas produzem muito néctar líquido, atraindo pássaros como o beija-flor.",
+    "image_id": "",
+    "id": 267,
+    "materia": "Biologia",
+    "dificuldade": "Fácil",
+    "enunciado": "A relação ecológica em que o animal obtém alimento e a planta garante sua reprodução cruzada transportando o pólen é classificada como:",
+    "alternativas": [
+      "Parasitismo.",
+      "Mutualismo.",
+      "Comensalismo.",
+      "Inquilinismo.",
+      "Competição."
+    ],
+    "correta": "Mutualismo.",
+    "explicacao_base": "É uma relação harmônica interespecífica onde ambos se beneficiam (alimento para ave, reprodução para planta) e, muitas vezes, há dependência (mutualismo)."
+  },
+  {
+    "grupo_id": 268,
+    "tema": "Matemática - Função do 1º Grau",
+    "texto_referencia": "Uma operadora de telefonia oferece um plano onde o cliente paga uma assinatura fixa de R$ 30,00 mais R$ 0,50 por minuto de ligação realizada para outras operadoras.",
+    "image_id": "",
+    "id": 268,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Se um cliente recebeu uma conta de R$ 55,00, quantos minutos de ligação ele utilizou?",
+    "alternativas": [
+      "30 minutos.",
+      "40 minutos.",
+      "50 minutos.",
+      "60 minutos.",
+      "110 minutos."
+    ],
+    "correta": "50 minutos.",
+    "explicacao_base": "Equação: $30 + 0,50x = 55$. Resolvendo: $0,50x = 55 - 30$. $0,50x = 25$. $x = 25 / 0,50 = 50$ minutos."
+  },
+  {
+    "grupo_id": 269,
+    "tema": "Química - Tratamento de Água",
+    "texto_referencia": "Para tornar a água de rios potável, as ETAs (Estações de Tratamento de Água) utilizam várias etapas. Após a decantação da sujeira e a filtração, adiciona-se um produto químico ou gás para matar bactérias e vírus patogênicos.",
+    "image_id": "",
+    "id": 269,
+    "materia": "Química / Saúde",
+    "dificuldade": "Fácil",
+    "enunciado": "Essa etapa de desinfecção é realizada, majoritariamente, com a adição de:",
+    "alternativas": [
+      "Sulfato de Alumínio.",
+      "Cloro ou compostos clorados.",
+      "Flúor (Fluoretação).",
+      "Cal virgem ($CaO$).",
+      "Carvão ativado."
+    ],
+    "correta": "Cloro ou compostos clorados.",
+    "explicacao_base": "A cloração (adição de Cloro) é o método mais comum e eficaz de desinfecção bacteriológica da água em grande escala."
+  },
+  {
+    "grupo_id": 270,
+    "tema": "Atualidades - Energia Renovável",
+    "texto_referencia": "O Nordeste brasileiro destaca-se na geração de energia eólica devido à constância dos ventos alísios. Contudo, essa fonte de energia possui uma desvantagem chamada 'intermitência'.",
+    "image_id": "",
+    "id": 270,
+    "materia": "Geografia / Física",
+    "dificuldade": "Média",
+    "enunciado": "A intermitência na geração eólica e solar significa que:",
+    "alternativas": [
+      "A energia produzida polui o ar intermitentemente.",
+      "A produção não é contínua e constante, pois depende de fatores naturais que variam (vento parou, noite chegou).",
+      "É proibido conectar essas usinas à rede elétrica nacional.",
+      "O custo de manutenção é intermitente, subindo e descendo.",
+      "Essas usinas só funcionam em anos bissextos."
+    ],
+    "correta": "A produção não é contínua e constante, pois depende de fatores naturais que variam (vento parou, noite chegou).",
+    "explicacao_base": "Fontes intermitentes (solar/eólica) dependem da natureza momentânea. Se não ventar ou não fizer sol, a geração cai a zero, exigindo baterias ou fontes de backup."
+  },
+  {
+    "grupo_id": 271,
+    "tema": "Matemática - Conjuntos Numéricos",
+    "texto_referencia": "No primeiro quadrinho, o personagem com a camisa 2 diz ao personagem com a camisa 23: 'Você é um cara ímpar!'. A frase contém um jogo de palavras (trocadilho) envolvendo conceitos matemáticos e a linguagem coloquial.",
+    "image_id": "pi.png",
+    "id": 271,
+    "materia": "Matemática",
+    "dificuldade": "Fácil",
+    "enunciado": "Matematicamente, a ironia na fala do personagem número 2 reside no fato de que, dentro do conjunto dos números primos positivos, o número 2 é:",
+    "alternativas": [
+      "O único número primo que também é um quadrado perfeito.",
+      "O único número primo que é par, tornando todos os demais, como o 23, 'ímpares'.",
+      "O único número primo que possui três divisores naturais.",
+      "Um número primo 'distante', pois não possui sucessores primos imediatos.",
+      "O elemento neutro da multiplicação."
+    ],
+    "correta": "O único número primo que é par, tornando todos os demais, como o 23, 'ímpares'.",
+    "explicacao_base": "O número 2 é o único número par que é primo (divisível apenas por 1 e ele mesmo). Todos os outros pares são divisíveis por 2. Logo, qualquer outro primo (como o 23) é, obrigatoriamente, ímpar. O trocadilho une 'ímpar' (único/especial) com a classificação numérica."
+  },
+  {
+    "grupo_id": 272,
+    "tema": "Português - Figuras de Linguagem",
+    "texto_referencia": "A tirinha 'Encontro Anual de Primos' explora a polissemia, característica em que uma palavra assume múltiplos significados dependendo do contexto.",
+    "image_id": "pi.png",
+    "id": 272,
+    "materia": "Português",
+    "dificuldade": "Média",
+    "enunciado": "Assinale a alternativa que explica corretamente a construção do humor no segundo quadrinho, com a frase: 'É uma galera que não se deixa dividir por qualquer fator'.",
+    "alternativas": [
+      "Utiliza a linguagem denotativa para informar que as pessoas na festa não gostam de operações de divisão matemática.",
+      "Emprega uma antítese, contrapondo a união da família com a divisão dos bens materiais.",
+      "Constrói uma metáfora baseada na definição aritmética de números primos (indivisíveis exceto por 1 e por si mesmos) para representar a união do grupo familiar.",
+      "Faz uso de um eufemismo para suavizar o fato de que os primos são antissociais.",
+      "Recorre ao pleonasmo vicioso, repetindo a ideia de divisão e fator desnecessariamente."
+    ],
+    "correta": "Constrói uma metáfora baseada na definição aritmética de números primos (indivisíveis exceto por 1 e por si mesmos) para representar a união do grupo familiar.",
+    "explicacao_base": "A fala joga com o conceito matemático (primos não têm divisores ou 'fatores' além dos triviais) e o sentido figurado de 'fator' como motivo de discórdia/separação entre pessoas."
+  },
+  {
+    "grupo_id": 273,
+    "tema": "Informática / Matemática - Criptografia",
+    "texto_referencia": "No último quadrinho, um personagem usa uma camiseta com um número gigantesco e o texto menciona: 'Ouvi dizer que ele trabalha com criptografia'.",
+    "image_id": "pi.png",
+    "id": 273,
+    "materia": "Informática / Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "A associação entre números primos muito grandes e criptografia (segurança digital) é fundamentada na dificuldade computacional de realizar uma operação matemática inversa específica. Essa operação é:",
+    "alternativas": [
+      "A soma de dois números primos, conhecida como Conjectura de Goldbach.",
+      "A multiplicação de dois números primos, que é um processo demorado.",
+      "A fatoração de um número inteiro semiprimo (produto de dois primos grandes) em seus fatores originais.",
+      "O cálculo do mínimo múltiplo comum (MMC) entre números pares.",
+      "A determinação da raiz quadrada exata de números primos."
+    ],
+    "correta": "A fatoração de um número inteiro semiprimo (produto de dois primos grandes) em seus fatores originais.",
+    "explicacao_base": "Algoritmos como o RSA baseiam sua segurança no fato de que é fácil multiplicar dois primos gigantes para obter uma chave, mas é extremamente difícil (computacionalmente inviável) pegar esse produto e descobrir quais foram os dois primos originais (fatoração)."
+  },
+  {
+    "grupo_id": 274,
+    "tema": "Matemática - Aritmética",
+    "texto_referencia": "Observe o personagem com a camisa número 137 no terceiro quadrinho.",
+    "image_id": "pi.png",
+    "id": 274,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Para confirmar que 137 é, de fato, um número primo e pode participar da festa, um estudante deve testar sua divisibilidade pelos primos sucessivos ($2, 3, 5, 7, \\dots$). O estudante pode interromper os testes com certeza de que o número é primo quando:",
+    "alternativas": [
+      "O resto da divisão for zero.",
+      "O quociente da divisão for menor ou igual ao divisor e o resto for diferente de zero.",
+      "O divisor for igual à metade de 137.",
+      "Testar a divisão por todos os números ímpares até 136.",
+      "O número terminar em 7, pois todos os números terminados em 7 são primos."
+    ],
+    "correta": "O quociente da divisão for menor ou igual ao divisor e o resto for diferente de zero.",
+    "explicacao_base": "Regra prática de primalidade: divide-se o número $N$ pelos primos sucessivos. Se em alguma divisão o quociente for menor ou igual ao divisor (e o resto não for zero), paramos e concluímos que $N$ é primo. Para 137, testaríamos até o 11 ($13^2 > 137$)."
+  },
+  {
+    "grupo_id": 275,
+    "tema": "Matemática - Teoria dos Números",
+    "texto_referencia": "A tirinha intitula-se 'Encontro Anual de Primos'. Matematicamente, a definição fundamental que permite a existência de tal 'grupo' exclui o número 1.",
+    "image_id": "pi.png",
+    "id": 275,
+    "materia": "Matemática",
+    "dificuldade": "Fácil",
+    "enunciado": "O número 1 não é considerado primo, e portanto seria barrado na festa, porque:",
+    "alternativas": [
+      "É um número par.",
+      "Possui infinitos divisores.",
+      "É o elemento neutro da adição.",
+      "Possui apenas um divisor natural (ele mesmo), e a definição de primo exige exatamente dois divisores naturais distintos (1 e ele mesmo).",
+      "É um número negativo."
+    ],
+    "correta": "Possui apenas um divisor natural (ele mesmo), e a definição de primo exige exatamente dois divisores naturais distintos (1 e ele mesmo).",
+    "explicacao_base": "Pela definição moderna, um número primo $p$ deve ser um natural maior que 1 que tem apenas dois divisores: 1 e $p$. O número 1 tem apenas um divisor, ele próprio, por isso não é primo (nem composto)."
+  },
+  {
+    "grupo_id": 276,
+    "tema": "Interdisciplinar (Biologia/Matemática)",
+    "texto_referencia": "No primeiro quadrinho, o personagem 2 é chamado de 'ímpar' (único) em meio aos primos. No contexto biológico, o termo 'primo' refere-se ao parentesco.",
+    "image_id": "pi.png",
+    "id": 276,
+    "materia": "Biologia",
+    "dificuldade": "Fácil",
+    "enunciado": "Fazendo uma analogia entre a 'unidade' dos números primos (citada no quadrinho 2) e a genética, o grau de parentesco entre primos de primeiro grau na espécie humana indica que eles compartilham genes herdados de:",
+    "alternativas": [
+      "Avós em comum.",
+      "Pais em comum.",
+      "Apenas da mãe.",
+      "Apenas do pai.",
+      "Bisavós em comum."
+    ],
+    "correta": "Avós em comum.",
+    "explicacao_base": "Primos de primeiro grau são filhos de irmãos. Portanto, seus ancestrais comuns mais próximos são os avós (pais dos seus pais)."
+  },
+  {
+    "grupo_id": 277,
+    "tema": "Matemática - Divisibilidade",
+    "texto_referencia": "No segundo quadrinho, vemos os personagens 37 e 73. Curiosamente, se invertermos os algarismos de 37, obtemos 73, e ambos são primos (Primos de Sheldon).",
+    "image_id": "pi.png",
+    "id": 277,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Sobre os números representados nas camisetas deste quadrinho (37 e 73), é correto afirmar que a soma deles ($37 + 73$) resulta em um número que:",
+    "alternativas": [
+      "Também é um número primo.",
+      "É um quadrado perfeito.",
+      "É divisível por 2, por 5 e por 11.",
+      "É divisível por 3 e por 9.",
+      "É um múltiplo de 7."
+    ],
+    "correta": "É divisível por 2, por 5 e por 11.",
+    "explicacao_base": "$37 + 73 = 110$. Análise de 110: É par (divisível por 2). Termina em 0 (divisível por 5). $110 / 11 = 10$ (divisível por 11)."
+  },
+  {
+    "grupo_id": 278,
+    "tema": "História - Teoria dos Números",
+    "texto_referencia": "O conhecimento sobre números primos, mencionado indiretamente na tirinha através da festa, remonta à antiguidade grega.",
+    "image_id": "pi.png",
+    "id": 278,
+    "materia": "História / Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Um dos primeiros matemáticos e geógrafos a criar um algoritmo (método sistemático) para encontrar números primos, conhecido como 'Crivo', que consistia em listar números e 'peneirar' os compostos, foi:",
+    "alternativas": [
+      "Pitágoras de Samos.",
+      "Eratóstenes de Cirene.",
+      "Tales de Mileto.",
+      "Bhaskara.",
+      "Isaac Newton."
+    ],
+    "correta": "Eratóstenes de Cirene.",
+    "explicacao_base": "O Crivo de Eratóstenes é um algoritmo simples e antigo para encontrar números primos até um certo valor limite, eliminando múltiplos dos primos já encontrados."
+  },
+  {
+    "grupo_id": 279,
+    "tema": "Química - Tabela Periódica",
+    "texto_referencia": "As camisetas dos personagens trazem números que os identificam (2, 23, 37, 73, etc). Suponha que esses números representem Números Atômicos (Z) na Tabela Periódica.",
+    "image_id": "pi.png",
+    "id": 279,
+    "materia": "Química",
+    "dificuldade": "Difícil",
+    "enunciado": "O personagem com a camiseta número 2 corresponderia a um elemento químico que:",
+    "alternativas": [
+      "É um metal alcalino altamente reativo.",
+      "Pertence à família dos Gases Nobres e possui estabilidade eletrônica com apenas 2 elétrons na camada de valência.",
+      "É um halogênio usado em tratamento de água.",
+      "É um metal de transição sólido em temperatura ambiente.",
+      "Possui tendência a perder 2 elétrons para formar ligações iônicas."
+    ],
+    "correta": "Pertence à família dos Gases Nobres e possui estabilidade eletrônica com apenas 2 elétrons na camada de valência.",
+    "explicacao_base": "Número Atômico 2 corresponde ao Hélio ($He$). Apesar de estar no bloco s, ele é um Gás Nobre (família 18) e é estável com o dueto (2 elétrons) completo na camada K."
+  },
+  {
+    "grupo_id": 280,
+    "tema": "Atualidades / Matemática - Segurança de Dados",
+    "texto_referencia": "A charge conecta primos grandes à 'Criptografia'.",
+    "image_id": "pi.png",
+    "id": 280,
+    "materia": "Atualidades / Tecnologia",
+    "dificuldade": "Média",
+    "enunciado": "Além de proteger mensagens de celular, a criptografia baseada em primos é fundamental para o funcionamento de uma tecnologia financeira descentralizada atual. Trata-se das:",
+    "alternativas": [
+      "Cédulas impressas de Real com marca d'água.",
+      "Cadernetas de poupança estatais.",
+      "Criptomoedas (como Bitcoin) e tecnologia Blockchain.",
+      "Máquinas de datilografia mecânicas.",
+      "Transferências via envelope em caixas eletrônicos."
+    ],
+    "correta": "Criptomoedas (como Bitcoin) e tecnologia Blockchain.",
+    "explicacao_base": "O Blockchain e as criptomoedas (como o Bitcoin) utilizam criptografia de chave pública/privada (assimetrica) e funções hash, conceitos matemáticos avançados que dependem da teoria dos números primos para garantir segurança e autenticidade das transações."
   }
 ]
