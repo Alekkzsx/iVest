@@ -1,0 +1,59 @@
+[
+  {
+    "grupo_id": 1,
+    "tema": "Urbanização e Sustentabilidade",
+    "texto_referencia": "--- LEIA O TEXTO A SEGUIR PARA RESPONDER ÀS QUESTÕES 01, 02 E 03 ---\n\nO conceito de 'Cidades Inteligentes' (Smart Cities) busca integrar tecnologia e sustentabilidade para melhorar a qualidade de vida urbana. Um dos pilares dessa transformação é a chamada micromobilidade, caracterizada pelo uso de veículos leves, como bicicletas e patinetes elétricos, para percorrer curtas distâncias, geralmente a chamada 'última milha' (o trajeto entre a estação de metrô e a casa ou o trabalho). Embora seja uma solução promissora para reduzir a emissão de gases de efeito estufa e os congestionamentos, a micromobilidade enfrenta desafios significativos.\n\nEstudos urbanísticos recentes apontam que a infraestrutura das cidades brasileiras, projetada historicamente para o automóvel (o 'rodoviarismo'), é hostil a esses novos modais, resultando em altos índices de acidentes. Além disso, há o paradoxo ambiental das baterias de íons de lítio: se por um lado o veículo não emite fumaça ao rodar, por outro, a extração do lítio e o descarte incorreto dessas baterias geram graves impactos ecológicos no solo e nos lençóis freáticos. Portanto, a mobilidade do futuro exige não apenas inovação tecnológica, mas uma profunda revisão das políticas públicas de trânsito e de logística reversa.",
+    "image_id": "",
+    "id": 1,
+    "materia": "Geografia / Interpretação",
+    "dificuldade": "Média",
+    "enunciado": "Segundo o texto, o conceito de 'última milha' refere-se:",
+    "alternativas": [
+      "À distância total de uma maratona que deve ser percorrida a pé para melhorar a saúde.",
+      "Ao trajeto completo realizado por caminhões de carga entre estados diferentes.",
+      "Ao trecho final do deslocamento diário, que conecta o sistema de transporte de massa (como ônibus ou metrô) ao destino final do usuário.",
+      "À fronteira agrícola onde termina a zona urbana e começa a zona rural.",
+      "À vida útil da bateria de um patinete elétrico antes de precisar ser recarregada."
+    ],
+    "correta": "Ao trecho final do deslocamento diário, que conecta o sistema de transporte de massa (como ônibus ou metrô) ao destino final do usuário.",
+    "explicacao_base": "O texto define explicitamente 'última milha' como 'o trajeto entre a estação de metrô e a casa ou o trabalho', caracterizando a integração entre modais."
+  },
+  {
+    "grupo_id": 1,
+    "tema": "Interpretação Textual e Argumentação",
+    "texto_referencia": "--- LEIA O TEXTO A SEGUIR PARA RESPONDER ÀS QUESTÕES 01, 02 E 03 ---\n\nO conceito de 'Cidades Inteligentes' (Smart Cities) busca integrar tecnologia e sustentabilidade para melhorar a qualidade de vida urbana. Um dos pilares dessa transformação é a chamada micromobilidade... [texto completo acima]",
+    "image_id": "",
+    "id": 2,
+    "materia": "Português",
+    "dificuldade": "Difícil",
+    "enunciado": "No segundo parágrafo, o autor apresenta um 'paradoxo ambiental'. Esse paradoxo consiste no fato de que:",
+    "alternativas": [
+      "Os patinetes elétricos são mais lentos que os carros, aumentando o tempo de deslocamento.",
+      "A tecnologia reduz o trânsito, mas aumenta o sedentarismo da população.",
+      "A extração de minérios para as baterias é limpa, mas o carregamento consome muita eletricidade.",
+      "O veículo é considerado limpo durante o uso, mas seu processo de fabricação (extração de lítio) e descarte (lixo eletrônico) pode ser altamente poluente.",
+      "As cidades inteligentes usam inteligência artificial, que consome pouca energia."
+    ],
+    "correta": "O veículo é considerado limpo durante o uso, mas seu processo de fabricação (extração de lítio) e descarte (lixo eletrônico) pode ser altamente poluente.",
+    "explicacao_base": "Um paradoxo é uma contradição aparente. O texto explica que, apesar de não emitir fumaça (lado positivo), o veículo gera impacto na extração do lítio e no descarte da bateria (lado negativo)."
+  },
+  {
+    "grupo_id": 1,
+    "tema": "História / Sociologia Urbana",
+    "texto_referencia": "--- LEIA O TEXTO A SEGUIR PARA RESPONDER ÀS QUESTÕES 01, 02 E 03 ---\n\nO conceito de 'Cidades Inteligentes' (Smart Cities) busca integrar tecnologia e sustentabilidade para melhorar a qualidade de vida urbana. Um dos pilares dessa transformação é a chamada micromobilidade... [texto completo acima]",
+    "image_id": "",
+    "id": 3,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "O texto cita que a infraestrutura das cidades brasileiras é historicamente hostil aos novos modais leves devido à herança do 'rodoviarismo'. Esse modelo de desenvolvimento urbano, intensificado no Brasil a partir da década de 1950 (Governo JK), priorizou:",
+    "alternativas": [
+      "O transporte ferroviário e a integração nacional por trens de passageiros.",
+      "O transporte fluvial, aproveitando a vasta rede hidrográfica brasileira.",
+      "O transporte individual motorizado (automóveis) e a construção de grandes avenidas e estradas, em detrimento do transporte público e de pedestres.",
+      "O transporte por tração animal nas grandes metrópoles.",
+      "A construção de ciclovias em todos os planos diretores municipais desde 1930."
+    ],
+    "correta": "O transporte individual motorizado (automóveis) e a construção de grandes avenidas e estradas, em detrimento do transporte público e de pedestres.",
+    "explicacao_base": "O termo 'rodoviarismo' refere-se à política histórica de privilegiar o carro e o caminhão (indústria automobilística) como eixos centrais do planejamento urbano e de transporte no Brasil."
+  }
+]

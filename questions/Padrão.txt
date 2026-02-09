@@ -5320,5 +5320,385 @@
     ],
     "correta": "Criptomoedas (como Bitcoin) e tecnologia Blockchain.",
     "explicacao_base": "O Blockchain e as criptomoedas (como o Bitcoin) utilizam criptografia de chave pública/privada (assimetrica) e funções hash, conceitos matemáticos avançados que dependem da teoria dos números primos para garantir segurança e autenticidade das transações."
+  },
+  {
+    "grupo_id": 281,
+    "tema": "Química - Tabela Periódica e Tecnologia",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 281 E 282 ---\n\nCom a expansão dos carros elétricos, o Lítio (Li) tornou-se o 'ouro branco' do século XXI. As baterias de íons de lítio são leves e possuem alta densidade de energia. O lítio é o metal mais leve da tabela periódica, localizado no Grupo 1 (Família 1A), e reage vigorosamente com a água. Um carro elétrico popular possui uma bateria com capacidade de 60 kWh (quilowatt-hora), permitindo uma autonomia de cerca de 400 km.",
+    "image_id": "",
+    "id": 281,
+    "materia": "Química",
+    "dificuldade": "Média",
+    "enunciado": "Com base no texto e nos conhecimentos sobre a Tabela Periódica, assinale a alternativa que apresenta corretamente a classificação da família do Lítio e uma propriedade periódica desse elemento:",
+    "alternativas": [
+      "Metais Alcalinoterrosos; possui alta eletronegatividade.",
+      "Metais Alcalinos; possui raio atômico maior que o do Sódio (Na).",
+      "Gases Nobres; é inerte e não reage com água.",
+      "Metais Alcalinos; possui apenas 1 elétron na camada de valência e tendência a doar esse elétron.",
+      "Halogênios; possui tendência a receber elétrons."
+    ],
+    "correta": "Metais Alcalinos; possui apenas 1 elétron na camada de valência e tendência a doar esse elétron.",
+    "explicacao_base": "O Lítio pertence ao Grupo 1 (Metais Alcalinos). Elementos desse grupo possuem 1 elétron na última camada e tendem a perdê-lo (oxidar) para atingir a estabilidade (formando cátions monovalentes +1)."
+  },
+  {
+    "grupo_id": 282,
+    "tema": "Física / Matemática - Consumo e Regra de Três",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 281 E 282 ---\n\nCom a expansão dos carros elétricos, o Lítio (Li) tornou-se o 'ouro branco' do século XXI. As baterias de íons de lítio são leves e possuem alta densidade de energia. O lítio é o metal mais leve da tabela periódica, localizado no Grupo 1 (Família 1A), e reage vigorosamente com a água. Um carro elétrico popular possui uma bateria com capacidade de 60 kWh (quilowatt-hora), permitindo uma autonomia de cerca de 400 km.",
+    "image_id": "",
+    "id": 282,
+    "materia": "Física / Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Suponha que um motorista utilize esse carro elétrico para uma viagem e mantenha uma velocidade média constante. Se o consumo médio do veículo for de 15 kWh a cada 100 km rodados, qual será a porcentagem de bateria restante após percorrer 300 km? (Considere que a bateria estava 100% carregada no início).",
+    "alternativas": [
+      "10%",
+      "25%",
+      "45%",
+      "50%",
+      "75%"
+    ],
+    "correta": "25%",
+    "explicacao_base": "Regra de três para o consumo: Se gasta 15 kWh em 100 km, em 300 km gastará 45 kWh. Capacidade total é 60 kWh. Restam: 60 - 45 = 15 kWh. Porcentagem restante: (15 / 60) = 0,25 ou 25%."
+  },
+  {
+    "grupo_id": 283,
+    "tema": "Interpretação de Gráficos e Desigualdade Social",
+    "texto_referencia": "--- IMAGEM PARA AS QUESTÕES 283 E 284 ---\n\n[Imagine um gráfico de barras comparando duas regiões, A e B. A Região A tem 90% de acesso a esgoto tratado e uma taxa de internação por doenças diarreicas de 2 por 1000 habitantes. A Região B tem apenas 30% de acesso a esgoto tratado e uma taxa de internação de 45 por 1000 habitantes].\n\nO saneamento básico é um direito constitucional, mas os dados gráficos revelam uma disparidade regional.",
+    "image_id": "",
+    "id": 283,
+    "materia": "Geografia / Sociologia",
+    "dificuldade": "Fácil",
+    "enunciado": "A análise comparativa entre as regiões A e B permite concluir que a falta de infraestrutura de saneamento básico está diretamente correlacionada a:",
+    "alternativas": [
+      "Uma maior qualidade de vida e preservação ambiental na Região B.",
+      "Um aumento nos gastos públicos com saúde devido às elevadas taxas de internação na Região B.",
+      "A uma população geneticamente mais resistente a vírus na Região A.",
+      "Ao uso exclusivo de fossas sépticas ecológicas na Região B.",
+      "A um surto de doenças respiratórias, como gripe e asma."
+    ],
+    "correta": "Um aumento nos gastos públicos com saúde devido às elevadas taxas de internação na Região B.",
+    "explicacao_base": "A correlação é direta: menos saneamento (Região B) resulta em mais doenças de veiculação hídrica, sobrecarregando o sistema de saúde (maior taxa de internação e custos)."
+  },
+  {
+    "grupo_id": 284,
+    "tema": "Doenças de Veiculação Hídrica",
+    "texto_referencia": "--- IMAGEM PARA AS QUESTÕES 283 E 284 ---\n\n[Imagine um gráfico de barras comparando duas regiões, A e B...].",
+    "image_id": "",
+    "id": 284,
+    "materia": "Biologia",
+    "dificuldade": "Média",
+    "enunciado": "As internações mencionadas no gráfico referem-se, em sua maioria, a doenças transmitidas pela ingestão de água ou alimentos contaminados por coliformes fecais. Assinale a alternativa que apresenta apenas doenças transmitidas por essa via (oral-fecal):",
+    "alternativas": [
+      "Tuberculose, Dengue e Cólera.",
+      "Cólera, Hepatite A e Amealíase (Amebíase).",
+      "Sífilis, Gonorreia e HIV.",
+      "Gripe H1N1, Sarampo e Rubéola.",
+      "Leptospirose, Tétano e Botulismo."
+    ],
+    "correta": "Cólera, Hepatite A e Amealíase (Amebíase).",
+    "explicacao_base": "Cólera (bactéria), Hepatite A (vírus) e Amebíase (protozoário) são exemplos clássicos de doenças causadas pela falta de saneamento (contato com fezes/água contaminada)."
+  },
+  {
+    "grupo_id": 285,
+    "tema": "Literatura - Naturalismo (O Cortiço)",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 285 E 286 ---\n\nLeia um trecho de 'O Cortiço', de Aluísio Azevedo (1890):\n\n'E naquela terra encharcada e fumegante, naquela umidade quente e lodosa, começou a minhocar, a esfervilhar, a crescer, um mundo, uma coisa viva, uma geração, que parecia brotar espontânea, ali mesmo, daquele lameiro, e multiplicar-se como larvas no esterco.'",
+    "image_id": "",
+    "id": 285,
+    "materia": "Português / Literatura",
+    "dificuldade": "Média",
+    "enunciado": "O fragmento acima exemplifica uma característica central da escola literária Naturalista, que descreve o ser humano e as aglomerações urbanas através de:",
+    "alternativas": [
+      "Uma visão idealizada e romântica, destacando a beleza da simplicidade.",
+      "Um foco na espiritualidade e na salvação da alma.",
+      "A Zoomorfização (animalização), comparando pessoas a larvas e insetos, influenciada pelo determinismo biológico.",
+      "O uso de linguagem rebuscada e parnasiana, focada apenas na forma do poema.",
+      "Uma crítica irônica aos costumes da burguesia inglesa."
+    ],
+    "correta": "A Zoomorfização (animalização), comparando pessoas a larvas e insetos, influenciada pelo determinismo biológico.",
+    "explicacao_base": "O Naturalismo radicalizou o Realismo, descrevendo o homem sob a ótica biológica (instintos), muitas vezes comparando-o a animais (zoomorfização) e destacando a influência do meio ('terra encharcada')."
+  },
+  {
+    "grupo_id": 286,
+    "tema": "História do Brasil - Urbanização do RJ",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 285 E 286 ---\n\nLeia um trecho de 'O Cortiço', de Aluísio Azevedo (1890)...",
+    "image_id": "",
+    "id": 286,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "A obra 'O Cortiço' retrata o Rio de Janeiro do final do século XIX. Poucos anos depois da publicação do livro, no início do século XX (Governo Rodrigues Alves), os cortiços do centro da cidade foram demolidos em massa para dar lugar a grandes avenidas e higienizar a capital. Esse episódio histórico, que expulsou os pobres para os morros (favela), ficou conhecido como:",
+    "alternativas": [
+      "A Revolta da Vacina.",
+      "O Encilhamento.",
+      "A Política do Café-com-Leite.",
+      "O 'Bota-Abaixo' (Reforma Pereira Passos).",
+      "A Coluna Prestes."
+    ],
+    "correta": "O 'Bota-Abaixo' (Reforma Pereira Passos).",
+    "explicacao_base": "O 'Bota-Abaixo' refere-se à reforma urbana liderada pelo prefeito Pereira Passos (inspirado em Paris), que demoliu o casario colonial e cortiços para alargar ruas, empurrando a população pobre para a periferia e morros."
+  },
+  {
+    "grupo_id": 287,
+    "tema": "Física - Conservação da Energia Mecânica",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 287 E 288 ---\n\nNas Olimpíadas, o Skate Street e o Skate Park popularizaram a física dos movimentos radicais. Imagine uma atleta no topo de uma rampa (Half-pipe) de 4 metros de altura, pronta para descer. Considere a gravidade g = 10 m/s² e despreze o atrito.",
+    "image_id": "",
+    "id": 287,
+    "materia": "Física",
+    "dificuldade": "Média",
+    "enunciado": "Ao sair do repouso no ponto mais alto e atingir o ponto mais baixo da pista, ocorre a seguinte transformação de energia:",
+    "alternativas": [
+      "A Energia Cinética transforma-se totalmente em Energia Potencial Gravitacional.",
+      "A Energia Mecânica aumenta devido à ação da gravidade.",
+      "A Energia Potencial Gravitacional máxima é convertida integralmente em Energia Cinética máxima.",
+      "A Energia Elástica do skate impulsiona a atleta.",
+      "Toda a energia é dissipada em forma de calor."
+    ],
+    "correta": "A Energia Potencial Gravitacional máxima é convertida integralmente em Energia Cinética máxima.",
+    "explicacao_base": "No topo, a velocidade é zero e a altura é máxima ($E_p$ máx). No fundo, a altura é zero e a velocidade é máxima. Pela conservação (sem atrito), toda $E_p$ virou $E_c$."
+  },
+  {
+    "grupo_id": 288,
+    "tema": "Física / Cinemática - Conversão de Unidades",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 287 E 288 ---\n\nNas Olimpíadas, o Skate Street e o Skate Park popularizaram a física dos movimentos radicais...",
+    "image_id": "",
+    "id": 288,
+    "materia": "Física / Matemática",
+    "dificuldade": "Fácil",
+    "enunciado": "Durante uma volta na pista, a atleta percorre uma distância linear total de 180 metros em um intervalo de tempo de 30 segundos. A velocidade média da atleta nessa volta foi de:",
+    "alternativas": [
+      "6 m/s ou 21,6 km/h.",
+      "5 m/s ou 18 km/h.",
+      "10 m/s ou 36 km/h.",
+      "6 m/s ou 12 km/h.",
+      "0,6 m/s ou 2 km/h."
+    ],
+    "correta": "6 m/s ou 21,6 km/h.",
+    "explicacao_base": "$Vm = \\Delta S / \\Delta t = 180 / 30 = 6$ m/s. Para converter em km/h, multiplica-se por 3,6: $6 \\times 3,6 = 21,6$ km/h."
+  },
+  {
+    "grupo_id": 289,
+    "tema": "Biologia - Saúde e Fisiologia (Diabetes)",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 289 E 290 ---\n\nNovas regras de rotulagem nutricional no Brasil exigem o uso de lupas frontais em embalagens para alertar sobre o 'ALTO TEOR DE AÇÚCAR ADICIONADO'. O consumo excessivo de açúcar sobrecarrega o pâncreas e pode levar à resistência à insulina.",
+    "image_id": "",
+    "id": 289,
+    "materia": "Biologia",
+    "dificuldade": "Média",
+    "enunciado": "A doença metabólica crônica diretamente associada à falha na produção ou na ação da insulina, resultando em hiperglicemia (excesso de açúcar no sangue), é o:",
+    "alternativas": [
+      "Hipotireoidismo.",
+      "Anemia Falciforme.",
+      "Diabetes Mellitus.",
+      "Hipertensão Arterial.",
+      "Colesterol Alto."
+    ],
+    "correta": "Diabetes Mellitus.",
+    "explicacao_base": "O Diabetes (especialmente o Tipo 2) está ligado à obesidade e ao consumo de açúcar, onde a insulina (hormônio do pâncreas) não consegue mais controlar a glicose no sangue."
+  },
+  {
+    "grupo_id": 290,
+    "tema": "Química / Biologia - Conservação de Alimentos (Osmose)",
+    "texto_referencia": "--- TEXTO PARA AS QUESTÕES 289 E 290 ---\n\nNovas regras de rotulagem nutricional no Brasil exigem o uso de lupas frontais em embalagens... [Contexto sobre sódio/açúcar como conservantes].\n\nDesde a antiguidade, sal e açúcar são usados para conservar carnes e frutas (charque, geleias), inibindo a proliferação de microrganismos.",
+    "image_id": "",
+    "id": 290,
+    "materia": "Química / Biologia",
+    "dificuldade": "Difícil",
+    "enunciado": "O sal em excesso preserva o alimento porque cria um meio extremamente hipertônico. Isso mata as bactérias decompositoras porque elas:",
+    "alternativas": [
+      "Perdem água para o meio externo por osmose, desidratando e morrendo.",
+      "Ganham muita água por osmose e explodem (turgência).",
+      "Absorvem o sal por transporte ativo e se intoxicam.",
+      "Não conseguem realizar fotossíntese no escuro.",
+      "Sofrem oxidação imediata de sua parede celular."
+    ],
+    "correta": "Perdem água para o meio externo por osmose, desidratando e morrendo.",
+    "explicacao_base": "O meio hipertônico (muito sal/açúcar) 'puxa' a água de dentro da célula bacteriana (meio hipotônico) através da membrana semipermeável. A bactéria desidrata e cessa seu metabolismo."
+  },
+  {
+    "grupo_id": 291,
+    "tema": "Geografia / Clima e Fenômenos Atuais",
+    "texto_referencia": "Em 2024, o Rio Grande do Sul enfrentou inundações históricas que devastaram cidades inteiras. Meteorologistas apontaram que, além das mudanças climáticas globais, um fenômeno oceânico-atmosférico específico estava ativo, aquecendo as águas do Oceano Pacífico Equatorial e alterando o regime de ventos, o que tradicionalmente bloqueia as frentes frias no sul do Brasil, intensificando as chuvas naquela região.",
+    "image_id": "",
+    "id": 291,
+    "materia": "Geografia",
+    "dificuldade": "Média",
+    "enunciado": "O fenômeno climático natural descrito, que periodicamente aquece o Pacífico e causa excesso de chuvas no Sul e seca no Norte/Nordeste do Brasil, é o:",
+    "alternativas": [
+      "La Niña.",
+      "El Niño.",
+      "Efeito Estufa.",
+      "Inversão Térmica.",
+      "Ciclone Extratropical."
+    ],
+    "correta": "El Niño.",
+    "explicacao_base": "O El Niño é o aquecimento anormal das águas do Pacífico Equatorial. No Brasil, seus efeitos clássicos são seca no Norte/Nordeste e chuvas excessivas no Sul."
+  },
+  {
+    "grupo_id": 292,
+    "tema": "Matemática - Geometria (Área Lateral)",
+    "texto_referencia": "Uma empresa de sucos deseja mudar o rótulo de suas latas cilíndricas para torná-las mais atraentes. A lata possui o formato de um cilindro circular reto com 10 cm de diâmetro da base e 12 cm de altura. O novo rótulo deve cobrir toda a superfície lateral da lata, sem sobreposição e sem cobrir as tampas.",
+    "image_id": "",
+    "id": 292,
+    "materia": "Matemática",
+    "dificuldade": "Média",
+    "enunciado": "Considerando $\\pi = 3$, a área mínima de papel necessária para produzir um único rótulo, em centímetros quadrados ($cm^2$), é de:",
+    "alternativas": [
+      "180 cm².",
+      "300 cm².",
+      "360 cm².",
+      "720 cm².",
+      "1200 cm²."
+    ],
+    "correta": "360 cm².",
+    "explicacao_base": "A área lateral do cilindro é um retângulo de base $2\\pi r$ (circunferência) e altura $h$. Diâmetro 10 cm $\\to$ Raio = 5 cm. Área $= 2 \\cdot \\pi \\cdot r \\cdot h = 2 \\cdot 3 \\cdot 5 \\cdot 12 = 360 \\, cm^2$."
+  },
+  {
+    "grupo_id": 293,
+    "tema": "História - Período Colonial (Invasões Holandesas)",
+    "texto_referencia": "Durante o século XVII, o Nordeste brasileiro, maior produtor mundial de açúcar na época, foi invadido e ocupado pela Companhia das Índias Ocidentais. Sob o governo do conde Maurício de Nassau, a cidade de Recife foi urbanizada, ganhou pontes, observatório astronômico e liberdade de culto religioso, vivendo um período de grande desenvolvimento cultural.",
+    "image_id": "",
+    "id": 293,
+    "materia": "História",
+    "dificuldade": "Média",
+    "enunciado": "A potência europeia responsável por essa invasão e administração do 'Brasil Holandês' (1630-1654) foi a:",
+    "alternativas": [
+      "França (França Equinocial).",
+      "Espanha (União Ibérica).",
+      "Holanda (Países Baixos).",
+      "Inglaterra (Corsários).",
+      "Portugal (Restauração)."
+    ],
+    "correta": "Holanda (Países Baixos).",
+    "explicacao_base": "Os holandeses (Países Baixos), através da WIC, invadiram o Nordeste (Pernambuco) para controlar o comércio do açúcar, após serem excluídos do negócio pela Espanha durante a União Ibérica."
+  },
+  {
+    "grupo_id": 294,
+    "tema": "Física - Eletrodinâmica (Circuitos)",
+    "texto_referencia": "Em residências antigas, era comum que, ao queimar uma lâmpada da árvore de Natal, todas as outras se apagassem. Já nas instalações elétricas modernas de uma casa (sala, cozinha, quartos), se a lâmpada da cozinha queima, a da sala continua acesa normalmente.",
+    "image_id": "",
+    "id": 294,
+    "materia": "Física",
+    "dificuldade": "Fácil",
+    "enunciado": "Para garantir que os aparelhos funcionem de forma independente e recebam a mesma tensão elétrica (Voltagem), a instalação residencial deve ser feita em:",
+    "alternativas": [
+      "Série.",
+      "Curto-circuito.",
+      "Paralelo.",
+      "Bobina.",
+      "Corrente Alternada bifásica sem neutro."
+    ],
+    "correta": "Paralelo.",
+    "explicacao_base": "No circuito em paralelo, a tensão é a mesma para todos os componentes e, se um caminho for interrompido (lâmpada queima), a corrente continua fluindo pelos outros caminhos. No circuito em série, se um queima, abre o circuito todo."
+  },
+  {
+    "grupo_id": 295,
+    "tema": "Biologia - Divisão Celular e Câncer",
+    "texto_referencia": "O corpo humano adulto repõe células desgastadas constantemente. No entanto, quando mecanismos de controle falham, uma célula pode começar a se dividir de maneira descontrolada e muito rápida, formando uma massa de tecido (tumor) que pode invadir outros órgãos.",
+    "image_id": "",
+    "id": 295,
+    "materia": "Biologia",
+    "dificuldade": "Média",
+    "enunciado": "O processo de divisão celular, que normalmente serve para crescimento e regeneração, mas que está acelerado na formação do câncer, é a:",
+    "alternativas": [
+      "Meiose.",
+      "Fecundação.",
+      "Mitose.",
+      "Osmose.",
+      "Fagocitose."
+    ],
+    "correta": "Mitose.",
+    "explicacao_base": "A Mitose é a divisão que gera células idênticas para o corpo (células somáticas). O câncer é, essencialmente, uma 'mitose descontrolada'. (A Meiose serve apenas para formar gametas sexuais)."
+  },
+  {
+    "grupo_id": 296,
+    "tema": "Química - Separação de Misturas (Centrifugação)",
+    "texto_referencia": "Ao realizar um exame de sangue (hemograma), o tubo contendo o sangue coletado é colocado em uma máquina que gira em alta velocidade. Após alguns minutos, observa-se que o sangue se separou em duas fases: uma parte vermelha sólida no fundo (hemácias) e um líquido amarelado em cima (plasma).",
+    "image_id": "",
+    "id": 296,
+    "materia": "Química",
+    "dificuldade": "Fácil",
+    "enunciado": "O processo de separação descrito, que acelera a decantação das partículas mais densas através da força de rotação, chama-se:",
+    "alternativas": [
+      "Destilação simples.",
+      "Centrifugação.",
+      "Filtração.",
+      "Sifonação.",
+      "Cromatografia."
+    ],
+    "correta": "Centrifugação.",
+    "explicacao_base": "A centrifugação utiliza a força centrífuga (rotação rápida) para separar componentes de densidades diferentes (sólido-líquido ou líquido-líquido) muito mais rápido que a gravidade sozinha."
+  },
+  {
+    "grupo_id": 297,
+    "tema": "Matemática - Lógica e Promoções",
+    "texto_referencia": "Uma rede de farmácias lançou a promoção 'Leve 3, Pague 2' em desodorantes. O preço unitário normal de um desodorante é de R$ 15,00. Um cliente decide aproveitar a promoção e levar 3 unidades.",
+    "image_id": "",
+    "id": 297,
+    "materia": "Matemática",
+    "dificuldade": "Difícil",
+    "enunciado": "Nessa transação, o desconto percentual real concedido sobre o valor total que ele pagaria fora da promoção é de aproximadamente:",
+    "alternativas": [
+      "10%.",
+      "33,3%.",
+      "50%.",
+      "66,6%.",
+      "75%."
+    ],
+    "correta": "33,3%.",
+    "explicacao_base": "Preço sem promoção (3 unidades): $3 \\times 15 = 45$. Preço pago (paga 2): $2 \\times 15 = 30$. Desconto em reais: 15. Percentual: $15 / 45 = 1/3 \\approx 0,333$ ou 33,3%."
+  },
+  {
+    "grupo_id": 298,
+    "tema": "Literatura / Português - Intertextualidade",
+    "texto_referencia": "Monteiro Lobato, em sua obra 'Urupês', criou o personagem Jeca Tatu, descrevendo-o como preguiçoso e atrasado. Anos depois, Lobato reviu seu conceito, afirmando: 'Jeca Tatu não é assim, ele *está* assim', referindo-se às doenças (verminoses) que minavam a energia do homem do campo.",
+    "image_id": "",
+    "id": 298,
+    "materia": "Português / Literatura",
+    "dificuldade": "Média",
+    "enunciado": "Essa mudança de postura do autor reflete a transição do pensamento Determinista (Pré-Modernismo) para uma visão de saúde pública. O Jeca Tatu tornou-se símbolo da necessidade de:",
+    "alternativas": [
+      "Reforma Agrária.",
+      "Saneamento Básico e Educação Sanitária.",
+      "Industrialização imediata do campo.",
+      "Importação de mão de obra europeia.",
+      "Abolição da escravidão."
+    ],
+    "correta": "Saneamento Básico e Educação Sanitária.",
+    "explicacao_base": "O Jeca Tatu sofria de amarelão (ancilostomose). A campanha de Lobato focou em mostrar que o problema do caipira não era preguiça racial, mas sim doença e falta de higiene/saneamento ('andar calçado')."
+  },
+  {
+    "grupo_id": 299,
+    "tema": "Física - Calorimetria e Materiais",
+    "texto_referencia": "Ao cozinhar macarrão, utilizamos panelas geralmente feitas de metais (como alumínio ou aço inox), mas as colheres para mexer a comida costumam ser de madeira, plástico ou silicone.",
+    "image_id": "",
+    "id": 299,
+    "materia": "Física",
+    "dificuldade": "Média",
+    "enunciado": "A escolha desses materiais para a colher justifica-se fisicamente porque madeira, plástico e silicone são:",
+    "alternativas": [
+      "Bons condutores térmicos, que resfriam a comida.",
+      "Materiais de alta densidade que afundam na água.",
+      "Isolantes térmicos, que dificultam a passagem de calor da panela quente para a mão de quem cozinha.",
+      "Materiais que sofrem sublimação a baixas temperaturas.",
+      "Metais de transição disfarçados."
+    ],
+    "correta": "Isolantes térmicos, que dificultam a passagem de calor da panela quente para a mão de quem cozinha.",
+    "explicacao_base": "Metais conduzem calor rapidamente (aquecem a comida), enquanto isolantes (madeira/plástico) possuem baixa condutividade térmica, protegendo a mão contra queimaduras."
+  },
+  {
+    "grupo_id": 300,
+    "tema": "Biologia / Evolução - Seleção Artificial",
+    "texto_referencia": "Desde o início da agricultura, há 10.000 anos, o ser humano seleciona as sementes das plantas que dão os maiores frutos e os animais mais dóceis para reprodução. Com o tempo, o milho selvagem (pequeno e duro) tornou-se o milho moderno (grande e macio) e o lobo deu origem ao cão doméstico.",
+    "image_id": "",
+    "id": 300,
+    "materia": "Biologia",
+    "dificuldade": "Fácil",
+    "enunciado": "Esse processo, guiado intencionalmente pelo ser humano para acentuar características desejáveis em outras espécies, foi denominado por Charles Darwin de:",
+    "alternativas": [
+      "Seleção Natural.",
+      "Deriva Genética.",
+      "Seleção Artificial.",
+      "Lei do Uso e Desuso.",
+      "Mutação Espontânea."
+    ],
+    "correta": "Seleção Artificial.",
+    "explicacao_base": "Diferente da Seleção Natural (onde o meio ambiente seleciona os mais aptos), na Seleção Artificial o ser humano interfere na reprodução escolhendo quais características quer preservar."
   }
 ]
