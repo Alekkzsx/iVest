@@ -138,16 +138,7 @@
       @case ('quiz') { <app-quiz /> }
       @case ('interpretation') { <app-text-interpretation /> }
       @case ('schedule') { <app-schedule /> }
-      @case ('resolutions') {
-      <div class="flex flex-col items-center justify-center h-full text-center">
-        <div class="w-24 h-24 bg-slate-100 rounded-full flex items-center justify-center mb-6 text-slate-400">
-          <i class="fas fa-check-double text-4xl"></i>
-        </div>
-        <h2 class="text-2xl font-bold text-slate-900">Resoluções</h2>
-        <p class="text-slate-500 mt-2 max-w-md">Esta funcionalidade permitirá ver resoluções detalhadas das questões. Em
-          breve!</p>
-      </div>
-      }
+      @case ('resolutions') { <app-resolutions /> }
 
       @case ('performance') {
       <div class="animate-fade-in font-sans">

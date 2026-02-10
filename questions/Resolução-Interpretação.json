@@ -1,0 +1,53 @@
+[
+    {
+        "questionId": 1,
+        "steps": [
+            {
+                "title": "🔍 Localização no Texto",
+                "content": "A primeira coisa a fazer é voltar ao primeiro parágrafo e encontrar exatamente onde o termo 'última milha' aparece. O autor coloca entre parênteses para explicar um conceito anterior."
+            },
+            {
+                "title": "💡 Identificando a Explicação",
+                "content": "O texto é muito direto: ele diz que a micromobilidade serve para percorrer curtas distâncias, 'geralmente a chamada última milha'. Logo em seguida, ele define: '(o trajeto entre a estação de metrô e a casa ou o trabalho)'."
+            },
+            {
+                "title": "🛠️ Técnica de Resolução",
+                "content": "Ao analisar as alternativas, descarte as que falam de 'maratona', 'fronteira agrícola' ou 'vida útil da bateria'. Foque no conceito de 'conexão' ou 'trecho final', que é o que o texto descreve."
+            }
+        ]
+    },
+    {
+        "questionId": 2,
+        "steps": [
+            {
+                "title": "🔍 Entendendo o Conceito",
+                "content": "Um paradoxo é algo que parece contraditório. O autor diz que o veículo ajuda por um lado, mas atrapalha por outro."
+            },
+            {
+                "title": "💡 O Lado Positivo vs Negativo",
+                "content": "Positivo: O veículo não emite fumaça ao rodar (sustentável no uso). Negativo: A extração do lítio e o descarte das baterias poluem solo e água (insustentável na origem/fim)."
+            },
+            {
+                "title": "🛠️ Conclusão Logística",
+                "content": "A alternativa correta deve equilibrar esses dois pesos: a limpeza no uso vs a sujeira na fabricação e descarte."
+            }
+        ]
+    },
+    {
+        "questionId": 3,
+        "steps": [
+            {
+                "title": "🔍 Olhar Histórico",
+                "content": "A questão pede para relacionar o termo 'rodoviarismo' com a década de 1950 no Brasil."
+            },
+            {
+                "title": "💡 O Modelo de Desenvolvimento",
+                "content": "O governo JK (Juscelino Kubitschek) foi marcado pela vinda das grandes montadoras de carros. Isso moldou as cidades para os veículos motorizados, não para pessoas ou trens."
+            },
+            {
+                "title": "🛠️ Identificação da Alternativa",
+                "content": "Procure a resposta que mencione o privilégio ao automóvel e às estradas, que é a definição exata de rodoviarismo citada no texto."
+            }
+        ]
+    }
+]

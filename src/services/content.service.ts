@@ -232,13 +232,15 @@ export class ContentService {
     // Load data from backend on initialization
     this.initializeData();
 
-    // Auto-save when stats or schedule change
+    // Granular Auto-saves
     effect(() => {
       const currentStats = this.stats();
-      const currentSchedule = this.schedule();
+      this.userDataService.saveUserProfile(currentStats);
+    });
 
-      // Save to backend (debounced in UserDataService)
-      this.saveToBackend();
+    effect(() => {
+      const currentSchedule = this.schedule();
+      this.userDataService.saveUserSchedule(currentSchedule);
     });
   }
 
@@ -247,37 +249,18 @@ export class ContentService {
    */
   private async initializeData(): Promise<void> {
     try {
-      // First, try to migrate data from localStorage if it exists
-      await this.userDataService.migrateFromLocalStorage();
-
       // Load data from backend
       const userData = await this.userDataService.loadUserData();
 
-      // Update stats
+      // Update stats (This will trigger the stats effect, but UserDataService handles it)
       this.stats.set(userData.user.stats);
 
-      // Update schedule
+      // Update schedule (This will trigger the schedule effect)
       this.schedule.set(userData.user.schedule);
 
       console.log('✅ ContentService initialized with backend data');
     } catch (error) {
       console.error('❌ Error initializing data:', error);
-    }
-  }
-
-  /**
-   * Save current state to backend
-   */
-  private saveToBackend(): void {
-    const userData = this.userDataService.getUserData();
-
-    if (userData) {
-      // Update with current stats and schedule
-      userData.user.stats = this.stats();
-      userData.user.schedule = this.schedule();
-
-      // Save (debounced)
-      this.userDataService.saveUserData(userData);
     }
   }
 

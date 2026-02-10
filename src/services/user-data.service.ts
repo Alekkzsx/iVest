@@ -1,6 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { firstValueFrom } from 'rxjs';
+import { Subject, debounceTime, switchMap, catchError, of, firstValueFrom } from 'rxjs';
 
 /**
  * Interface representing the complete user data structure
@@ -22,6 +21,16 @@ export interface UserData {
             timestamp: number;
             wasCorrect: boolean;
         }>;
+        interpretationHistory: Array<{
+            questionId: number;
+            timestamp: number;
+            wasCorrect: boolean;
+        }>;
+        resolutionsHistory: Array<{
+            questionId: number;
+            timestamp: number;
+            viewedAt: number;
+        }>;
         schedule: Array<{
             id: string;
             day: string;
@@ -39,212 +48,239 @@ export interface UserData {
     providedIn: 'root'
 })
 export class UserDataService {
-    private readonly API_BASE = 'http://localhost:3001/api';
-    private readonly SAVE_DEBOUNCE_MS = 1000; // Wait 1 second before saving
+    private readonly API_BASE = '/api/user/davi';
 
-    // Loading state
+    // Status Signals
     isLoading = signal(false);
+    syncStatus = signal<'synced' | 'saving' | 'error'>('synced');
     lastSaved = signal<Date | null>(null);
 
-    // User data cache
+    // User data cache (Frontend "View" of the DB)
     private userData = signal<UserData | null>(null);
-    private saveTimeout: any = null;
+
+    // Debounce Subjects
+    private profileUpdate$ = new Subject<any>();
+    private historyUpdate$ = new Subject<any[]>();
+    private interpretationUpdate$ = new Subject<any[]>();
+    private resolutionsUpdate$ = new Subject<any[]>();
+    private scheduleUpdate$ = new Subject<any[]>();
+
+    constructor() {
+        this.setupDebouncedSaves();
+    }
 
     /**
-     * Load user data from backend
+     * Set up debounced auto-saves using RxJS
+     */
+    private setupDebouncedSaves() {
+        // Debounced Profile Save
+        this.profileUpdate$.pipe(
+            debounceTime(1000),
+            switchMap(stats => {
+                this.syncStatus.set('saving');
+                return fetch(`${this.API_BASE}/profile`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ stats })
+                }).then(res => res.json());
+            }),
+            catchError(err => {
+                console.error('❌ Error saving profile:', err);
+                this.syncStatus.set('error');
+                return of(null);
+            })
+        ).subscribe(() => {
+            this.syncStatus.set('synced');
+            this.lastSaved.set(new Date());
+        });
+
+        // Debounced History Save
+        this.historyUpdate$.pipe(
+            debounceTime(1500),
+            switchMap(history => {
+                this.syncStatus.set('saving');
+                return fetch(`${this.API_BASE}/history`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(history)
+                }).then(res => res.json());
+            }),
+            catchError(err => {
+                console.error('❌ Error saving history:', err);
+                this.syncStatus.set('error');
+                return of(null);
+            })
+        ).subscribe(() => {
+            this.syncStatus.set('synced');
+            this.lastSaved.set(new Date());
+        });
+
+        // Debounced Interpretation Save
+        this.interpretationUpdate$.pipe(
+            debounceTime(1500),
+            switchMap(history => {
+                this.syncStatus.set('saving');
+                return fetch(`${this.API_BASE}/interpretation`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(history)
+                }).then(res => res.json());
+            }),
+            catchError(err => {
+                console.error('❌ Error saving interpretation history:', err);
+                this.syncStatus.set('error');
+                return of(null);
+            })
+        ).subscribe(() => {
+            this.syncStatus.set('synced');
+            this.lastSaved.set(new Date());
+        });
+
+        // Debounced Resolutions Save
+        this.resolutionsUpdate$.pipe(
+            debounceTime(1500),
+            switchMap(history => {
+                this.syncStatus.set('saving');
+                return fetch(`${this.API_BASE}/resolutions`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(history)
+                }).then(res => res.json());
+            }),
+            catchError(err => {
+                console.error('❌ Error saving resolutions history:', err);
+                this.syncStatus.set('error');
+                return of(null);
+            })
+        ).subscribe(() => {
+            this.syncStatus.set('synced');
+            this.lastSaved.set(new Date());
+        });
+
+        // Debounced Schedule Save
+        this.scheduleUpdate$.pipe(
+            debounceTime(1000),
+            switchMap(schedule => {
+                this.syncStatus.set('saving');
+                return fetch(`${this.API_BASE}/schedule`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(schedule)
+                }).then(res => res.json());
+            }),
+            catchError(err => {
+                console.error('❌ Error saving schedule:', err);
+                this.syncStatus.set('error');
+                return of(null);
+            })
+        ).subscribe(() => {
+            this.syncStatus.set('synced');
+            this.lastSaved.set(new Date());
+        });
+    }
+
+    /**
+     * Load full user data from the File Database (V4)
      */
     async loadUserData(): Promise<UserData> {
         this.isLoading.set(true);
 
         try {
-            const response = await fetch(`${this.API_BASE}/user-data`);
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            const response = await fetch(`${this.API_BASE}/full`);
+            if (!response.ok) throw new Error('Server unreachable');
 
             const data = await response.json();
             this.userData.set(data);
-
-            console.log('✅ User data loaded from backend');
+            console.log('✅ User data loaded from User DB');
             return data;
         } catch (error) {
-            console.error('❌ Error loading user data:', error);
-
-            // Return default data on error
-            const defaultData: UserData = {
-                version: '1.0.0',
-                lastUpdated: new Date().toISOString(),
-                user: {
-                    stats: {
-                        questionsAnswered: 0,
-                        correctAnswers: 0,
-                        currentStreak: 0,
-                        xp: 0,
-                        level: 1,
-                        essaysWritten: 0
-                    },
-                    questionHistory: [],
-                    schedule: []
-                }
-            };
-
-            this.userData.set(defaultData);
-            return defaultData;
+            console.error('❌ Error loading data:', error);
+            const empty = this.createDefaultData();
+            this.userData.set(empty);
+            this.syncStatus.set('error');
+            return empty;
         } finally {
             this.isLoading.set(false);
         }
     }
 
     /**
-     * Save user data to backend (debounced)
+     * Save PROFILE (Stats/XP/Level)
      */
-    saveUserData(data: UserData): void {
-        // Clear existing timeout
-        if (this.saveTimeout) {
-            clearTimeout(this.saveTimeout);
-        }
+    saveUserProfile(stats: any): void {
+        // Update local cache
+        this.userData.update(current => {
+            if (!current) return current;
+            return { ...current, user: { ...current.user, stats: stats } };
+        });
 
-        // Update cache immediately
-        this.userData.set(data);
-
-        // Debounce save to backend
-        this.saveTimeout = setTimeout(() => {
-            this.saveUserDataImmediate(data);
-        }, this.SAVE_DEBOUNCE_MS);
+        // Push to debounce stream
+        this.profileUpdate$.next(stats);
     }
 
     /**
-     * Save user data immediately (no debounce)
+     * Save HISTORY
      */
-    async saveUserDataImmediate(data: UserData): Promise<void> {
-        try {
-            const response = await fetch(`${this.API_BASE}/user-data`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
+    saveUserHistory(history: any[]): void {
+        this.userData.update(current => {
+            if (!current) return current;
+            return { ...current, user: { ...current.user, questionHistory: history } };
+        });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const result = await response.json();
-            this.lastSaved.set(new Date(result.lastUpdated));
-
-            console.log('💾 User data saved to backend');
-        } catch (error) {
-            console.error('❌ Error saving user data:', error);
-            // Still keep the data in memory even if save fails
-        }
+        this.historyUpdate$.next(history);
     }
 
     /**
-     * Get current user data from cache
+     * Save SCHEDULE
      */
+    saveUserSchedule(schedule: any[]): void {
+        this.userData.update(current => {
+            if (!current) return current;
+            return { ...current, user: { ...current.user, schedule: schedule } };
+        });
+
+        this.scheduleUpdate$.next(schedule);
+    }
+
+    /**
+     * Save Interpretation HISTORY
+     */
+    saveUserInterpretationHistory(history: any[]): void {
+        this.userData.update(current => {
+            if (!current) return current;
+            return { ...current, user: { ...current.user, interpretationHistory: history } };
+        });
+
+        this.interpretationUpdate$.next(history);
+    }
+
+    /**
+     * Save Resolutions HISTORY
+     */
+    saveUserResolutionsHistory(history: any[]): void {
+        this.userData.update(current => {
+            if (!current) return current;
+            return { ...current, user: { ...current.user, resolutionsHistory: history } };
+        });
+
+        this.resolutionsUpdate$.next(history);
+    }
+
     getUserData(): UserData | null {
         return this.userData();
     }
 
-    /**
-     * Download backup of user data
-     */
-    async downloadBackup(): Promise<void> {
-        try {
-            const response = await fetch(`${this.API_BASE}/user-data/backup`);
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+    private createDefaultData(): UserData {
+        return {
+            version: '4.0.0',
+            lastUpdated: new Date().toISOString(),
+            user: {
+                stats: { questionsAnswered: 0, correctAnswers: 0, currentStreak: 0, xp: 0, level: 1, essaysWritten: 0 },
+                questionHistory: [],
+                interpretationHistory: [],
+                resolutionsHistory: [],
+                schedule: []
             }
-
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = `vestbot-backup-${new Date().toISOString()}.json`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-
-            console.log('📦 Backup downloaded');
-        } catch (error) {
-            console.error('❌ Error downloading backup:', error);
-            throw error;
-        }
-    }
-
-    /**
-     * Check if backend is available
-     */
-    async checkHealth(): Promise<boolean> {
-        try {
-            const response = await fetch(`${this.API_BASE}/health`);
-            return response.ok;
-        } catch {
-            return false;
-        }
-    }
-
-    /**
-     * Migrate data from localStorage to backend
-     */
-    async migrateFromLocalStorage(): Promise<void> {
-        try {
-            // Check if there's data in localStorage
-            const statsData = localStorage.getItem('vestbot_stats');
-            const historyData = localStorage.getItem('vestbot_question_history');
-            const scheduleData = localStorage.getItem('vestbot_schedule');
-
-            if (!statsData && !historyData && !scheduleData) {
-                console.log('ℹ️ No localStorage data to migrate');
-                return;
-            }
-
-            // Load current backend data
-            const userData = await this.loadUserData();
-
-            // Migrate stats
-            if (statsData) {
-                try {
-                    const stats = JSON.parse(statsData);
-                    userData.user.stats = stats;
-                    console.log('📋 Migrated stats from localStorage');
-                } catch (e) {
-                    console.error('Error parsing stats from localStorage:', e);
-                }
-            }
-
-            // Migrate question history
-            if (historyData) {
-                try {
-                    const history = JSON.parse(historyData);
-                    userData.user.questionHistory = history;
-                    console.log('📋 Migrated question history from localStorage');
-                } catch (e) {
-                    console.error('Error parsing history from localStorage:', e);
-                }
-            }
-
-            // Migrate schedule
-            if (scheduleData) {
-                try {
-                    const schedule = JSON.parse(scheduleData);
-                    userData.user.schedule = schedule;
-                    console.log('📋 Migrated schedule from localStorage');
-                } catch (e) {
-                    console.error('Error parsing schedule from localStorage:', e);
-                }
-            }
-
-            // Save migrated data
-            await this.saveUserDataImmediate(userData);
-
-            console.log('✅ Migration from localStorage completed');
-        } catch (error) {
-            console.error('❌ Error migrating from localStorage:', error);
-        }
+        };
     }
 }

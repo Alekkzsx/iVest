@@ -1,0 +1,237 @@
+[ID: 1]
+### 🔍 Conversão de Unidades
+O primeiro passo é igualar as unidades. Se 1 GB = 1.024 MB, então os 100 GB livres equivalem a 102.400 MB.
+
+### 💡 Espaço Disponível
+Subtraia o que o sistema ocupa (28 GB) do total (128 GB). Você tem 100 GB reais para as fotos.
+
+### 🛠️ Divisão Final
+Divida o espaço total em MB (102.400) pelo tamanho de cada foto (5 MB). Isso resulta em 20.480 fotos.
+
+--------------------------------------------------
+
+[ID: 2]
+### 🔍 Ativa vs Passiva
+Imunização ativa estimula o corpo a fabricar defesas (vacina). Imunização passiva entrega as defesas prontas (soro).
+
+### 💡 Aplicação
+O soro antiofídico é curativo e imediato (passiva). A vacina é preventiva e gera memória (ativa).
+
+### 🛠️ Conclusão
+A sequência correta, conforme o enunciado pede ('respectivamente'), é Passiva e Ativa.
+
+--------------------------------------------------
+
+[ID: 3]
+### 🔍 Fluxo Migratório
+O texto descreve pessoas saindo do campo para as fábricas nas cidades. Este é um movimento clássico de urbanização.
+
+### 💡 Nome Técnico
+Diferente da migração pendular (diária) ou nomadismo, a saída definitiva do campo para a cidade tem um nome específico.
+
+### 🛠️ Termo Correto
+O termo é Êxodo Rural, intensificado no Brasil pela industrialização pós-1930.
+
+--------------------------------------------------
+
+[ID: 4]
+### 🔍 Mudança de Estado
+Ao passar álcool na mão, ele some rapidamente. Isso significa que ele mudou do estado líquido para o gasoso.
+
+### 💡 Termodinâmica
+Para evaporar, o álcool precisa de energia (calor). Ele 'rouba' esse calor da sua pele.
+
+### 🛠️ Sensação de Frio
+Como sua pele perde calor para o álcool evaporar, você sente o resfriamento imediato.
+
+--------------------------------------------------
+
+[ID: 5]
+### 🔍 Cálculo de Área
+Primeiro, calcule a área total do retângulo da parede: 4m (base) x 3m (altura) = 12 m².
+
+### 💡 Desconto da Porta
+Agora calcule a área da porta que NÃO será pintada: 2m x 1m = 2 m². Subtraia do total: 12 - 2 = 10 m².
+
+### 🛠️ Divisão por Latas
+Se cada lata cobre 5 m², divida a área real (10) pela capacidade da lata (5). Você precisará de 2 latas.
+
+--------------------------------------------------
+
+[ID: 6]
+### 🔍 Jogo de Palavras
+Note o uso de antíteses (contrários) e o raciocínio circular do verso. Isso é típico de um estilo que valoriza a forma e a lógica.
+
+### 💡 Dualidade Humana
+O texto reflete a dúvida e o contraste entre as partes e o todo, temas centrais do homem do século XVII.
+
+### 🛠️ Estilo de Época
+Essas características de Gregório de Matos (Boca do Inferno) definem perfeitamente o movimento Barroco.
+
+--------------------------------------------------
+
+[ID: 7]
+### 🔍 Densidade
+Lembre-se da regra: o material menos denso flutua sobre o mais denso. O óleo é 'mais leve' que a água nesse sentido.
+
+### 💡 Polaridade
+A água é polar e o óleo é apolar. Por isso eles não se misturam (são imiscíveis).
+
+### 🛠️ Combinação Chave
+A flutuação ocorre pela soma desses dois fatores: Ser menos denso e não se misturar (insolúvel).
+
+--------------------------------------------------
+
+[ID: 8]
+### 🔍 Ajuste de Unidades
+Velocidade em km/h não combina com tempo em segundos. Divida 72 por 3,6 para obter 20 metros por segundo (m/s).
+
+### 💡 Cálculo Progressivo
+Se o carro anda 20 metros a cada 1 segundo, em 2 segundos ele andará o dobro.
+
+### 🛠️ Resultado
+Distância = Velocidade (20) x Tempo (2). O motorista percorreu 40 metros sem olhar para a estrada.
+
+--------------------------------------------------
+
+[ID: 9]
+### 🔍 Relação (+ / 0)
+Analise quem sai ganhando. A orquídea ganha luz (+), mas a árvore não perde nada nem ganha nada (0).
+
+### 💡 Tipo de Interação
+Relações onde um se beneficia sem prejudicar o outro são chamadas de Comensalismo.
+
+### 🛠️ Especialidade
+Quando o benefício é apenas moradia/suporte entre plantas, usamos o nome específico: Epifitismo.
+
+--------------------------------------------------
+
+[ID: 10]
+### 🔍 Contexto da OTAN
+A OTAN é uma aliança militar. Sua aproximação das fronteiras de certas potências gera tensões geopolíticas.
+
+### 💡 Geopolítica Atual
+O Leste Europeu é uma zona de influência histórica russa. A entrada de vizinhos na OTAN é vista como ameaça direta.
+
+### 🛠️ Conflitos Diretos
+Essa tensão foi o argumento principal usado pelo governo russo para justificar a invasão da Ucrânia em 2022.
+
+--------------------------------------------------
+
+[ID: 11]
+### 🔍 Cálculo do Pix
+10% de R$ 2.500 é R$ 250. O valor à vista fica R$ 2.500 - R$ 250 = R$ 2.250.
+
+### 💡 Cálculo do Cartão
+5% de acréscimo sobre R$ 2.500 é R$ 125. O valor a prazo fica R$ 2.500 + R$ 125 = R$ 2.625.
+
+### 🛠️ Diferença Real
+Subtraia o menor do maior: R$ 2.625 - R$ 2.250 = R$ 375 de diferença total.
+
+--------------------------------------------------
+
+[ID: 12]
+### 🔍 pH e Acidez
+Acidificação significa que a água ficou com pH mais baixo. Isso ocorre pela absorção de CO2.
+
+### 💡 Reação Química
+O ácido carbônico formado reage com o Carbonato de Cálcio, que é a 'matéria-prima' das conchas.
+
+### 🛠️ Impacto Biológico
+Com as conchas se dissolvendo ou sem conseguir se formar, a vida marinha calcária fica seriamente ameaçada.
+
+--------------------------------------------------
+
+[ID: 13]
+### 🔍 Conceito de Imaterial
+Patrimônio imaterial não é um objeto ou prédio, mas um saber, uma celebração ou uma prática cultural.
+
+### 💡 Eliminação
+Cristo Redentor, Ouro Preto e Brasília são bens 'materiais' (concretos).
+
+### 🛠️ Identificação
+A Roda de Capoeira é uma expressão viva, um saber transmitido, logo, é patrimônio imaterial.
+
+--------------------------------------------------
+
+[ID: 14]
+### 🔍 Potência em kW
+Para calcular em kWh, primeiro transforme 1.500 W em 1,5 kW (divida por 1.000).
+
+### 💡 Horas Mensais
+30 min por dia dá 15 horas no mês (30 dias x 0,5 hora).
+
+### 🛠️ Conta de Luz
+Energia = 1,5 kW x 15h = 22,5 kWh. Multiplicando pelo preço (0,80), temos R$ 18,00.
+
+--------------------------------------------------
+
+[ID: 15]
+### 🔍 Regra de Ligação
+No DNA, as bases se atraem aos pares: Adenina com Timina (A-T) e Citosina com Guanina (C-G).
+
+### 💡 Tradução da Fita
+Dada a fita A-T-G-C-T-A, trocamos cada letra pelo seu par correspondente.
+
+### 🛠️ Resultado Final
+A sequência complementar é T - A - C - G - A - T.
+
+--------------------------------------------------
+
+[ID: 16]
+### 🔍 Localização do Lítio
+O 'ouro branco' (lítio) é extraído de salares em regiões de alta altitude nos Andes.
+
+### 💡 Os Três Grande
+Essa região estratégica abrange partes da Argentina, da Bolívia e do Chile.
+
+### 🛠️ Importância
+Como esses países formam um triângulo geográfico de depósitos, ganharam esse nome econômico.
+
+--------------------------------------------------
+
+[ID: 17]
+### 🔍 Metáfora do Comer
+Oswald de Andrade não falava de canibalismo real, mas de 'comer' a cultura europeia.
+
+### 💡 Digestão Cultural
+A ideia era absorver as técnicas modernas de fora e misturá-las com a nossa raíz indígena e brasileira.
+
+### 🛠️ Originalidade
+O resultado não é cópia, mas uma arte nova e genuinamente nacional.
+
+--------------------------------------------------
+
+[ID: 18]
+### 🔍 Geometria no Poste
+A escada inclinada forma a hipotenusa (10m) e o chão forma a base (6m).
+
+### 💡 Aplicando Pitágoras
+Alt² + 6² = 10². Isso vira: Alt² + 36 = 100.
+
+### 🛠️ Raíz Quadrada
+Alt² = 64. A raíz quadrada de 64 é 8 metros de altura.
+
+--------------------------------------------------
+
+[ID: 19]
+### 🔍 Repouso da Mistura
+Quando deixamos a sujeira 'descansar' na água, os flocos mais pesados descem sozinhos.
+
+### 💡 Densidade e Gravidade
+A sujeira é mais densa que a água, por isso se deposita no fundo do tanque.
+
+### 🛠️ Nome do Processo
+Esse ato de esperar a fase sólida assentar no fundo é chamado de Decantação.
+
+--------------------------------------------------
+
+[ID: 20]
+### 🔍 Tempos Diferentes
+Cuidado! Não tire a média de 75 e 50. Calcule o tempo de cada parte: 150/75 = 2h e 150/50 = 3h.
+
+### 💡 Viagem Total
+O ônibus demorou 5 horas totais (2 + 3) para percorrer os 300 km.
+
+### 🛠️ Velocidade Real
+V = 300km / 5h. A velocidade média foi de 60 km/h.

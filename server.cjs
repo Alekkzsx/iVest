@@ -4,185 +4,254 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
-const PORT = 3001; // Backend runs on different port than Angular
-const DATA_FILE = path.join(__dirname, 'data', 'data-user.txt');
+const PORT = 3001;
+const DATA_DIR = path.join(__dirname, 'data');
 
-// Middleware
-app.use(cors());
-app.use(express.json());
-
-// Estrutura padrão dos dados
-const DEFAULT_USER_DATA = {
-  version: '1.0.0',
-  lastUpdated: new Date().toISOString(),
-  user: {
-    stats: {
-      questionsAnswered: 0,
-      correctAnswers: 0,
-      currentStreak: 0,
-      xp: 0,
-      level: 1,
-      essaysWritten: 0
-    },
-    questionHistory: [],
-    schedule: []
-  }
+// File Paths - V4 Shared (Directly in data/)
+const FILES = {
+  PROFILE: path.join(DATA_DIR, 'profile.json'),
+  HISTORY: path.join(DATA_DIR, 'history.json'),
+  INTERPRETATION: path.join(DATA_DIR, 'interpretation-history.json'),
+  RESOLUTIONS: path.join(DATA_DIR, 'resolutions-history.json'),
+  SCHEDULE: path.join(DATA_DIR, 'schedule.json'),
+  LEGACY: path.join(DATA_DIR, 'data-user.txt')
 };
 
-/**
- * Ensure data directory and file exist
- */
-async function ensureDataFile() {
-  try {
-    // Check if data directory exists
-    const dataDir = path.dirname(DATA_FILE);
-    try {
-      await fs.access(dataDir);
-    } catch {
-      await fs.mkdir(dataDir, { recursive: true });
-      console.log('📁 Created data directory');
-    }
+app.use(cors());
+app.use(express.json({ limit: '50mb' })); // Increased limit for large history files
 
-    // Check if data file exists
-    try {
-      await fs.access(DATA_FILE);
-    } catch {
-      await fs.writeFile(DATA_FILE, JSON.stringify(DEFAULT_USER_DATA, null, 2));
-      console.log('📄 Created default data-user.txt file');
-    }
+// --- HELPER WRAPPERS ---
+
+/**
+ * Ensures a directory exists
+ */
+async function ensureDir(dirPath) {
+  try {
+    await fs.access(dirPath);
+  } catch {
+    await fs.mkdir(dirPath, { recursive: true });
+  }
+}
+
+/**
+ * Atomic Write: Writes to temp file then renames to target
+ * This prevents file corruption on power loss.
+ */
+async function atomicWrite(filePath, data) {
+  const tempPath = `${filePath}.tmp`;
+  try {
+    await ensureDir(path.dirname(filePath));
+    await fs.writeFile(tempPath, JSON.stringify(data, null, 2));
+    await fs.rename(tempPath, filePath); // Atomic operation
+    console.log(`💾 Saved: ${path.basename(filePath)}`);
   } catch (error) {
-    console.error('Error ensuring data file:', error);
+    console.error(`❌ Error saving ${path.basename(filePath)}:`, error);
+    try { await fs.unlink(tempPath); } catch { } // Cleanup temp
     throw error;
   }
 }
 
 /**
- * GET /api/user-data
- * Load user data from file
+ * Reads a JSON file or returns default if missing
  */
-app.get('/api/user-data', async (req, res) => {
+async function readJson(filePath, defaultValue) {
   try {
-    await ensureDataFile();
-    const data = await fs.readFile(DATA_FILE, 'utf8');
-    const userData = JSON.parse(data);
-    
-    console.log('✅ User data loaded successfully');
-    res.json(userData);
+    const data = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(data);
   } catch (error) {
-    console.error('❌ Error loading user data:', error);
-    
-    // If file is corrupted, return default data
-    if (error instanceof SyntaxError) {
-      console.log('⚠️ Corrupted file, returning default data');
-      res.json(DEFAULT_USER_DATA);
-    } else {
-      res.status(500).json({ 
-        error: 'Failed to load user data',
-        message: error.message 
-      });
+    return defaultValue;
+  }
+}
+
+// --- MIGRATION LOGIC ---
+
+async function migrateLegacyData() {
+  try {
+    // Check if new structure already exists
+    try {
+      await fs.access(FILES.PROFILE);
+      return; // Already migrated
+    } catch { }
+
+    console.log('📦 Checking for legacy data to migrate...');
+
+    // Check if legacy file exists
+    try {
+      await fs.access(FILES.LEGACY);
+    } catch {
+      console.log('ℹ️ No legacy data found. Starting fresh.');
+      return;
     }
+
+    // Read Legacy
+    const oldData = await readJson(FILES.LEGACY, null);
+    if (!oldData || !oldData.user) return;
+
+    console.log('🔄 Migrating legacy data to new structure...');
+
+    // Split Data
+    const profile = {
+      version: '4.0.0',
+      lastUpdated: new Date().toISOString(),
+      stats: oldData.user.stats || {
+        questionsAnswered: 0,
+        correctAnswers: 0,
+        currentStreak: 0,
+        xp: 0,
+        level: 1,
+        essaysWritten: 0
+      }
+    };
+
+    const history = oldData.user.questionHistory || [];
+    const schedule = oldData.user.schedule || [];
+
+    // Write New Files
+    await ensureDir(DATA_DIR);
+    await atomicWrite(FILES.PROFILE, profile);
+    await atomicWrite(FILES.HISTORY, history);
+    await atomicWrite(FILES.SCHEDULE, schedule);
+
+    // Archive Legacy
+    const archivePath = path.join(DATA_DIR, `data-user-migrated-${Date.now()}.txt`);
+    await fs.rename(FILES.LEGACY, archivePath);
+
+    console.log('✅ Migration Complete! User "Davi" is ready.');
+
+  } catch (error) {
+    console.error('❌ Migration Failed:', error);
+  }
+}
+
+// --- ENDPOINTS ---
+
+/**
+ * GET /api/user/davi/full
+ * Loads all data components and combines them for App Init
+ */
+app.get('/api/user/davi/full', async (req, res) => {
+  try {
+    await migrateLegacyData();
+
+    const [profile, history, schedule] = await Promise.all([
+      readJson(FILES.PROFILE, { stats: { level: 1, xp: 0, questionsAnswered: 0, correctAnswers: 0, currentStreak: 0, essaysWritten: 0 } }),
+      readJson(FILES.HISTORY, []),
+      readJson(FILES.SCHEDULE, [])
+    ]);
+
+    // Reconstruct the "Unified" object for the frontend to consume initially
+    const fullData = {
+      version: profile.version || '4.0.0',
+      lastUpdated: profile.lastUpdated || new Date().toISOString(),
+      user: {
+        stats: profile.stats,
+        questionHistory: history,
+        schedule: schedule
+      }
+    };
+
+    res.json(fullData);
+  } catch (error) {
+    console.error('Error loading full data:', error);
+    res.status(500).json({ error: 'Failed to load data' });
   }
 });
 
 /**
- * POST /api/user-data
- * Save user data to file
+ * POST /api/user/davi/profile
+ * Updates Stats/XP/Level/Streak
  */
-app.post('/api/user-data', async (req, res) => {
+app.post('/api/user/davi/profile', async (req, res) => {
   try {
-    const userData = req.body;
-    
-    // Validate data structure
-    if (!userData.user || !userData.user.stats) {
-      return res.status(400).json({ 
-        error: 'Invalid data structure',
-        message: 'Missing required fields: user.stats' 
-      });
-    }
+    const newStats = req.body; // Expects just the stats object or profile object
 
-    // Update timestamp
-    userData.lastUpdated = new Date().toISOString();
-    userData.version = '1.0.0';
+    // We strictly assume we receive the 'stats' object or a full profile wrapper
+    // Let's normalize
+    const dataToSave = {
+      version: '4.0.0',
+      lastUpdated: new Date().toISOString(),
+      stats: newStats.stats || newStats // Handle both {stats: {...}} and {...}
+    };
 
-    // Save to file
-    await ensureDataFile();
-    await fs.writeFile(DATA_FILE, JSON.stringify(userData, null, 2));
-    
-    console.log('💾 User data saved successfully');
-    res.json({ 
-      success: true, 
-      message: 'Data saved successfully',
-      lastUpdated: userData.lastUpdated
-    });
+    await atomicWrite(FILES.PROFILE, dataToSave);
+    res.json({ success: true, lastUpdated: dataToSave.lastUpdated });
   } catch (error) {
-    console.error('❌ Error saving user data:', error);
-    res.status(500).json({ 
-      error: 'Failed to save user data',
-      message: error.message 
-    });
+    res.status(500).json({ error: error.message });
   }
 });
 
 /**
- * GET /api/user-data/backup
- * Download backup of user data
+ * POST /api/user/davi/history
+ * Updates Question History
  */
-app.get('/api/user-data/backup', async (req, res) => {
+app.post('/api/user/davi/history', async (req, res) => {
   try {
-    await ensureDataFile();
-    const data = await fs.readFile(DATA_FILE, 'utf8');
-    
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const filename = `vestbot-backup-${timestamp}.json`;
-    
-    res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-    res.send(data);
-    
-    console.log('📦 Backup downloaded');
+    const newHistory = req.body; // Expects Array
+    if (!Array.isArray(newHistory)) throw new Error('History must be an array');
+
+    await atomicWrite(FILES.HISTORY, newHistory);
+    res.json({ success: true });
   } catch (error) {
-    console.error('❌ Error creating backup:', error);
-    res.status(500).json({ 
-      error: 'Failed to create backup',
-      message: error.message 
-    });
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * POST /api/user/davi/schedule
+ * Updates Schedule
+ */
+app.post('/api/user/davi/schedule', async (req, res) => {
+  try {
+    const newSchedule = req.body; // Expects Array
+    if (!Array.isArray(newSchedule)) throw new Error('Schedule must be an array');
+
+    await atomicWrite(FILES.SCHEDULE, newSchedule);
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * POST /api/user/davi/interpretation
+ * Updates Interpretation History
+ */
+app.post('/api/user/davi/interpretation', async (req, res) => {
+  try {
+    const newHistory = req.body;
+    if (!Array.isArray(newHistory)) throw new Error('Data must be an array');
+    await atomicWrite(FILES.INTERPRETATION, newHistory);
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * POST /api/user/davi/resolutions
+ * Updates Resolutions History
+ */
+app.post('/api/user/davi/resolutions', async (req, res) => {
+  try {
+    const data = req.body;
+    if (!Array.isArray(data)) throw new Error('Data must be an array');
+    await atomicWrite(FILES.RESOLUTIONS, data);
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 });
 
 /**
  * GET /api/health
- * Health check endpoint
  */
 app.get('/api/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
-    message: 'VestBot Backend is running',
-    dataFile: DATA_FILE
-  });
+  res.json({ status: 'ok', mode: 'Split-File V4', user: 'Davi' });
 });
 
-// Initialize server
-async function startServer() {
-  try {
-    await ensureDataFile();
-    
-    app.listen(PORT, () => {
-      console.log('');
-      console.log('🚀 VestBot Backend Server Started!');
-      console.log(`📡 Server running on: http://localhost:${PORT}`);
-      console.log(`📄 Data file: ${DATA_FILE}`);
-      console.log('');
-      console.log('Available endpoints:');
-      console.log(`  GET  /api/health            - Health check`);
-      console.log(`  GET  /api/user-data         - Load user data`);
-      console.log(`  POST /api/user-data         - Save user data`);
-      console.log(`  GET  /api/user-data/backup  - Download backup`);
-      console.log('');
-    });
-  } catch (error) {
-    console.error('Failed to start server:', error);
-    process.exit(1);
-  }
-}
+// --- SERVER START ---
 
-startServer();
+app.listen(PORT, () => {
+  console.log(`🚀 VestBot Server (V4 Clean-Data) running on port ${PORT}`);
+  console.log(`📂 Data Directory: ${DATA_DIR}`);
+});

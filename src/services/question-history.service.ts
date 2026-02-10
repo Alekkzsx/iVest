@@ -22,7 +22,6 @@ export interface QuestionAttempt {
     providedIn: 'root'
 })
 export class QuestionHistoryService {
-    private readonly STORAGE_KEY = 'vestbot_question_history';
     private userDataService = inject(UserDataService);
 
     // Time intervals in milliseconds
@@ -51,7 +50,7 @@ export class QuestionHistoryService {
         // Add new attempt
         filtered.push(attempt);
 
-        // Save to localStorage
+        // Save via UserDataService
         this.saveHistory(filtered);
 
         console.log(`📝 Recorded ${wasCorrect ? 'correct' : 'incorrect'} attempt for question ${questionId}`);
@@ -125,61 +124,40 @@ export class QuestionHistoryService {
     }
 
     /**
-     * Clear all history (useful for testing or reset)
+     * Clear all history
      */
     clearHistory(): void {
-        localStorage.removeItem(this.STORAGE_KEY);
+        this.saveHistory([]);
         console.log('🗑️ Question history cleared');
     }
 
     /**
-     * Get all history from localStorage or backend
+     * Get all history from Unified User Data
      */
     private getHistory(): QuestionAttempt[] {
-        try {
-            // Try to get from backend first
-            const userData = this.userDataService.getUserData();
-
-            if (userData && userData.user.questionHistory) {
-                return userData.user.questionHistory;
-            }
-
-            // Fallback to localStorage
-            const data = localStorage.getItem(this.STORAGE_KEY);
-            if (!data) {
-                return [];
-            }
-            return JSON.parse(data);
-        } catch (error) {
-            console.error('Error reading question history:', error);
-            return [];
+        const userData = this.userDataService.getUserData();
+        if (userData && userData.user.questionHistory) {
+            return userData.user.questionHistory;
         }
+        return [];
     }
 
     /**
-     * Save history to backend and localStorage
+     * Save history to Unified User Data (V4: Specific Endpoint)
      */
     private saveHistory(history: QuestionAttempt[]): void {
-        try {
-            // Save to localStorage as backup
-            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(history));
-
-            // Save to backend
-            const userData = this.userDataService.getUserData();
-            if (userData) {
-                userData.user.questionHistory = history;
-                this.userDataService.saveUserData(userData);
-            }
-        } catch (error) {
-            console.error('Error saving question history:', error);
-        }
+        // Update via the dedicated history endpoint for granular saving
+        this.userDataService.saveUserHistory(history);
     }
 
     /**
      * Clean up old entries that are past the block time
-     * This prevents the localStorage from growing indefinitely
      */
     private cleanupOldEntries(): void {
+        // Run cleanup only if data is loaded
+        const userData = this.userDataService.getUserData();
+        if (!userData) return;
+
         const history = this.getHistory();
         const now = Date.now();
 

@@ -4,9 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "ng serve",
+    "dev": "concurrently \"ng serve\" \"node server.cjs\"",
     "server": "node server.cjs",
-    "dev:full": "concurrently \"npm run dev\" \"npm run server\"",
     "build": "ng build",
     "preview": "ng serve --configuration=production"
   },

@@ -1,7 +1,8 @@
 import { Injectable, signal, inject, computed } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { Question } from './content.service';
+import { Question, ContentService } from './content.service';
+import { UserDataService } from './user-data.service';
 
 /**
  * Representa um grupo de questões de interpretação
@@ -197,8 +198,29 @@ export class InterpretationService {
         return false;
     }
 
+    private userDataService = inject(UserDataService);
+
     /**
-     * Registra a resposta do usuário para uma questão
+     * Registra a resposta do usuário para uma questão e salva no histórico dedicado
+     */
+    async recordInterpretationAttempt(questionId: number, wasCorrect: boolean): Promise<void> {
+        const fullData = await this.userDataService.loadUserData();
+        const history = fullData.user.interpretationHistory || [];
+
+        const attempt = {
+            questionId,
+            timestamp: Date.now(),
+            wasCorrect
+        };
+
+        const filtered = history.filter(h => h.questionId !== questionId);
+        filtered.push(attempt);
+
+        this.userDataService.saveUserInterpretationHistory(filtered);
+    }
+
+    /**
+     * Registra a resposta do usuário para uma questão (Sessão local)
      */
     submitAnswer(questionId: number, answerIndex: number): void {
         this.answeredQuestions.update(map => {

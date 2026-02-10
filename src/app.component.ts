@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { TextInterpretationComponent } from './components/text-interpretation/text-interpretation.component';
+import { ResolutionsComponent } from './components/resolutions/resolutions.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ContentService } from './services/content.service';
 
@@ -16,6 +17,7 @@ type View = 'dashboard' | 'quiz' | 'interpretation' | 'performance' | 'schedule'
     DashboardComponent,
     QuizComponent,
     TextInterpretationComponent,
+    ResolutionsComponent,
     ScheduleComponent
   ],
   templateUrl: './app.component.html',
