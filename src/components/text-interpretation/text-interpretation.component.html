@@ -120,7 +120,7 @@
         <i class="fas fa-file-alt"></i>
         <h3>Texto de Referência</h3>
       </div>
-      <div class="text-content">{{ currentGroup().supportText }}</div>
+      <div class="text-content" [innerHTML]="currentGroup().supportText | latex"></div>
     </div>
 
     <!-- Questão Atual -->
@@ -135,7 +135,7 @@
         </span>
       </div>
 
-      <p class="question-text">{{ question.text }}</p>
+      <p class="question-text" [innerHTML]="question.text | latex"></p>
 
       <!-- Options -->
       <div class="options-list">
@@ -145,7 +145,7 @@
           <input type="radio" [name]="'current-question'" [value]="$index" [checked]="isSelected($index)"
             [disabled]="hasAnswered()" (change)="selectAnswer($index)">
           <span class="option-letter">{{ getOptionLetter($index) }}</span>
-          <span class="option-text">{{ option }}</span>
+          <span class="option-text" [innerHTML]="option | latex"></span>
           @if (isCorrectOption($index)) {
           <i class="fas fa-check-circle result-icon"></i>
           }
@@ -163,7 +163,7 @@
           <i class="fas fa-lightbulb"></i>
           <strong>Explicação</strong>
         </div>
-        <p>{{ question.explanation }}</p>
+        <p [innerHTML]="question.explanation | latex"></p>
       </div>
       }
 

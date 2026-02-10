@@ -5,11 +5,12 @@ import { ContentService, Question } from '../../services/content.service';
 import { QuestionHistoryService } from '../../services/question-history.service';
 import { DictionaryService, DictionaryEntry } from '../../services/dictionary.service';
 import { WordPopupComponent } from '../word-popup/word-popup.component';
+import { LatexPipe } from '../../pipes/latex.pipe';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, FormsModule, WordPopupComponent],
+  imports: [CommonModule, FormsModule, WordPopupComponent, LatexPipe],
   templateUrl: './quiz.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

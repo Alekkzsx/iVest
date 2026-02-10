@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InterpretationService } from '../../services/interpretation.service';
 import { ContentService } from '../../services/content.service';
+import { LatexPipe } from '../../pipes/latex.pipe';
 
 type ViewState = 'config' | 'activity' | 'loading' | 'error';
 
 @Component({
   selector: 'app-text-interpretation',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, LatexPipe],
   templateUrl: './text-interpretation.component.html',
   styleUrl: './text-interpretation.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
