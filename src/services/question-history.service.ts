@@ -2,21 +2,27 @@ import { Injectable, inject } from '@angular/core';
 import { UserDataService } from './user-data.service';
 
 /**
+ * Context where the question was attempted
+ */
+export type QuestionContext = 'quiz' | 'interpretation' | 'resolution';
+
+/**
  * Represents a single attempt at answering a question
  */
 export interface QuestionAttempt {
     questionId: number;
     timestamp: number;      // Unix timestamp in milliseconds
     wasCorrect: boolean;
+    context?: QuestionContext; // Optional for backwards compatibility
 }
 
 /**
  * Service to manage question history and spaced repetition logic
  * 
  * Rules:
- * - Correctly answered questions are blocked for 3 days (72 hours)
- * - Incorrectly answered questions are blocked for 8 hours
- * - Never answered questions are always available
+ * - Quiz/Interpretation CORRECT: blocked for 3 hours
+ * - Quiz/Interpretation INCORRECT: blocked for 30 minutes
+ * - Resolution (viewed): REDUCES block time to 30min (if was correct) or 10min (if was incorrect)
  */
 @Injectable({
     providedIn: 'root'
@@ -25,8 +31,10 @@ export class QuestionHistoryService {
     private userDataService = inject(UserDataService);
 
     // Time intervals in milliseconds
-    private readonly CORRECT_BLOCK_TIME = 3 * 24 * 60 * 60 * 1000;  // 3 days
-    private readonly INCORRECT_BLOCK_TIME = 8 * 60 * 60 * 1000;     // 8 hours
+    private readonly QUIZ_CORRECT_BLOCK_TIME = 3 * 60 * 60 * 1000;  // 3 hours
+    private readonly QUIZ_INCORRECT_BLOCK_TIME = 30 * 60 * 1000;    // 30 minutes
+    private readonly RESOLUTION_CORRECT_REDUCTION = 30 * 60 * 1000;  // 30 minutes (reduced from 3h)
+    private readonly RESOLUTION_INCORRECT_REDUCTION = 10 * 60 * 1000; // 10 minutes (reduced from 30min)
 
     constructor() {
         this.cleanupOldEntries();
@@ -34,15 +42,31 @@ export class QuestionHistoryService {
 
     /**
      * Record a question attempt
+     * 
+     * @param questionId - ID of the question
+     * @param wasCorrect - Whether the answer was correct
+     * @param context - Context where the question was attempted ('quiz', 'interpretation', or 'resolution')
      */
-    recordAttempt(questionId: number, wasCorrect: boolean): void {
+    recordAttempt(questionId: number, wasCorrect: boolean, context: QuestionContext = 'quiz'): void {
         const history = this.getHistory();
+
+        // Check if there's a previous attempt for this question
+        const previousAttempt = history.find(h => h.questionId === questionId);
 
         const attempt: QuestionAttempt = {
             questionId,
             timestamp: Date.now(),
-            wasCorrect
+            wasCorrect,
+            context
         };
+
+        // Special logic for 'resolution' context: it reduces block time
+        if (context === 'resolution' && previousAttempt) {
+            // Resolution inherits the previous correctness status
+            // but updates timestamp to "reset" with reduced time
+            attempt.wasCorrect = previousAttempt.wasCorrect;
+            console.log(`🔄 Resolution viewed for question ${questionId} (was ${previousAttempt.wasCorrect ? 'correct' : 'incorrect'}). Reducing block time.`);
+        }
 
         // Remove previous attempts for this question
         const filtered = history.filter(h => h.questionId !== questionId);
@@ -53,7 +77,8 @@ export class QuestionHistoryService {
         // Save via UserDataService
         this.saveHistory(filtered);
 
-        console.log(`📝 Recorded ${wasCorrect ? 'correct' : 'incorrect'} attempt for question ${questionId}`);
+        const contextLabel = context === 'quiz' ? 'quiz' : context === 'interpretation' ? 'interpretation' : 'resolution';
+        console.log(`📝 Recorded ${wasCorrect ? 'correct' : 'incorrect'} attempt for question ${questionId} [${contextLabel}]`);
     }
 
     /**
@@ -71,12 +96,23 @@ export class QuestionHistoryService {
         const now = Date.now();
         const timeSinceAttempt = now - lastAttempt.timestamp;
 
-        // Check if enough time has passed based on correctness
-        if (lastAttempt.wasCorrect) {
-            return timeSinceAttempt >= this.CORRECT_BLOCK_TIME;
+        // Determine block time based on context and correctness
+        let blockTime: number;
+        const context = lastAttempt.context || 'quiz'; // Default to 'quiz' for backwards compatibility
+
+        if (context === 'resolution') {
+            // Resolution context uses reduced times
+            blockTime = lastAttempt.wasCorrect
+                ? this.RESOLUTION_CORRECT_REDUCTION
+                : this.RESOLUTION_INCORRECT_REDUCTION;
         } else {
-            return timeSinceAttempt >= this.INCORRECT_BLOCK_TIME;
+            // Quiz/Interpretation context uses normal times
+            blockTime = lastAttempt.wasCorrect
+                ? this.QUIZ_CORRECT_BLOCK_TIME
+                : this.QUIZ_INCORRECT_BLOCK_TIME;
         }
+
+        return timeSinceAttempt >= blockTime;
     }
 
     /**
@@ -93,7 +129,20 @@ export class QuestionHistoryService {
 
         const now = Date.now();
         const timeSinceAttempt = now - lastAttempt.timestamp;
-        const blockTime = lastAttempt.wasCorrect ? this.CORRECT_BLOCK_TIME : this.INCORRECT_BLOCK_TIME;
+
+        // Determine block time based on context and correctness
+        const context = lastAttempt.context || 'quiz'; // Default to 'quiz' for backwards compatibility
+
+        let blockTime: number;
+        if (context === 'resolution') {
+            blockTime = lastAttempt.wasCorrect
+                ? this.RESOLUTION_CORRECT_REDUCTION
+                : this.RESOLUTION_INCORRECT_REDUCTION;
+        } else {
+            blockTime = lastAttempt.wasCorrect
+                ? this.QUIZ_CORRECT_BLOCK_TIME
+                : this.QUIZ_INCORRECT_BLOCK_TIME;
+        }
 
         const remaining = blockTime - timeSinceAttempt;
         return remaining > 0 ? remaining : null;
@@ -164,7 +213,20 @@ export class QuestionHistoryService {
         // Keep only entries that are still within block time
         const filtered = history.filter(h => {
             const age = now - h.timestamp;
-            const blockTime = h.wasCorrect ? this.CORRECT_BLOCK_TIME : this.INCORRECT_BLOCK_TIME;
+            const context = h.context || 'quiz';
+
+            // Determine block time based on context
+            let blockTime: number;
+            if (context === 'resolution') {
+                blockTime = h.wasCorrect
+                    ? this.RESOLUTION_CORRECT_REDUCTION
+                    : this.RESOLUTION_INCORRECT_REDUCTION;
+            } else {
+                blockTime = h.wasCorrect
+                    ? this.QUIZ_CORRECT_BLOCK_TIME
+                    : this.QUIZ_INCORRECT_BLOCK_TIME;
+            }
+
             return age < blockTime * 2; // Keep for 2x block time for historical data
         });
 

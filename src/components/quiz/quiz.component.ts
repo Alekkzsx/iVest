@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { ContentService, Question } from '../../services/content.service';
 import { QuestionHistoryService } from '../../services/question-history.service';
 import { DictionaryService, DictionaryEntry } from '../../services/dictionary.service';
+import { ActivitySessionService } from '../../services/activity-session.service';
 import { WordPopupComponent } from '../word-popup/word-popup.component';
+import { CelebrationComponent, CelebrationType } from '../celebration/celebration.component';
 import { LatexPipe } from '../../pipes/latex.pipe';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, FormsModule, WordPopupComponent, LatexPipe],
+  imports: [CommonModule, FormsModule, WordPopupComponent, CelebrationComponent, LatexPipe],
   templateUrl: './quiz.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -18,6 +20,7 @@ export class QuizComponent implements OnDestroy {
   contentService = inject(ContentService);
   questionHistory = inject(QuestionHistoryService);
   dictionary = inject(DictionaryService);
+  activitySession = inject(ActivitySessionService);
 
   // Configuration State
   availableSubjects = signal<string[]>(this.contentService.getSubjects());
@@ -37,6 +40,11 @@ export class QuizComponent implements OnDestroy {
   isCorrect = signal(false);
   score = signal(0);
   quizFinished = signal(false);
+
+  // Celebration State
+  showCelebration = signal(false);
+  celebrationType = signal<CelebrationType>('correct');
+  celebrationXP = signal(0);
 
   // Loading State
   isPreparing = signal(false);
@@ -380,6 +388,9 @@ export class QuizComponent implements OnDestroy {
         this.timeLeft.set(0);
       }
 
+      // Iniciar sessão de atividade para tracking de XP de conclusão
+      this.activitySession.startSession('quiz');
+
     } catch (e) {
       console.error(e);
       alert('Erro ao iniciar simulado.');
@@ -448,12 +459,21 @@ export class QuizComponent implements OnDestroy {
 
     if (correct) {
       this.score.update(s => s + 1);
+
+      // Show celebration only every 10 correct answers
+      if (this.score() % 10 === 0) {
+        this.celebrationType.set('streak');
+        this.celebrationXP.set(50);
+        this.showCelebration.set(true);
+      }
     }
 
     // Record attempt for spaced repetition
-    this.questionHistory.recordAttempt(currentQ.id, correct);
+    this.questionHistory.recordAttempt(currentQ.id, correct, 'quiz');
 
-    this.contentService.updateStats(correct);
+    // Record question in session and update stats with subject
+    this.activitySession.recordQuestion(currentQ.difficulty);
+    this.contentService.updateStats(correct, currentQ.subject);
   }
 
   nextQuestion() {
@@ -468,10 +488,29 @@ export class QuizComponent implements OnDestroy {
   finishQuiz() {
     this.stopTimer();
     this.quizFinished.set(true);
+
+    // Complete session and award bonus XP
+    const bonusXP = this.activitySession.completeSession();
+    if (bonusXP > 0) {
+      console.log(`🎊 Simulado completo! Bônus de conclusão: +${bonusXP} XP`);
+    }
+
+    // Show completion celebration
+    this.celebrationType.set('completion');
+    this.celebrationXP.set(bonusXP);
+    this.showCelebration.set(true);
+  }
+
+  closeCelebration() {
+    this.showCelebration.set(false);
   }
 
   exitQuiz() {
     this.stopTimer();
+
+    // Abandon session (no bonus XP)
+    this.activitySession.abandonSession();
+
     this.quizActive.set(false);
     this.quizFinished.set(false);
   }

@@ -1,5 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Subject, debounceTime, switchMap, catchError, of, firstValueFrom } from 'rxjs';
+import type { UserAchievement, UserChallenge, ActivitySession } from '../types/gamification.types';
 
 /**
  * Interface representing the complete user data structure
@@ -38,6 +39,17 @@ export interface UserData {
             topic: string;
             duration: string;
         }>;
+        gamification?: {
+            achievements: UserAchievement[];
+            challenges: UserChallenge[];
+            completedSessions: ActivitySession[];
+            consecutiveCorrect: number; // Para conquistas de streak perfeito
+            subjectStats: Array<{
+                subject: string;
+                answered: number;
+                correct: number;
+            }>;
+        };
     };
 }
 
@@ -64,6 +76,7 @@ export class UserDataService {
     private interpretationUpdate$ = new Subject<any[]>();
     private resolutionsUpdate$ = new Subject<any[]>();
     private scheduleUpdate$ = new Subject<any[]>();
+    private gamificationUpdate$ = new Subject<any>();
 
     constructor() {
         this.setupDebouncedSaves();
@@ -177,6 +190,27 @@ export class UserDataService {
             this.syncStatus.set('synced');
             this.lastSaved.set(new Date());
         });
+
+        // Debounced Gamification Save
+        this.gamificationUpdate$.pipe(
+            debounceTime(2000),
+            switchMap(gamification => {
+                this.syncStatus.set('saving');
+                return fetch(`${this.API_BASE}/gamification`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(gamification)
+                }).then(res => res.json());
+            }),
+            catchError(err => {
+                console.error('❌ Error saving gamification:', err);
+                this.syncStatus.set('error');
+                return of(null);
+            })
+        ).subscribe(() => {
+            this.syncStatus.set('synced');
+            this.lastSaved.set(new Date());
+        });
     }
 
     /**
@@ -266,6 +300,18 @@ export class UserDataService {
         this.resolutionsUpdate$.next(history);
     }
 
+    /**
+     * Save GAMIFICATION data (achievements, challenges, etc.)
+     */
+    saveGamificationData(gamification: any): void {
+        this.userData.update(current => {
+            if (!current) return current;
+            return { ...current, user: { ...current.user, gamification } };
+        });
+
+        this.gamificationUpdate$.next(gamification);
+    }
+
     getUserData(): UserData | null {
         return this.userData();
     }
@@ -279,7 +325,14 @@ export class UserDataService {
                 questionHistory: [],
                 interpretationHistory: [],
                 resolutionsHistory: [],
-                schedule: []
+                schedule: [],
+                gamification: {
+                    achievements: [],
+                    challenges: [],
+                    completedSessions: [],
+                    consecutiveCorrect: 0,
+                    subjectStats: [],
+                }
             }
         };
     }

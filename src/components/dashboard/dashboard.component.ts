@@ -1,17 +1,28 @@
 import { Component, inject, computed, signal, output, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContentService } from '../../services/content.service';
+import { LevelIndicatorComponent } from '../level-indicator/level-indicator.component';
+import { ChallengesCardComponent } from '../challenges-card/challenges-card.component';
+import { AchievementModalComponent } from '../achievement-modal/achievement-modal.component';
+import { AchievementsService } from '../../services/achievements.service';
+import type { Achievement } from '../../types/gamification.types';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LevelIndicatorComponent, ChallengesCardComponent, AchievementModalComponent],
   templateUrl: './dashboard.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
   contentService = inject(ContentService);
+  private achievementsService = inject(AchievementsService);
+
   stats = this.contentService.stats;
+
+  // Achievement modal state
+  showAchievementModal = signal(false);
+  currentAchievement = signal<Achievement | null>(null);
 
   // Output signal for navigation
   navigate = output<string>();

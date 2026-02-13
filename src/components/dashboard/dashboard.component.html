@@ -1,17 +1,24 @@
 <div class="animate-fade-in font-sans pb-10">
-  
+
   <header class="mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
     <div>
       <h2 class="text-3xl font-bold text-slate-900 mb-1">Dashboard</h2>
       <p class="text-slate-500 text-sm">Bem-vindo, <span class="text-black font-semibold">{{ userRank() }}</span>.</p>
     </div>
+
+    <!-- Level Indicator -->
+    <app-level-indicator></app-level-indicator>
   </header>
+
+  <!-- Challenges Card -->
+  <app-challenges-card></app-challenges-card>
 
   <!-- Metric Cards Row -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-    
+
     <!-- Streak -->
-    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center transition-transform hover:-translate-y-1">
+    <div
+      class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center transition-transform hover:-translate-y-1">
       <div class="w-12 h-12 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center text-xl mr-4">
         <i class="fas fa-fire"></i>
       </div>
@@ -22,7 +29,8 @@
     </div>
 
     <!-- XP -->
-    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center transition-transform hover:-translate-y-1">
+    <div
+      class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center transition-transform hover:-translate-y-1">
       <div class="w-12 h-12 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center text-xl mr-4">
         <i class="fas fa-bolt"></i>
       </div>
@@ -33,7 +41,8 @@
     </div>
 
     <!-- Accuracy -->
-    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center transition-transform hover:-translate-y-1">
+    <div
+      class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center transition-transform hover:-translate-y-1">
       <div class="w-12 h-12 rounded-lg bg-green-50 text-green-600 flex items-center justify-center text-xl mr-4">
         <i class="fas fa-bullseye"></i>
       </div>
@@ -43,9 +52,9 @@
       </div>
     </div>
   </div>
-  
+
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-    
+
     <!-- Card 1: Nível Atual (Main Progress) -->
     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col relative overflow-hidden h-80">
       <div class="flex justify-between items-start mb-4">
@@ -57,12 +66,12 @@
           META: NÍVEL {{ stats().level + 1 }}
         </div>
       </div>
-      
+
       <!-- CSS Donut Chart Centered -->
       <div class="flex-1 flex items-center justify-center">
         <div class="relative w-40 h-40">
-          <div class="w-full h-full rounded-full bg-slate-100" 
-               [style.background]="'conic-gradient(black 0% ' + xpProgress() + '%, #f1f5f9 ' + xpProgress() + '% 100%)'">
+          <div class="w-full h-full rounded-full bg-slate-100"
+            [style.background]="'conic-gradient(black 0% ' + xpProgress() + '%, #f1f5f9 ' + xpProgress() + '% 100%)'">
           </div>
           <div class="absolute inset-2 bg-white rounded-full flex items-center justify-center flex-col shadow-inner">
             <span class="text-3xl font-bold text-black tracking-tighter">{{ xpProgress() | number:'1.0-0' }}%</span>
@@ -70,21 +79,24 @@
           </div>
         </div>
       </div>
-      
+
       <p class="text-center text-slate-400 text-xs mt-2">{{ motivationalMessage() }}</p>
     </div>
 
     <!-- Card 2: Próxima Lição (Action Card) -->
     <div class="bg-black p-8 rounded-2xl shadow-lg flex flex-col justify-center h-80 relative overflow-hidden group">
       <!-- Decorative background shapes -->
-      <div class="absolute -right-10 -top-10 w-40 h-40 bg-slate-800 rounded-full opacity-50 blur-2xl group-hover:scale-110 transition-transform duration-700"></div>
-      
+      <div
+        class="absolute -right-10 -top-10 w-40 h-40 bg-slate-800 rounded-full opacity-50 blur-2xl group-hover:scale-110 transition-transform duration-700">
+      </div>
+
       <p class="text-slate-400 font-medium mb-1 relative z-10 text-xs uppercase tracking-widest">Recomendado pela IA</p>
       <h3 class="text-3xl font-bold text-white leading-tight mb-4 relative z-10">Interpretação<br>& Inferência</h3>
       <p class="text-slate-300 mb-8 text-sm leading-relaxed relative z-10 max-w-xs">
         Análise textual é responsável por 30% da prova. Domine essa habilidade agora.
       </p>
-      <button (click)="navigate.emit('interpretation')" class="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors w-fit relative z-10 flex items-center text-sm">
+      <button (click)="navigate.emit('interpretation')"
+        class="bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors w-fit relative z-10 flex items-center text-sm">
         Iniciar Lição <i class="fas fa-arrow-right ml-2"></i>
       </button>
     </div>
@@ -92,109 +104,113 @@
     <!-- Card 3: Histórico Recente (List) -->
     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-80 flex flex-col">
       <h3 class="font-bold text-lg text-slate-900 mb-4">Registro de Atividades</h3>
-      
+
       <div class="flex-1 overflow-y-auto pr-2 custom-scrollbar space-y-3">
         @if (stats().questionsAnswered === 0) {
-          <div class="h-full flex flex-col items-center justify-center text-slate-400">
-            <i class="far fa-calendar-times text-2xl mb-2"></i>
-            <p class="text-xs">Nenhuma atividade recente</p>
-          </div>
+        <div class="h-full flex flex-col items-center justify-center text-slate-400">
+          <i class="far fa-calendar-times text-2xl mb-2"></i>
+          <p class="text-xs">Nenhuma atividade recente</p>
+        </div>
         } @else {
-          <!-- Mock Rows reflecting general activity types -->
-          <div class="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-100">
-            <div class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center text-slate-700 text-xs mr-3">
-              <i class="fas fa-check"></i>
-            </div>
-            <div class="flex-1">
-              <p class="text-sm font-bold text-slate-800">Questões Realizadas</p>
-              <p class="text-[10px] text-slate-500">Total acumulado</p>
-            </div>
-            <span class="font-bold text-slate-900 text-sm">{{ stats().questionsAnswered }}</span>
+        <!-- Mock Rows reflecting general activity types -->
+        <div class="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-100">
+          <div
+            class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center text-slate-700 text-xs mr-3">
+            <i class="fas fa-check"></i>
           </div>
+          <div class="flex-1">
+            <p class="text-sm font-bold text-slate-800">Questões Realizadas</p>
+            <p class="text-[10px] text-slate-500">Total acumulado</p>
+          </div>
+          <span class="font-bold text-slate-900 text-sm">{{ stats().questionsAnswered }}</span>
+        </div>
 
-           <div class="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-100">
-            <div class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center text-green-600 text-xs mr-3">
-              <i class="fas fa-bullseye"></i>
-            </div>
-            <div class="flex-1">
-              <p class="text-sm font-bold text-slate-800">Acertos</p>
-              <p class="text-[10px] text-slate-500">Respostas corretas</p>
-            </div>
-            <span class="font-bold text-green-600 text-sm">{{ stats().correctAnswers }}</span>
+        <div class="flex items-center p-3 bg-slate-50 rounded-lg border border-slate-100">
+          <div
+            class="w-8 h-8 rounded bg-white border border-slate-200 flex items-center justify-center text-green-600 text-xs mr-3">
+            <i class="fas fa-bullseye"></i>
           </div>
+          <div class="flex-1">
+            <p class="text-sm font-bold text-slate-800">Acertos</p>
+            <p class="text-[10px] text-slate-500">Respostas corretas</p>
+          </div>
+          <span class="font-bold text-green-600 text-sm">{{ stats().correctAnswers }}</span>
+        </div>
         }
       </div>
     </div>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    
+
     <!-- Card 4: Frequência Semanal (Bar Chart) -->
     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-72 flex flex-col">
       <div class="flex justify-between items-center mb-6">
         <h3 class="font-bold text-lg text-slate-900">Frequência</h3>
         <span class="text-[10px] bg-slate-100 px-2 py-1 rounded text-slate-500 font-bold">Últimos 7 dias</span>
       </div>
-      
+
       <div class="flex-1 flex items-end justify-between gap-2 px-2 pb-2">
         <!-- Bars -->
         @let bars = [20, 45, 10, 80, 50, 90, 30];
         @let labels = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'];
         @for (val of bars; track $index) {
-          <div class="flex flex-col items-center flex-1 h-full justify-end group cursor-pointer">
-            <div class="w-full bg-slate-900 rounded-t-sm transition-all duration-500 relative group-hover:bg-black group-hover:shadow-lg" [style.height.%]="val"></div>
-            <span class="text-[10px] text-slate-400 font-bold mt-2">{{ labels[$index] }}</span>
-          </div>
+        <div class="flex flex-col items-center flex-1 h-full justify-end group cursor-pointer">
+          <div
+            class="w-full bg-slate-900 rounded-t-sm transition-all duration-500 relative group-hover:bg-black group-hover:shadow-lg"
+            [style.height.%]="val"></div>
+          <span class="text-[10px] text-slate-400 font-bold mt-2">{{ labels[$index] }}</span>
+        </div>
         }
       </div>
     </div>
 
     <!-- Card 5: Distribuição de Matérias (Simple Visual) -->
     <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm h-72 flex flex-col">
-       <h3 class="font-bold text-lg text-slate-900 mb-6">Foco de Estudo</h3>
-       
-       <div class="space-y-4 flex-1 overflow-y-auto pr-2 custom-scrollbar">
-          <!-- Mock Data for Visual Balance -->
-          <div>
-            <div class="flex justify-between text-xs font-bold mb-1">
-              <span class="text-slate-700">Matemática</span>
-              <span class="text-slate-400">40%</span>
-            </div>
-            <div class="w-full bg-slate-100 rounded-full h-2">
-              <div class="bg-blue-600 h-2 rounded-full" style="width: 40%"></div>
-            </div>
-          </div>
-          
-          <div>
-            <div class="flex justify-between text-xs font-bold mb-1">
-              <span class="text-slate-700">Português</span>
-              <span class="text-slate-400">35%</span>
-            </div>
-            <div class="w-full bg-slate-100 rounded-full h-2">
-              <div class="bg-red-500 h-2 rounded-full" style="width: 35%"></div>
-            </div>
-          </div>
+      <h3 class="font-bold text-lg text-slate-900 mb-6">Foco de Estudo</h3>
 
-          <div>
-            <div class="flex justify-between text-xs font-bold mb-1">
-              <span class="text-slate-700">Ciências Naturais</span>
-              <span class="text-slate-400">15%</span>
-            </div>
-            <div class="w-full bg-slate-100 rounded-full h-2">
-              <div class="bg-green-500 h-2 rounded-full" style="width: 15%"></div>
-            </div>
+      <div class="space-y-4 flex-1 overflow-y-auto pr-2 custom-scrollbar">
+        <!-- Mock Data for Visual Balance -->
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span class="text-slate-700">Matemática</span>
+            <span class="text-slate-400">40%</span>
           </div>
+          <div class="w-full bg-slate-100 rounded-full h-2">
+            <div class="bg-blue-600 h-2 rounded-full" style="width: 40%"></div>
+          </div>
+        </div>
 
-           <div>
-            <div class="flex justify-between text-xs font-bold mb-1">
-              <span class="text-slate-700">Humanas</span>
-              <span class="text-slate-400">10%</span>
-            </div>
-            <div class="w-full bg-slate-100 rounded-full h-2">
-              <div class="bg-yellow-500 h-2 rounded-full" style="width: 10%"></div>
-            </div>
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span class="text-slate-700">Português</span>
+            <span class="text-slate-400">35%</span>
           </div>
-       </div>
+          <div class="w-full bg-slate-100 rounded-full h-2">
+            <div class="bg-red-500 h-2 rounded-full" style="width: 35%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span class="text-slate-700">Ciências Naturais</span>
+            <span class="text-slate-400">15%</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-2">
+            <div class="bg-green-500 h-2 rounded-full" style="width: 15%"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between text-xs font-bold mb-1">
+            <span class="text-slate-700">Humanas</span>
+            <span class="text-slate-400">10%</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-2">
+            <div class="bg-yellow-500 h-2 rounded-full" style="width: 10%"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Card 6: Acesso Rápido -->
@@ -202,23 +218,31 @@
       <div>
         <h3 class="font-bold text-lg text-slate-900 mb-2">Recursos Extras</h3>
         <p class="text-sm text-slate-500 mb-6">Ferramentas para turbinar sua preparação.</p>
-        
+
         <div class="space-y-3">
-           <button (click)="onStartQuiz()" class="w-full bg-white border border-slate-200 p-3 rounded-lg text-left text-sm font-bold text-slate-700 hover:border-black hover:text-black transition-colors flex justify-between items-center group">
-             Simulado Rápido
-             <i class="fas fa-bolt text-slate-300 group-hover:text-black"></i>
-           </button>
-           <button (click)="navigate.emit('schedule')" class="w-full bg-white border border-slate-200 p-3 rounded-lg text-left text-sm font-bold text-slate-700 hover:border-black hover:text-black transition-colors flex justify-between items-center group">
-             Ver Cronograma
-             <i class="fas fa-calendar-alt text-slate-300 group-hover:text-black"></i>
-           </button>
+          <button (click)="onStartQuiz()"
+            class="w-full bg-white border border-slate-200 p-3 rounded-lg text-left text-sm font-bold text-slate-700 hover:border-black hover:text-black transition-colors flex justify-between items-center group">
+            Simulado Rápido
+            <i class="fas fa-bolt text-slate-300 group-hover:text-black"></i>
+          </button>
+          <button (click)="navigate.emit('schedule')"
+            class="w-full bg-white border border-slate-200 p-3 rounded-lg text-left text-sm font-bold text-slate-700 hover:border-black hover:text-black transition-colors flex justify-between items-center group">
+            Ver Cronograma
+            <i class="fas fa-calendar-alt text-slate-300 group-hover:text-black"></i>
+          </button>
         </div>
       </div>
-      
+
       <div class="text-[10px] text-slate-400 font-mono text-center">
         ETECPRO BUILD v2.3
       </div>
     </div>
 
   </div>
+
+  <!-- Achievement Modal -->
+  @if (showAchievementModal() && currentAchievement()) {
+  <app-achievement-modal [achievement]="currentAchievement"
+    (closed)="showAchievementModal.set(false)"></app-achievement-modal>
+  }
 </div>

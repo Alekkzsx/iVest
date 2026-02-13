@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { InterpretationService } from '../../services/interpretation.service';
 import { ContentService } from '../../services/content.service';
+import { QuestionHistoryService } from '../../services/question-history.service';
+import { ActivitySessionService } from '../../services/activity-session.service';
+import { CelebrationComponent, CelebrationType } from '../celebration/celebration.component';
 import { LatexPipe } from '../../pipes/latex.pipe';
 
 type ViewState = 'config' | 'activity' | 'loading' | 'error';
@@ -10,7 +13,7 @@ type ViewState = 'config' | 'activity' | 'loading' | 'error';
 @Component({
   selector: 'app-text-interpretation',
   standalone: true,
-  imports: [CommonModule, FormsModule, LatexPipe],
+  imports: [CommonModule, FormsModule, CelebrationComponent, LatexPipe],
   templateUrl: './text-interpretation.component.html',
   styleUrl: './text-interpretation.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -18,10 +21,17 @@ type ViewState = 'config' | 'activity' | 'loading' | 'error';
 export class TextInterpretationComponent implements OnInit {
   private interpretationService = inject(InterpretationService);
   private contentService = inject(ContentService);
+  private questionHistory = inject(QuestionHistoryService);
+  private activitySession = inject(ActivitySessionService);
 
   // View state
   viewState = signal<ViewState>('loading');
   errorMessage = signal<string | null>(null);
+
+  // Celebration state
+  showCelebration = signal(false);
+  celebrationType = signal<CelebrationType>('correct');
+  celebrationXP = signal(0);
 
   // Config state (tela inicial)
   selectedDifficulty = signal<'Fácil' | 'Médio' | 'Difícil' | 'Todas'>('Todas');
@@ -72,6 +82,9 @@ export class TextInterpretationComponent implements OnInit {
   startActivity() {
     this.viewState.set('activity');
     this.resetActivity();
+
+    // Start activity session
+    this.activitySession.startSession('interpretation');
   }
 
   /**
@@ -116,10 +129,16 @@ export class TextInterpretationComponent implements OnInit {
 
     if (correct) {
       this.totalCorrect.update(n => n + 1);
-      this.contentService.updateStats(true);
+      this.contentService.updateStats(true, question.subject);
     } else {
-      this.contentService.updateStats(false);
+      this.contentService.updateStats(false, question.subject);
     }
+
+    // Record question in session
+    this.activitySession.recordQuestion(question.difficulty);
+
+    // Record attempt for spaced repetition with 'interpretation' context
+    this.questionHistory.recordAttempt(question.id, correct, 'interpretation');
   }
 
   /**
@@ -158,7 +177,13 @@ export class TextInterpretationComponent implements OnInit {
    * Mostra resultados finais
    */
   private showFinalResults() {
-    alert(`Atividade concluída!\n\nVocê acertou ${this.totalCorrect()} de ${this.totalAnswered()} questões.\nPercentual: ${Math.round((this.totalCorrect() / this.totalAnswered()) * 100)}%`);
+    // Complete session and award bonus XP
+    const bonusXP = this.activitySession.completeSession();
+    if (bonusXP > 0) {
+      console.log(`🎊 Interpretação completa! Bônus: +${bonusXP} XP`);
+    }
+
+    alert(`Atividade concluída!\n\nVocê acertou ${this.totalCorrect()} de ${this.totalAnswered()} questões.\nPercentual: ${Math.round((this.totalCorrect() / this.totalAnswered()) * 100)}%\nBônus de conclusão: +${bonusXP} XP`);
     this.backToConfig();
   }
 

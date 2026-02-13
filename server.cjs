@@ -14,6 +14,7 @@ const FILES = {
   INTERPRETATION: path.join(DATA_DIR, 'interpretation-history.json'),
   RESOLUTIONS: path.join(DATA_DIR, 'resolutions-history.json'),
   SCHEDULE: path.join(DATA_DIR, 'schedule.json'),
+  GAMIFICATION: path.join(DATA_DIR, 'gamification.json'),
   LEGACY: path.join(DATA_DIR, 'data-user.txt')
 };
 
@@ -133,10 +134,11 @@ app.get('/api/user/davi/full', async (req, res) => {
   try {
     await migrateLegacyData();
 
-    const [profile, history, schedule] = await Promise.all([
+    const [profile, history, schedule, gamification] = await Promise.all([
       readJson(FILES.PROFILE, { stats: { level: 1, xp: 0, questionsAnswered: 0, correctAnswers: 0, currentStreak: 0, essaysWritten: 0 } }),
       readJson(FILES.HISTORY, []),
-      readJson(FILES.SCHEDULE, [])
+      readJson(FILES.SCHEDULE, []),
+      readJson(FILES.GAMIFICATION, { achievements: [], challenges: [], completedSessions: [], consecutiveCorrect: 0, subjectStats: [] })
     ]);
 
     // Reconstruct the "Unified" object for the frontend to consume initially
@@ -146,7 +148,8 @@ app.get('/api/user/davi/full', async (req, res) => {
       user: {
         stats: profile.stats,
         questionHistory: history,
-        schedule: schedule
+        schedule: schedule,
+        gamification: gamification
       }
     };
 
@@ -236,6 +239,20 @@ app.post('/api/user/davi/resolutions', async (req, res) => {
     const data = req.body;
     if (!Array.isArray(data)) throw new Error('Data must be an array');
     await atomicWrite(FILES.RESOLUTIONS, data);
+    res.json({ success: true });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * POST /api/user/davi/gamification
+ * Updates Gamification data (achievements, challenges, sessions)
+ */
+app.post('/api/user/davi/gamification', async (req, res) => {
+  try {
+    const data = req.body;
+    await atomicWrite(FILES.GAMIFICATION, data);
     res.json({ success: true });
   } catch (error) {
     res.status(500).json({ error: error.message });

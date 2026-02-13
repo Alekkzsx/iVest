@@ -1,6 +1,8 @@
 import { Injectable, signal, inject, effect } from '@angular/core';
 import { QuestionLoaderService } from './question-loader.service';
 import { UserDataService } from './user-data.service';
+import { AchievementsService } from './achievements.service';
+import { ChallengesService } from './challenges.service';
 
 export interface Question {
   id: number;
@@ -31,6 +33,8 @@ export class ContentService {
 
   private questionLoader = inject(QuestionLoaderService);
   private userDataService = inject(UserDataService);
+  private achievementsService = inject(AchievementsService);
+  private challengesService = inject(ChallengesService);
 
   // Local questions loaded from files
   private loadedQuestions = signal<Question[]>([]);
@@ -233,9 +237,28 @@ export class ContentService {
     this.initializeData();
 
     // Granular Auto-saves
+    // Effect to auto-save stats on change
     effect(() => {
-      const currentStats = this.stats();
-      this.userDataService.saveUserProfile(currentStats);
+      const stats = this.stats();
+      if (stats) {
+        this.userDataService.saveUserProfile(stats); // Changed from saveStats to saveUserProfile to match existing code
+      }
+    });
+
+    // Effect to auto-save gamification data
+    effect(() => {
+      // Watch for changes in achievements or challenges
+      const achievements = this.achievementsService.unlockedAchievements();
+      const challenges = this.challengesService.userChallenges();
+
+      // Save to backend
+      this.userDataService.saveGamificationData({
+        achievements,
+        challenges,
+        completedSessions: [],
+        consecutiveCorrect: 0,
+        subjectStats: []
+      });
     });
 
     effect(() => {
@@ -352,7 +375,7 @@ export class ContentService {
     return this.questionLoader.loadingProgress();
   }
 
-  updateStats(isCorrect: boolean) {
+  updateStats(isCorrect: boolean, subject?: string) {
     this.stats.update(val => {
       // XP Calculation: 50 XP for correct answer, 10 XP for effort (wrong answer)
       const earnedXp = isCorrect ? 50 : 10;
@@ -361,13 +384,27 @@ export class ContentService {
       // Level Calculation: 1000 XP per level
       const newLevel = Math.floor(newXp / 1000) + 1;
 
-      return {
+      const newStats = {
         ...val,
         questionsAnswered: val.questionsAnswered + 1,
         correctAnswers: isCorrect ? val.correctAnswers + 1 : val.correctAnswers,
         xp: newXp,
         level: newLevel
       };
+
+      // Update challenges
+      this.challengesService.updateProgress('daily_questions', 1);
+      if (isCorrect) {
+        this.challengesService.updateProgress('daily_correct', 1);
+      }
+      if (subject) {
+        this.challengesService.updateProgress(`daily_subject_${subject}`, 1);
+      }
+
+      // Check for achievements
+      this.achievementsService.checkAchievements(newStats);
+
+      return newStats;
     });
 
     // Auto-save is triggered by effect

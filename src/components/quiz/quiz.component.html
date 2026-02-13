@@ -259,6 +259,17 @@
   }
   }
 </div>
+
+<!-- Celebration Component -->
+@if (showCelebration()) {
+  <app-celebration
+    [type]="celebrationType()"
+    [xpEarned]="celebrationXP()"
+    [autoClose]="celebrationType() !== 'completion'"
+    (closed)="closeCelebration()"
+  ></app-celebration>
+}
+
 <!-- Word Definition Popup -->
 <app-word-popup [word]="selectedWord()" [definitions]="wordDefinitions()" [position]="popupPosition()"
   [visible]="showWordPopup()" (close)="closeWordPopup()"></app-word-popup>

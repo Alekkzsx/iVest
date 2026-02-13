@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"ng serve\" \"node server.cjs\"",
+    "dev-extended": "concurrently \"ng serve --watch --poll=2000\" \"node server.cjs\"",
     "server": "node server.cjs",
     "build": "ng build",
     "preview": "ng serve --configuration=production"

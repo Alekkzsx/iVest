@@ -53,6 +53,14 @@ npm run dev
 
 O aplicativo abrirá em `http://localhost:4200`
 
+> **💡 Dica:** O comando `npm run dev` padrão pode fechar após 30 minutos de inatividade. Se você precisa deixar o servidor rodando por mais tempo, use:
+>
+> ```bash
+> npm run dev-extended
+> ```
+> 
+> Este comando mantém o servidor ativo indefinidamente, ideal para sessões de estudo longas!
+
 #### 🪟 Windows
 
 **Método Simples (Recomendado):**
